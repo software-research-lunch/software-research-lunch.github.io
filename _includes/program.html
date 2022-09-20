@@ -1,0 +1,203 @@
+
+{% assign data = include.data %}
+{% assign prev_data = include.prev_data %}
+
+<script>
+
+// all talks
+var talks = [
+{% for talk in data.talks %}
+  {
+    date: '{{ talk.date | parse_date | date: "%Y-%m-%d" }}',
+    year: '{{ talk.date | parse_date | date: "%Y" }}',
+    month: '{{ talk.date | parse_date | date: "%-m" }}',
+    day: '{{ talk.date | parse_date | date: "%-d" }}'
+  },
+{% endfor %}
+];
+
+// find the next talk
+var today = new Date();
+today = new Date(today.getFullYear(), today.getMonth(), today.getDate());
+var nextTalk = null;
+var i = 0;
+while (nextTalk == null && i < talks.length) {
+  var talk = talks[i];
+  var date = new Date(talk.year, talk.month-1, talk.day);
+  if (date >= today) {
+    nextTalk = talk;
+  }
+  i += 1;
+}
+</script>
+
+{% if page.organizing == 1 %}
+<script>
+
+function emailLink(addr, subject, body, ccaddr) {
+  if (ccaddr) {
+    return "mailto:" + addr + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body) + "&cc=" + encodeURIComponent(ccaddr);
+  } else {
+    return "mailto:" + addr + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  }
+}
+</script>
+
+<h3>Overview</h3>
+<table>
+<tr>
+<th></th>
+<th>Speaker</th>
+<th>Food</th>
+</tr>
+{% for talk in data.talks %}
+{% assign speaker = talk.speaker | split:' <' | first %}
+<tr>
+<td>{{ talk.date | parse_date | date: "%-m/%-d" }}</td>
+<td>{{ speaker }}</td>
+<td>{{ talk.food | split:' ' | first }}</td>
+</tr>
+{% endfor %}
+<tr>
+<th></th>
+<th>----</th>
+<th></th>
+</tr>
+{% for talk in prev_data.talks %}
+{% assign speaker = talk.speaker | split:' <' | first %}
+<tr>
+<td>{{ talk.date | parse_date | date: "%-m/%-d" }}</td>
+<td>{{ speaker }}</td>
+<td>{{ talk.food | split:' ' | first }}</td>
+</tr>
+{% endfor %}
+</table>
+<br>
+{% endif %}
+
+{% for talk in data.talks %}
+{% assign speakerparts = talk.speaker | split:' <' %}
+{% assign speaker = speakerparts[0] %}
+<h2 id="talk-{{ talk.date | parse_date | date: "%Y-%m-%d" }}">{{ talk.date | parse_date | date: "%-m/%-d" }}: {% if talk.title != "" %}{{ talk.title }}{% else %}TBD{% if talk.speaker != "" %} ({{ speaker }}){% endif %}{% endif %}</h2>
+
+{% if page.organizing == 1 %}
+<p>
+{% if talk.speaker != "" %}
+<a id="email-speaker-{{ talk.date }}" href="#">Speaker reminder</a> |
+<script>
+var speakerAddr = "{{ talk.speaker }}";
+var speakerEmailSubj = "Software Lunch ({{ talk.date | parse_date | date: "%-m/%-d" }}): Title/abstract/bio please";
+var speakerEmail = `Hi {{ speaker | split:' ' | first }},
+
+I have you as the speaker for Software Lunch on {{ talk.date | parse_date | date: "%A, %B %-d, %Y" }}.  Could you please send me a title, abstract and a short bio for the announcement?  I need it by end-of-day Monday.
+
+Thanks,
+Scott`;
+document.getElementById("email-speaker-{{ talk.date }}").setAttribute("href", emailLink(speakerAddr, speakerEmailSubj, speakerEmail));
+</script>
+{% endif %}
+
+{% if talk.food != "" %}
+<a id="email-food-{{ talk.date }}" href="#">Food reminder ({{ talk.food | split:' ' | first }})</a>
+<script>
+var foodEmailSubj = "Software Lunch ({{ talk.date | parse_date | date: "%-m/%-d" }}): Food order reminder";
+var foodEmail = `Hi {{ talk.food | split:' ' | first }},
+
+This is a reminder that you are ordering food for Software Lunch on {{ talk.date | parse_date | date: "%A, %B %-d, %Y" }}.
+
+Please plan to order food for about 20 people and make sure they include plates, silverware and serving utensils (you don't have to order drinks though).
+
+You can choose what restaurant to order food from, but please ensure that at least 50% dishes are vegetarian and that there are some vegan options.  Remember that most restaurants require catering orders up to 48 hours in advance.  To get reimbursed, bring the itemized receipt to Andrea Villanueva (Gates 349).
+
+If you don't know where to order from, or how to do it, email me and I'd be happy to help.
+
+Please confirm by replying to this email that you are ordering food.
+
+Thanks,
+Scott`;
+document.getElementById("email-food-{{ talk.date }}").setAttribute("href", emailLink("{{ talk.food }}", foodEmailSubj, foodEmail));
+</script>
+{% endif %}
+
+{% if talk.speaker != "" %}{% if talk.title != "" %}
+| <a id="email-announce-{{ talk.date }}" href="#">Announcement</a>
+<script>
+var announceEmailSubj = "{{ talk.date | parse_date | date: "%-m/%-d" }}: {{ speaker }} on \"{{ talk.title }}\"";
+var announceEmail = `Join us on {{ talk.date | parse_date | date: "%A, %B %-d, %Y" }} at noon in {{ data.location }} for a talk by {{ speaker }} on "{{ talk.title }}".  There will be food at noon, and the talk itself will start at 12:15pm.
+
+###
+
+Title: {{ talk.title }}
+Speaker: {{ speaker }}
+
+{{ talk.date | parse_date | date: "%A, %B %-d, %Y" }} - 12 noon - 1pm
+{{ data.location }}
+
+Abstract: {{ talk.abstract | newline_to_br | strip_html }}
+
+Bio: {{ talk.bio | newline_to_br | strip_html }}
+
+-----
+
+Website: http://software-research-lunch.stanford.edu/
+Calendar: http://software-research-lunch.stanford.edu/calendar.ics`;
+document.getElementById("email-announce-{{ talk.date }}").setAttribute("href", emailLink("software-research-lunch@lists.stanford.edu", announceEmailSubj, announceEmail, speakerAddr));
+</script>
+{% endif %}{% endif %}
+
+{% if talk.title == "Organizational Lunch" %}
+<a id="email-announce-{{ talk.date }}" href="#">Announcement</a>
+<script>
+var announceEmailSubj = "{{ talk.date | parse_date | date: "%-m/%-d" }}: Organizational lunch";
+var announceEmail = `Join us on {{ talk.date | parse_date | date: "%A, %B %-d, %Y" }} at noon in {{ data.location }} for a social/organizational lunch.  There is no speaker, just good food and good company, and a chance to sign up to give a talk during the quarter.
+
+Hope to see you there,
+Scott
+
+-----
+
+Website: http://software-research-lunch.stanford.edu/
+Calendar: http://software-research-lunch.stanford.edu/calendar.ics`;
+document.getElementById("email-announce-{{ talk.date }}").setAttribute("href", emailLink("software-research-lunch@lists.stanford.edu", announceEmailSubj, announceEmail));
+</script>
+{% endif %}
+
+</p>
+{% endif %}
+
+<p><strong>Time</strong>: {{ talk.date | parse_date | date: "%A, %B %-d, %Y" }}, 12 noon - 1pm
+<br>
+<strong>Location</strong>: {{ data.location }}</p>
+
+{% if talk.title == "Organizational Lunch" %}
+<p>Organizational lunch.  Come sign up to give a talk during the quarter.</p>
+{% else %}
+{% if speaker != "" %}<p><strong>Speaker</strong>: {{ speaker }}</p>{% endif %}
+
+{% if talk.abstract and talk.abstract != "" %}<p><strong>Abstract</strong>: {{ talk.abstract | newline_to_br }}</p>{% endif %}
+{% endif %}
+
+{% if talk.food != "" %}
+  <p class="light">Food: {{ talk.food | split:' ' | first }}</p>
+{% else %}{% if page.organizing == 1 %}
+  <p class="error">Food: NOBODY</p>
+{% endif %}{% endif %}
+<br>
+{% endfor %}
+
+{% if page.organizing == 1 %}
+<script>
+// scroll to current day
+if (nextTalk != null) {
+  window.location.href = "#talk-"+nextTalk.date;
+}
+</script>
+{% endif %}
+
+
+<script>
+// highlight upcoming talk
+if (nextTalk != null) {
+  document.getElementById("talk-"+nextTalk.date).classList.add("upcoming");
+}
+</script>

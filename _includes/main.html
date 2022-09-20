@@ -1,0 +1,23 @@
+
+<p>The Stanford Software Research Lunch is a weekly event on Thursday where students and researchers present their latest work to peers.  Talks are open to anybody, but regular attendees are expected to give a presentation on their work.</p>
+
+<p><strong>Mailing list</strong>: <a href="mailto:software-research-lunch@lists.stanford.edu">software-research-lunch@lists.stanford.edu</a> (<a href="https://mailman.stanford.edu/mailman/listinfo/software-research-lunch">subscribe via mailman</a>)<p>
+
+<p><strong>Calendar</strong>: <a href="/calendar.ics">ical</a> | <a href="http://www.google.com/calendar/render?cid={{ "/calendar.ics" | prepend:site.url | url_param_escape }}">Add to Google Calendar</a><p>
+
+<p><strong>Format</strong>: The lunch is held every week during fall, winter and spring quarter.  The first week of every quarter is an organizational lunch where people can sign up to give a talk.  If you'd like to give a talk, contact <a href="mailto:sviteri@stanford.edu">Scott Viteri</a>.<p>
+
+<p><strong>Past quarters</strong>: <a href="/archive/2020-fall/">Fall 2020</a>, <a href="/archive/2020-spring/">Spring 2020</a>, <a href="/archive/2020-winter/">Winter 2020</a>, <a href="/archive/2019-fall/">Fall 2019</a>, <a href="/archive/2019-spring/">Spring 2019</a>, <a href="/archive/2019-winter/">Winter 2019</a>, <a href="/archive/2018-fall/">Fall 2018</a>, <a href="/archive/2018-spring/">Spring 2018</a>, <a href="/archive/2018-winter/">Winter 2018</a>, <a href="/archive/2017-fall/">Fall 2017</a>, <a href="/archive/2017-spring/">Spring 2017</a>, <a href="/archive/2017-winter/">Winter 2017</a>, <a href="/archive/2016-fall/">Fall 2016</a>.</p>
+{% if false %}
+<p><strong>Upcoming quarters</strong>: <a href="/archive/2018-fall/">Fall 2018</a>.</p>
+{% endif %}
+
+<p><strong>Ordering Food</strong>: For suggestions for those ordering food for the lunch, see <a href="/past_orders">here</a>.</p>
+
+<hr>
+
+{% if include.data.summer %}
+No Software Research Lunch Meetings are held over the summer.  We will be back the first week of the quarter in fall.
+{% else %}
+{% include program.html data=include.data prev_data=include.prev_data %}
+{% endif %}

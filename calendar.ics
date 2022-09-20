@@ -1,0 +1,21 @@
+---
+layout: null
+---
+{% assign data = site.data.schedule.y21_winter %}BEGIN:VCALENDAR
+VERSION:2.0
+NAME:Stanford Software Research Lunch
+X-WR-CALNAME:Stanford Software Research Lunch
+X-WR-TIMEZONE:America/Los_Angeles
+CALSCALE:GREGORIAN
+PRODID:random
+{% for talk in data.talks %}{% if talk.speaker != "" or talk.title == "Organizational Lunch" %}BEGIN:VEVENT
+UID:{{ talk.date | date: "%Y%m%d" }}-software-research-lunch@stanford.edu
+LOCATION:{{ data.location | ical_escape }}
+SUMMARY:{{ 'Software Lunch: ' | ical_escape}}{% if talk.title != "" %}{{ talk.title | ical_escape }}{% else %}TBD{% endif %}{% if talk.speaker != "" %} ({{ talk.speaker | split:' <' | first | ical_escape }}){% endif %}
+DESCRIPTION:{% if talk.title == "Organizational Lunch" %}{{ "Organizational lunch.  Come sign up to give a talk during the quarter." | ical_escape }}{% else %}{% if talk.speaker != "" %}{{ talk.abstract | newline_to_br | strip_html | ical_escape }}{% else %}{{ "TBD" | ical_escape }}{% endif %}{% endif %}
+CLASS:PUBLIC
+DTSTART;TZID=America/Los_Angeles:{{ talk.date | parse_date | date: "%Y%m%d" }}T120000
+DTEND;TZID=America/Los_Angeles:{{ talk.date | parse_date | date: "%Y%m%d" }}T130000
+DTSTAMP:{{ 'now' | date: "%Y%m%d" }}T170000Z
+END:VEVENT
+{% endif %}{% endfor %}END:VCALENDAR

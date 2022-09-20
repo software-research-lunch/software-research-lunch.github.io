@@ -1,0 +1,22 @@
+permalink: pretty
+
+title: Stanford Software Research Lunch
+tagline: ""
+url: http://software-research-lunch.stanford.edu
+baseurl: ""
+
+sass:
+  sass_dir: _sass
+  style: :compressed
+
+analytics_id: UA-80843812-2
+
+github:
+  repo: https://github.com/StanfordPL/software-research-lunch
+
+exclude: [
+  README.md,
+  Makefile,
+  PAST_ORDERS.md,
+  000.yml
+]

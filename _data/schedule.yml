@@ -1,0 +1,1573 @@
+
+# people
+#
+# Berkeley Churchill <berkc@stanford.edu>
+# Elliott Slaughter <slaughter@cs.stanford.edu>
+# Pratiksha Thaker <prthaker@stanford.edu>
+# Manolis Papadakis <mpapadak@stanford.edu>
+# Sergio Benitez <sbenitez@stanford.edu>
+# Zhihao Jia <zhihao@cs.stanford.edu>
+# Wonchan Lee <wonchan@stanford.edu>
+# Todd Warszawski <twarszaw@stanford.edu>
+# Omid Mashayekhi <omidm@stanford.edu>
+# Lázaro Clapp <lazaro@stanford.edu>
+# Andres Nötzli <noetzli@stanford.edu>
+# Wonyeol Lee <wyl@stanford.edu>
+# Giovanni Campagna <gcampagn@stanford.edu>
+# Guy Katz <guyk@stanford.edu>
+# Cristian Mattarei <mattarei@stanford.edu>
+# Stefan Heule <sheule@cs.stanford.edu>
+# Daniel Selsam <dselsam@stanford.edu>
+# Karthik Murthy <ksmurthy@stanford.edu>
+# Cristian Mattarei <mattarei@stanford.edu>
+# Wonyeol Lee <wyl@stanford.edu>
+# Ben Parks <bparks@stanford.edu>
+# Yoni Zohar <yoni206@gmail.com>
+# Oded Padon <oded.padon@gmail.com>
+# Jason Koenig <jrkoenig@stanford.edu>
+# Haoze Wu <haozewu@stanford.edu>
+
+y21_winter:
+  location: "Zoom"
+  year: "2021"
+  quarter: "winter"
+  talks:
+  - date: "2020-01-14"
+    abstract: "While there exist several successful techniques for supporting programmers in deriving static resource bounds for sequential code, analyzing the resource usage of message-passing concurrent processes poses additional challenges. To meet these challenges, this talk presents an analysis for statically deriving worst-case bounds on the computational complexity of message-passing processes, respectively. The analysis is based on novel resource-aware session types that describe resource contracts by allowing both messages and processes to carry potential and amortize cost. The talk then applies session types to implement digital contracts. Digital contracts are protocols that describe and enforce execution of a contract, often among mutually distrusting parties. Programming digital contracts comes with its unique challenges, which include describing and enforcing protocols of interaction, analyzing resource usage and tracking linear assets. The talk presents the type-theoretic foundations of Nomos, a programming language for digital contracts whose type system addresses the aforementioned domain-specific requirements. To express and enforce protocols, Nomos is based on shared binary session types rooted in linear logic. To control resource usage, Nomos uses resource-aware session types and automatic amortized resource analysis, a type-based technique for inferring resource bounds. To track assets, Nomos employs a linear type system that prevents assets from being duplicated or discarded. The talk concludes with future work directions on designing an efficient implementation for Nomos and making it robust to attacks from malicious entities."
+    title: "Resource-Aware Session Types for Digital Contracts"
+    speaker: "Ankush Das"
+    bio: "Ankush Das is a final year PhD student at Carnegie Mellon University. He is advised by Prof. Jan Hoffmann. He is broadly interested in programming languages with a specific focus on resource analysis, session types and language design for smart contracts on the blockchain. He is the lead designer and developer of Nomos, a domain-specific language for implementing smart contracts based on resource-aware session types. In the past, he has worked jointly with Prof. Frank Pfenning and his advisor on designing resource-aware session types for parallel complexity analysis of concurrent programs implemented in a programming language called Rast. Before joining CMU, he worked as a Research Fellow at Microsoft Research, India with Akash Lal where he developed an efficient method to perform precise alias analysis for C and C++ programs for Windows driver modules to automatically infer safe null pointer dereferences. He completed his undergraduate at IIT Bombay, India in 2014 where he worked with Prof. Supratik Chakraborty and Prof. Akshay S on deciding termination of linear loop programs."
+    food: "Doordash, see list email"
+
+  - date: "2020-02-04"
+    abstract: "Mapping is the process of selecting a processor for each computation, or task, and memories for the data collections that those tasks access.  On parallel, heterogeneous, and distributed computing platforms, finding a mapping that yields high performance for a given application is  challenging. We show that fast mappings are sensitive to the machine, application, and even input used. Porting to a new machine, modifying the application, or running on a substantially different input may all necessitate re-tuning the application mapping to maintain the best possible performance.
+
+We present AutoMap, a system which, given an application and an input, automatically tunes the mapping to the hardware used. AutoMap searches over the space of possible mappings dynamically, using a search algorithm and judicious pruning methods. We demonstrate that AutoMap finds fast mappings in minutes to a few hours, whereas handwritten mappings often require days of experimentation.
+
+We also describe  em constrained coordinate-wise descent (CCD), a search algorithm that explicitly balances the trade-off between running computations as quickly as possible and minimizing data movement. CCD discovers mappings that are as fast as, or up to 20% faster than, hand-tuned mappings, even on the hardware for which the hand-tuned mapping was designed. We find greater speedups (up to 40%) when re-tuning an existing mapping for different hardware or inputs."
+    title: "AutoMap"
+    speaker: "Rohan Yadav"
+    bio: ""
+    food: "Doordash, see list email"
+
+  - date: "2020-02-11"
+    abstract: "Probabilistic programming languages offer an intuitive way to model uncertainty
+by representing complex probability models as simple probabilistic programs.
+Thus, even a programmer with limited exposure to statistical machine learning
+can benefit from powerful probabilistic inference. A programmer only needs to
+write a high-level model in a programming language with support for random
+sampling and conditioning on data. The underlying probabilistic programming
+systems (which execute the high-level probabilistic programs) hide the complexity
+of inference algorithms from the program developer.  Understanding how to test
+and debug probabilistic software will have a key role in improving programmer
+productivity in this emerging domain.
+
+In this talk, I will present our work on testing and analyzing probabilistic programming
+systems and discuss some common classes of real-world problems that impact the
+accuracy and correctness in probabilistic programming. Our systems helped discover
+over 50 bugs in the popular probabilistic programming systems Pyro, Edward, and Stan,
+as well as their underlying infrastructures PyTorch and TensorFlow."
+    title: "Programming Systems for Bug-Free and Robust Probabilistic Software"
+    speaker: "Sasa Misailovic"
+    bio: "Sasa Misailovic is an Assistant Professor in the Department of Computer
+Science at the University of Illinois at Urbana-Champaign. He received PhD
+from MIT in 2015. His research interests include programming languages,
+software engineering, and compilers, with an emphasis on improving
+performance, energy efficiency, and resilience in the face of software
+errors and approximation opportunities."
+    food: ""
+
+
+
+  - date: "2020-02-18"
+    abstract: "Symbolic model checking is an important tool for finding bugs (or proving the absence of bugs) in modern system designs. Because of this, improving the ease of use, scalability, and performance of model checking tools and algorithms continues to be an important research direction. In service of this goal, we present Pono, an open-source SMT-based model checker. Pono is designed to be both a research platform for developing and improving model checking algorithms, as well as a performance-competitive tool that can be used for academic and industry verification applications. In addition to performance, Pono prioritizes transparency (developed as an open-source project on GitHub), flexibility (Pono can be adapted to a variety of tasks by exploiting its general SMT-based interface), and extensibility (it is easy to add new algorithms and new back-end solvers)."
+    title: "Pono Model Checker"
+    speaker: "Makai Mann"
+    bio: ""
+
+
+  - date: "2020-02-25"
+    abstract: "Program reification is a new approach to the construction of verified concurrent programs and their proofs.  This approach simplifies and scales (human and automated) reasoning by enabling a concurrent program to be represented and manipulated at multiple layers of abstraction.  These abstraction layers are chained together via simple program transformations; each transformation is justified by a collection of automatically checked verification conditions. Program reification makes proofs maintainable and reusable, specifically eliminating the need to write complex invariants on the low-level encoding of the concurrent program as a flat transition system.
+
+I will present Civl, a reifier for concurrent programs.  Civl has been used to construct verified low-level implementations of complex systems such as a concurrent garbage collector, consensus protocol, and shared-memory data structures.  Civl is publicly available: https://civl-verifier.github.io/.
+
+This work has been done jointly with Bernhard Kragl (IST Austria)."
+    title: "Reifying Concurrent Programs"
+    speaker: "Shaz Qadeer"
+    bio: "Shaz Qadeer works at Novi, a group at Facebook aiming to build large-scale financial services.  He is currently working on two projects: (1) Move, the programmable piece of the Diem blockchain (https://github.com/diem/diem), and (2) Civl, a reifier for concurrent programs (https://civl-verifier.github.io/). His research interests span all aspects of development of robust and secure software."
+
+
+
+y20_fall:
+
+  location: "Zoom"
+  year: "2020"
+  quarter: "fall"
+  talks:
+
+  - date: "2020-09-17"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: ""
+
+  - date: "2020-09-24"
+    abstract: "Symbolic quick error detection (SQED) is a formal pre-silicon verification technique targeted at processor designs. It leverages bounded model checking (BMC) to check a design for counterexamples to a self-consistency property: given the instruction set architecture (ISA) of the design, executing an instruction sequence twice on the same inputs must always produce the same outputs. Self-consistency is a universal, implementation-independent property. Consequently, in contrast to traditional verification approaches that use implementation-specific assertions (often generated manually), SQED does not require a full formal design specification or manually-written properties. Case studies have shown that SQED is effective for commercial designs and that SQED substantially improves design productivity. However, until now there has been no formal characterization of its bug-finding capabilities.  We aim to close this gap by laying a formal foundation for SQED. We use a transition-system processor model and define the notion of a bug using an abstract specification relation. We prove the soundness of SQED, i.e., that any bug reported by SQED is in fact a real bug in the processor.  Importantly, this result holds regardless of what the actual specification relation is. We next describe conditions under which SQED is complete, that is, what kinds of bugs it is guaranteed to find.  We show that for a large class of bugs, SQED can always find a trace exhibiting the bug. Ultimately, we prove full completeness of a variant of SQED that uses specialized state reset instructions. Our results enable a rigorous understanding of SQED and its bug-finding capabilities and give insights on how to optimize implementations of SQED in practice."
+    title: "A Theoretical Framework for Symbolic Quick Error Detection"
+    speaker: "Florian Lonsing"
+    bio: "Florian Lonsing is a research scientist in Clark Barrett’s lab in the Computer Science Department at Stanford University. He is working on formal techniques for hardware verification. Prior to joining Stanford, Florian Lonsing’s research was focused on the development of high-performance, award-winning decision procedures for quantified Boolean formulas (QBF) and related theoretical and practical aspects. Between 2012 and 2018 he was a post-doctoral researcher in the Knowledge-Based Systems Group at TU Wien, Vienna, Austria. Florian Lonsing studied computer science at Johannes Kepler University (JKU), Linz, Austria, where he obtained his PhD in 2012 (advised by Armin Biere). From 2008 to 2012 he was a research and teaching assistant at JKU at the Institute of Formal Models and Verification."
+    food: ""
+
+  - date: "2020-10-01"
+    abstract: "This talk will describe our recent work on employing automated reasoning for solving the system configuration problem. I will present our new framework, which automatically finds correct configurations of a system for desired applications. The framework leverages advances in Model Checking and Satisfiability Modulo Theories (SMT) techniques and utilizes the state-of-the-art, award-winning, tools Pono and Boolector developed in our lab. The framework will be showcased on an ongoing Lake project at the AHA! Agile Hardware Center at Stanford for CGRA memory tile design. In agile design, rapid prototyping and optimization of the hardware require preserving correct execution of applications as the hardware changes. In a traditional setting, a compiler frontend needs to be updated to understand new hardware targets and configure them appropriately. Due to the scale and complexity of designs, in conjunction with decoupled workflows, this is not possible in a timely manner with manual effort, and a gap appears between the compiler and the hardware. To bridge the gap, we depend on automation. I will illustrate how we configure our latest CGRA memory tile designs at AHA! for image processing applications. Through the talk, I will share a story of a synergy between two communities, those of formal methods and system design, and how such a synergy leads us to a more efficient, automation-friendly, and automation-guided, hardware design. Finally, I will highlight some challenges and problems we encountered along this path."
+    title: "Automating System Configuration"
+    speaker: "Nestan Tsiskaridze"
+    bio: "Nestan is a Research Engineer in Clark Barrett's Lab in the Department of Computer Science at Stanford University. Her research interests are in developing and utilizing formal verification techniques for automating the design and analysis of hardware and software systems. She works on the validation and automation efforts in the AHA! Agile Hardware Project at Stanford University, with a focus on integrating Satisfiability Modulo Theories (SMT) techniques and leveraging the advances in automated reasoning for efficient system design.
+
+Previously she worked on developing techniques to aid checking of software and hardware security properties, solving string constraints, model counting; on formalizing new computing paradigms, and on automating reverse engineering of integrated circuits for security analysis. From 2011 to 2019, she was a Project Scientist at the University of California Santa Barbara, a Postdoctoral Researcher and a Visiting Assistant Professor at the University of Iowa, and a Postdoctoral Researcher at Princeton University. She received a PhD in Computer Science from the University of Manchester, United Kingdom. Her dissertation presented a novel approach for Linear Programming."
+    food: ""
+
+  - date: "2020-10-08"
+    abstract: "I will describe my work during my internship at SiFive over the summer. The goal of the project is to create a more modern, scalable, and modular SoC assembly tool, and my work prototypes a data model which serves as the single source of truth for the SoC design. The data model is an MLIR dialect (Multi-Level Intermediate Representation, https://mlir.llvm.org/), and uses the RTL dialect and Verilog emission of CIRCT (Circuit IR Compilers and Tools, https://github.com/llvm/circt), an open source effort for using MLIR to represent hardware. Both MLIR and CIRCT will be introduced in more detail during the talk. Currently the data model / MLIR dialect can represent many of the important pieces of an SoC design at the IP composition level, and some support exists for Verilog emission through CIRCT. Two main goals for the future of the data model are as follows: to effectively represent generators in such a way that the assembly tool can interact with generators and update the data model, and to capture enough information about the SoC to generate Verilog, software components, verification collateral, and documentation. In this talk I will discuss the motivation for this single-source-of-truth data model, what the current project is capable of, and other efforts to use MLIR for hardware."
+    title: "Plato: An SoC Assembly Tool Using MLIR"
+    speaker: "Amalee Wilson"
+    bio: "tsra"
+    food: ""
+
+  - date: "2020-10-15"
+    abstract: "We present an infrastructure for compiling from programming languages with stateful semantics (i.e. mutable variables and control flow) to existentially quantified circuits (i.e. non-deterministic, stateless computations).  This infrastructure addresses the common compilation needs of seemingly disparate applications: symbolic execution, cryptographic proof systems, and multiparty computation.  Each of these applications stands to benefit from common transformations and optimization in our infrastructure.  Each of the these applications can be supported by our infrastructure through small compiler extensions.  Furthermore, mixing and matching extensions enables interesting new applications and techniques.
+This talk concerns a project in progress. I'll lay out current progress, future plans, and would very much appreciate suggestions and ideas."
+    title: "Circify: Compiling programs to circuits for cryptographic proofs, symbolic execution, and maybe more."
+    speaker: "Alex Ozdemir"
+    bio: ""
+    food: ""
+
+
+
+  - date: "2020-10-22"
+    abstract: "Satisfiability Modulo Theories (SMT) has proven to be a powerful way to formulate and solve problems from many applications. One of the most challenging theories considered in current research is nonlinear real arithmetic (NRA): inequalities over real polynomials. This talk surveys techniques to solve nonlinear NRA problems that are used in modern SMT solvers. We start with heuristic approaches (linearization and interval constraint propagation) that aim to shrink the search space until it either becomes empty or is close enough to the actual solution space that an arbitrary guess yields a solution. These methods can be seen as approximation schemes and are usually very efficient, but also vulnerable to non-termination. We then continue with incomplete methods that are algebraically motivated (e.g. Gröbner bases and virtual substitution). Though they do not rely on approximation, they may not be able to proceed at some point and thus yield inconclusive results. In the third part, we discuss a complete decision procedure (e.g. cylindrical algebraic decomposition), which however suffers from bad worst-case runtime complexity.
+Finally, we mention some further techniques for NRA problems as well as extensions to NRA itself."
+    title: "Techniques for Nonlinear Real Arithmetic"
+    speaker: "Gereon Kremer"
+    bio: "Gereon Kremer is a research scientist in Clark Barrett’s lab in the Computer Science Department at Stanford University. His main focus is to improve solving techniques for nonlinear real arithmetic in state-of-the-art SMT solvers. This work includes the adaptation of classical algebraic decision procedures like Cylindrical Algebraic Decomposition, the combination of complete with incomplete and heuristic approaches, and extensions of the regular CDCL(T) scheme (like MCSAT). Gereon Kremer studied computer science at RWTH Aachen University, where he worked between 2013 and 2020 as a research and teaching assistant and obtained his PhD in 2020 (advised by Erika Ábrahám)."
+    food: ""
+
+
+  - date: "2020-10-29"
+    abstract: "Probabilistic programming is the idea of writing models from statistics and machine learning using program notations and reasoning about these models using generic inference engines. Recently its combination with deep learning has been explored intensely, leading to the development of deep probabilistic programming languages such as Pyro and Edward. At the core of this development lie inference engines based on stochastic variational inference algorithms, which convert a posterior-inference query into an optimisation problem and solve it approximately by gradient ascent.
+
+In this paper, we analyse one of the most fundamental and versatile variational inference algorithms, called score estimator or REINFORCE, using tools from denotational semantics and program analysis. We formally express what this algorithm does on models denoted by programs, and expose implicit assumptions made by the algorithm. The violation of these assumptions may lead to an undefined optimisation objective or the loss of convergence guarantee of the optimisation process. We then describe rules for proving these assumptions, which can be automated by static program analyses. Following our general methodology, we have developed a static program analysis for Pyro that aims at discharging the assumption about what we call model-guide support match. Applied to the eight representative model-guide pairs from the Pyro webpage, our analysis finds a bug in one of these cases and shows that the assumptions are met in other six cases."
+    title: "Towards Verified Stochastic Variational Inferece for Probabilistic Programs"
+    speaker: "Wonyeol Lee"
+    bio: "Wonyeol Lee is a fourth-year PhD student at Stanford University, advised by Alex Aiken. From 2017 to 2020, he took a leave from Stanford to serve mandatory military service in Korea, for which he worked at KAIST with Hongseok Yang. His research interests lie in programming languages and machine learning. His work has focused on various types of numerical programs (such as floating-point, differentiable, or probabilistic programs) and aimed at understanding and proving various notions of correctness of those programs."
+    food: ""
+
+  - date: "2020-11-05"
+    abstract: "We cannot guarantee that training datasets are representative of the distribution of inputs that will be encountered during deployment. So we must have confidence that our models do not over-rely on this assumption. To this end, we introduce a new method that identifies context-sensitive feature perturbations (e.g.~shape, location, texture, colour) to the inputs of image classifiers. We produce these changes by performing small adjustments to the activation values of different layers of a trained generative neural network. Perturbing at layers earlier in the generator causes changes to coarser-grained features; perturbations further on cause finer-grained changes. Unsurprisingly, we find that state-of-the-art classifiers are not robust to any such changes. More surprisingly, when it comes to coarse-grained feature changes, we find that adversarial training against pixel-space perturbations is not just unhelpful: it is counterproductive."
+    title: "Evaluating Robustness to Context-Sensitive Feature Perturbations of Different Granularities"
+    speaker: "Hadrien Pouget"
+    bio: ""
+    food: "Doordash, see list email"
+
+
+
+  - date: "2020-11-12"
+    abstract: "Existing literature and “folklore” knowledge has established that prophecy variables can sometimes play the same role as universally quantified variables, making it possible to transform a system that would require quantified reasoning into one that does not. Until now, however, there has been no automatic method for applying this transformation. In this paper, we introduce a technique we call counterexample- guided prophecy. The idea is that during the refinement step of an abstraction-refinement loop, it may be possible to automatically introduce prophecy variables that aid the refinement step and may also reduce the need for quantified reasoning. We develop this idea in the context of model checking for infinite-state systems over arrays, which often requires quantified reasoning using existing approaches. We show how a standard abstraction for arrays can be augmented with counterexample-guided prophecy to obtain an algorithm that can leverage off-the-shelf solvers (which need only support quantifier-free, array-free reasoning) to solve challenging model checking problems over arrays."
+    title: "Counterexample-Guided Prophecy for Model Checking Modulo the Theory of Arrays"
+    speaker: "Makai Mann"
+    bio: "Makai is a 4th year Electrical Engineering PhD student advised by
+    Clark Barrett. He works on model checking, primarily for hardware."
+    food: "Doordash, see list email"
+
+
+  - date: "2020-11-19"
+    abstract: "Recursive types extend the simply-typed lambda calculus (STLC) with the additional expressive power to enable diverging computation and to encode recursive data-types (e.g., lists).
+Two formulations of recursive types exist: iso-recursive and equi-recursive.
+The relative advantages of iso- and equi-recursion are well-studied when it comes to their impact on type-inference.
+However, the relative semantic expressiveness of the two formulations remains unclear so far.
+
+This paper studies the semantic expressiveness of STLC with iso- and equi-recursive types, proving that these formulations are \emph{equally expressive}.
+In fact, we prove that they are both as expressive as STLC with only term-level recursion.
+We phrase these equi-expressiveness results in terms of full abstraction of three canonical compilers between these three languages (STLC with iso-, with equi-recursive types and with term-level recursion).
+Our choice of languages allows us to study expressiveness when interacting over both a simply-typed and a recursively-typed interface.
+The three proofs all rely on a typed version of a proof technique called approximate backtranslation.
+
+Together, our results show that there is no difference in semantic expressiveness between STLCs with iso- and equi-recursive types.
+In this paper, we focus on a simply-typed setting but we believe our results scale to more powerful type systems like System~F."
+    title: "On the semantic expressiveness of recursive types"
+    speaker: "Marco Patrignani"
+    bio: ""
+    food: "Doordash, see list email"
+
+
+
+y20_winter:
+
+  location: "Gates 415"
+  year: "2020"
+  quarter: "winter"
+  talks:
+
+  - date: "2020-01-09"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: "Andres Noetzli"
+
+  - date: "2020-01-16"
+    abstract: "Working with any gradient-based machine learning algorithm
+    involves the tedious task of tuning the optimizer's hyperparameters, such
+    as the learning rate. There exist many techniques for automated
+    hyperparameter optimization, but they typically introduce even more
+    hyperparameters to control the hyperparameter optimization process. We
+    propose to instead learn the hyperparameters themselves by gradient
+    descent, and furthermore to learn the hyper-hyperparameters by gradient
+    descent as well, and so on ad infinitum. As these towers of gradient-based
+    optimizers grow, they become significantly less sensitive to the choice of
+    top-level hyperparameters, hence decreasing the burden on the user to
+    search for optimal values."
+    title: "Learning to learn to learn by gradient descent by gradient descent
+    by gradient descent"
+    speaker: "Kartik Chandra <kach@stanford.edu>"
+    bio: "Kartik is a third-year undergraduate in CS at Stanford interested in
+    the design and novel application of differentiable programming languages.
+
+    Website: cs.stanford.edu/~kach"
+    food: "TBD"
+
+  - date: "2020-01-23"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "TBD"
+    bio: "TBD"
+    food: "TBD"
+
+  - date: "2020-01-30"
+    abstract: "Recently there has been a lot of progress in the area of
+    cryptographic proof systems. These systems have three important properties:
+
+    * They are _probabilistic arguments_: sound only probabilistically against
+       computationally-bounded provers.
+    * They are succinct & efficient: proof sizes and verification times are
+       sub-linear in the statement size.
+    * They are general: applicable to any NP language.
+
+    This talk will serve as a high-level introduction to these systems, with a
+    particular emphasis on programming them: the means by which their
+    genericity is achieved.
+    It will focus in particular on how to program the mutation of large, public
+    storage, as described in this paper: https://eprint.iacr.org/2019/1494"
+    title: "Programming Cryptographic Proof Systems for Mutating Large Storage"
+    speaker: "Alex Ozdemir <aozdemir@stanford.edu>"
+    bio: "Alex Ozdemir is a second-year PhD student at Stanford, interested in
+    formal methods and cryptography. He's particularly interested in projects
+    involving proof systems, privacy, and distributed systems. He is advised by
+    Clark Barrett and Dan Boneh."
+    food: "Sergio Benitez <sbenitez@stanford.edu>"
+
+  - date: "2020-02-06"
+    abstract: "Strings are sequences of code points, which can be interpreted
+    as integers. We present a decision procedure for a (concatention-free)
+    fragment of strings that includes length and a conversion function from
+    strings to integer code points. Furthermore, we show that many common
+    string operations, such as conversions between lowercase and uppercase, can
+    be naturally encoded using this conversion function. We implement our
+    approach in CVC4, a state-of-the-art string solver and show that the use of
+    a native procedure for code points significantly improves its performance
+    with respect to state-of-the-art string solvers."
+    title: "A Decision Procedure for String to Code Point Conversion"
+    speaker: "Andres Noetzli <noetzli@stanford.edu>"
+    bio: "Andres Nötzli is a sixth year PhD student in the Computer Science
+    Department at Stanford University, advised by Prof. Clark Barrett. He works
+    on the theory of strings, preprocessing, and SyGuS in CVC4."
+    food: "Yoni Zohar <yoni206@gmail.com>"
+
+  - date: "2020-02-13"
+    abstract: "Symbolic model checking has become an important part of the
+    verification flow in industrial hardware design. However, its use is still
+    limited due to scaling issues. One way to address this is to exploit the
+    large amounts of symmetry present in many real world designs. In this
+    paper, we adapt partial order reduction for bounded model checking of
+    synchronous hardware and introduce a novel technique that improves the
+    efficacy of partial order reduction in this new domain. These approaches
+    are largely automatic, requiring only minimal manual effort. We evaluate
+    our technique on open-source and commercial packet mover circuits---designs
+    containing FIFOs and arbiters."
+    title: "Partial Order Reduction for Deep Bug Finding in Synchronous Hardware"
+    speaker: "Makai Mann <makaim@stanford.edu>"
+    bio: "Makai is a 4th year Electrical Engineering PhD student advised by
+    Clark Barrett. He works on model checking, primarily for hardware."
+    food: "TBD"
+
+  - date: "2020-02-20"
+    abstract: "Algebraic datatypes, and among them lists and trees, have
+    attracted a lot of interest in automated reasoning and Satisfiability
+    Modulo Theories (SMT). Since its latest stable version, the SMT-LIB
+    standard defines a theory of algebraic datatypes, which is currently
+    supported by several mainstream SMT solvers. In this paper, we study this
+    particular theory of datatypes and prove that it is strongly polite,
+    showing also how it can be combined with other arbitrary disjoint theories
+    using polite combination. Our results cover both inductive and finite
+    datatypes, as well as their union. The combination method uses a new,
+    simple, and natural notion of additivity, that enables deducing strong
+    politeness from (weak) politeness."
+    title: "Politeness for The Theory of Algebraic Datatypes"
+    speaker: "Ying Sheng <ying.sheng@stanford.edu>"
+    bio: "Ying is a 2nd year Computer Science PhD student advised by Clark
+    Barrett. She has broad interests and background on Theoretical CS, and has
+    rising interests in automated reasoning and its related fields."
+    food: "TBD"
+
+  - date: "2020-02-27"
+    abstract: "Quantified first-order formulas, often with quantifier
+    alternations, are increasingly used in the verification of complex systems.
+    While automated theorem provers for first-order logic are becoming more
+    robust, invariant inference tools that handle quantifiers are currently
+    restricted to purely universal formulas. We define and analyze first-order
+    quantified separators and their application to inferring invariants with
+    quantifier alternations. A separator for a given set of positively and
+    negatively labeled models is a formula that satisfies positive models and
+    does not satisfy negative models. We investigate the problem of finding a
+    separator from the class of formulas in prenex normal form with a bounded
+    number of quantifiers and show this problem is NP-complete by reduction
+    from SAT. We also give a practical separation algorithm via reduction to
+    SAT, which we use to demonstrate the first invariant inference procedure
+    able to infer invariants with quantifier alternations."
+    title: "First Order Separation and its Application to Invariant Inference"
+    speaker: "Jason Koenig <jrkoenig@stanford.edu>"
+    bio: "Jason Koenig is a sixth year student advised by Alex Aiken."
+    food: "Scott Viteri <scottviteri@gmail.com>"
+
+  - date: "2020-03-05"
+    abstract: "Developers spend a significant amount of their time fixing bugs.
+    Fixes often are repetitive, so it appears that some portion of this work
+    should be automated. Indeed, some recent approaches offer automation, but
+    these typically explore a large space of potential fixes by making varying
+    combinations of mutations, trying them all until one that passes the test
+    suite. This is not only computationally expensive, but the suggested may
+    not look natural to a developer. We present Getafix, a tool that offers
+    readable bug fixes without requiring massive computational resources.
+    Getafix learns from your bug fix history. It extracts past code changes
+    that fixed bugs and learns, in an off-line phase, a set of templates from
+    those fixes. As new bug reports appear, Getafix uses these templates to
+    create and rank a set of suggestions in mere seconds, as well as offer
+    fixes that resemble human-made fixes. At Facebook, Getafix has been used to
+    auto-fix bugs reported by static analysis tools like Infer."
+    title: "Getafix - Learning to Fix Bugs Automatically"
+    speaker: "Johannes Bader <jobader@fb.com>"
+    bio: "Johannes is a software engineer at Facebook. He works on the Getafix
+    project, which attempts to automate predictable engineering work by finding
+    patterns in human code changes. He received his MS in computer science from
+    Karlsruhe Institute of Technology in 2016 and wrote his thesis on gradual
+    program verification with Jonathan Aldrich at Carnegie Mellon University."
+    food: "TBD"
+
+  - date: "2020-03-12"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "TBD"
+    bio: "TBD"
+    food: "TBD"
+
+
+y19_fall:
+
+  location: "Gates 415"
+  year: "2019"
+  quarter: "fall"
+  talks:
+
+  - date: "2019-09-26"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: "Andres Noetzli"
+
+  - date: "2019-10-03"
+    abstract: "Deep Neural Networks (DNNs) are revolutionizing the software development world. However, we still can't predict when and why a DNN might fail. Applying formal verification to DNNs is a novel approach that can give us the confidence of using DNNs in critical tasks. Verification of DNNs is an active field, but most work to date has focused on feed-forward DNNs, while ignoring recurrent neural networks (RNNs), which are widely used for many tasks. We will present a new novel approach that is based on invariants."
+    title: "Verification of Recurrent Neural Networks"
+    speaker: "Yuval Jacoby <yuval.jacoby@mail.huji.ac.il>"
+    bio: "Yuval is a master's student from Hebrew University of Jerusalem, under the supervision of Dr. Guy Katz. He is visiting Clark's group for a couple of months working on extending Marabou, a Neural Network verification tool."
+    food: "TBD"
+
+  - date: "2019-10-10"
+    abstract: "At Google we have found tens of thousands of security and robustness bugs by fuzzing C and C++ libraries. To fuzz a library, a fuzzer requires a fuzz driver—which exercises some library code—to which it can pass inputs. Unfortunately, writing fuzz drivers remains a primarily manual exercise, a major hindrance to the widespread adoption of fuzzing. In this paper, we address this major hindrance by introducing the Fudge system for automated fuzz driver generation. Fudge automatically generates fuzz driver candidates for libraries based on existing client code. We have used Fudge to generate thousands of new drivers for a wide variety of libraries. Each generated driver includes a synthesized C/C++ program and a corresponding build script, and is automatically analyzed for quality. Developers have integrated over 200 of these generated drivers into continuous fuzzing services and have committed to address reported security bugs. Further, several of these fuzz drivers have been upstreamed to open source projects and integrated into the OSS-Fuzz fuzzing infrastructure. Running these fuzz drivers has resulted in over 150 bug fixes, including the elimination of numerous exploitable security vulnerabilities.
+
+The talk is based on work published at FSE 2019 (Best Paper Award)."
+    title: "FUDGE: Fuzz Driver Generation at Scale"
+    speaker: "Tim King"
+    bio: "Tim King is a Senior Software Engineer at Google. Tim's interests cover the spectrum of automated software analysis techniques from static analysis to fuzzing. He is an author of the CVC4 Satisfiability Modulo Theories solver and did his PhD at NYU advised by Clark Barrett."
+    food: "Sergio Benitez <sbenitez@stanford.edu>"
+
+  - date: "2019-10-17"
+    abstract: "
+Circuit design is in the heart of modern computing. Algorithms based on
+satisfiability have application in functional circuit design, layout,
+technology mapping, and various optimization techniques. Many problems in
+digital design, though, belong to higher classes in the computational
+hierarchy. Encoding those as satisfiability problems is often cumbersome.
+
+In this talk we will discuss a class of algorithms that solve problems from
+digital design by constructing and solving Quantified Boolean Formulas. These
+encodings are intuitive and can help the designer invent novel circuits. The
+algorithms we discuss are generic and have use both in design and optimization.
+
+The designs computed by our algorithms are compositions of function types
+specified in component libraries. Our algorithms reduce the design problem to
+quantified satisfiability and use advanced solvers to find solutions that
+represent useful systems.
+
+The algorithms we present in this talk are sound and complete and are
+guaranteed to discover correct designs of optimal size, if they exist.  We
+apply our method to the design of digital circuits and discover new and more
+optimal classical and quantum circuits for common arithmetic functions such as
+addition and multiplication.
+
+The performance of our algorithms is evaluated through extensive
+experimentation. We have first created a benchmark consisting of specifications
+of scalable synthetic digital circuits and real-world microchips. We have then
+generated multiple circuits functionally equivalent to the ones in the
+benchmark.
+
+Our approach generalizes circuit optimization. It uses arbitrary component
+libraries and has applications to areas such as digital circuit design,
+diagnostics, abductive reasoning, test vector generation, and combinatorial
+optimization."
+    title: "Toward Fully-Automated Digital Design"
+    speaker: "Alex Feldman"
+    bio: "
+Alexander Feldman is a researcher at PARC (former Xerox PARC). Before that he
+was a postdoc at University College Cork and a visiting researcher at Ecole
+Polytechnique Fédérale de Lausanne (EPFL) and Delft University of Technology.
+He has obtained his Ph.D. (cum laude) in computer science/artificial
+intelligence and M.Sc. (cum laude) in parallel and distributed systems from the
+Delft University of Technology. He has more than 50 publications in leading
+conference proceedings and international journals covering topics from
+artificial intelligence, model-based diagnosis, computer science, and
+engineering.  In cooperation with NASA Ames Research Center and PARC, Alexander
+Feldman has co-organized the International Diagnostic Competitions (DXC).
+Alexander Feldman's interest cover wide spectrum, including topics such as
+model-based diagnosis, automated problem solving, software and hardware design,
+quantum computing, logic design, design of diagnostic space applications,
+digital signal processing, and localization."
+    food: "TBD"
+
+  - date: "2019-10-24"
+    abstract: "
+Existing deep neural network (DNN) frameworks optimize the computation graph of
+a DNN by applying graph transformations manually designed by human experts.
+This approach misses possible graph optimizations and is difficult to scale, as
+new DNN operators are introduced on a regular basis.
+
+We propose TASO, the first DNN computation graph optimizer that automatically
+generates graph substitutions. TASO takes as input a list of operator
+specifications and generates candidate substitutions using the given operators
+as basic building blocks. All generated substitutions are formally verified
+against the operator specifications using an automated theorem prover. To
+optimize a given DNN computation graph, TASO performs a cost-based backtracking
+search, applying the substitutions to find an optimized graph, which can be
+directly used by existing DNN frameworks.
+
+Our evaluation on five real-world DNN architectures shows that TASO outperforms
+existing DNN frameworks by up to 2.8×, while requiring significantly less human
+effort. For example, TensorFlow currently contains approximately 53,000 lines
+of manual optimization rules, while the operator specifications needed by TASO
+are only 1,400 lines of code.
+    "
+    title: "TASO: Optimizing Deep Learning Computation with Automatic Generation of Graph Substitutions"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "
+Zhihao Jia is a PhD candidate working with Alex Aiken on building scalable and
+high performance systems to accelerate deep learning computations on modern
+hardware platforms.
+    "
+    food: "Andres Noetzli"
+
+  - date: "2019-10-31"
+    abstract: "As designs grow in size and complexity, design verification
+    becomes one of the most difficult and costly tasks facing design teams.
+    Formal verification techniques offer great promise because of their ability
+    to exhaustively explore design behaviors. However, formal techniques also
+    have a reputation for being labor-intensive and limited to small blocks. Is
+    there any hope for successful application of formal techniques at design
+    scale? We answer this question affirmatively by digging deeper to
+    understand what the real technological issues and opportunities are. First,
+    we look at satisfiability solvers, the engines underlying formal techniques
+    such as model checking. Given the recent innovations in satisfiability
+    solving, we argue that there are many reasons to be optimistic that formal
+    techniques will scale to designs of practical interest. We use our CoSA
+    model checker as a demonstration platform to illustrate how advances in
+    solvers can improve scalability. However, even if solvers become blazingly
+    fast, applying them well is still labor-intensive.  This is because formal
+    tools are only as useful as the properties they are given to prove, which
+    traditionally have required great effort to develop. Symbolic quick error
+    detection (SQED) addresses this issue by using a single, universal property
+    that checks designs automatically. We demonstrate how SQED can
+    automatically find logic bugs in a variety of designs and report on bugs
+    found and efficiency gains realized in academic and industry designs. We
+    also present a generator for an improved SQED module that further reduces
+    the amount of manual effort that has to be spent by the designer."
+    title: "Unlocking the Power of Formal Hardware Verification with CoSA and Symbolic QED"
+    speaker: "Florian Lonsing"
+    bio: "Florian Lonsing is a research scientist in Clark Barrett’s lab in the
+    Computer Science Department at Stanford University. He is working on formal
+    techniques for hardware verification. Prior to joining Stanford, Florian
+    Lonsing’s research was focused on the development of high-performance,
+    award-winning decision procedures for quantified Boolean formulas (QBF) and
+    related theoretical and practical aspects. Between 2012 and 2018 he was a
+    post-doctoral researcher in the Knowledge-Based Systems Group at TU Wien,
+    Vienna, Austria. Florian Lonsing studied computer science at Johannes
+    Kepler University (JKU), Linz, Austria, where he obtained his PhD in 2012
+    (advised by Armin Biere). From 2008 to 2012 he was a research and teaching
+    assistant at JKU at the Institute of Formal Models and Verification."
+    food: "Andrew Wu"
+
+  - date: "2019-11-07"
+    abstract: "Soft failures, e.g., execution failures due to bitflips that are
+    undetectable by error-correcting codes, inevitably occur during
+    long-running applications on extreme-scale parallel systems. Resilience
+    against these failures is necessary. Further, programmers desire the
+    ability to surgically restart specific portions of an application's task
+    graph to overcome such failures. In this talk, we present a resilience
+    framework that addresses these challenges. Our framework allows programmers
+    to specify what should be protected (policy) and our scalable parallel
+    runtime implements this policy automatically (mechanism). We demonstrate
+    the utility of our framework by allowing a suite of Lux applications to
+    successfully complete multi-node multi-GPU executions in the presence of
+    failures with minimal programmer effort."
+    title: "Resilience à la carte: Application-tailored Resilience in Legion"
+    speaker: "Karthik Murthy <ksmurthy@stanford.edu>"
+    bio: "Karthik Murthy is a postdoc with Alex Aiken in the CS department. As
+    a student at Rice University and the University of Texas at Austin, he
+    worked on code generation for distributed memory parallel programming
+    models. At Stanford, he works on a scalable runtime for a task-based
+    parallel programming model called Legion."
+    food: "Oded Padon"
+
+  - date: "2019-11-14"
+    abstract: "Satisfiability Modulo Theories (SMT) is the problem of deciding
+    the satisfiability of a first-order formula with respect to some theory or
+    combination of theories; Verification Modulo Theories (VMT) is the problem
+    of analyzing the reachability for transition systems represented in terms
+    of SMT formulae. In this talk, we will focus on the problems of SMT and VMT
+    over the theories of polynomials over the reals (NRA), over the integers
+    (NIA), and of NRA augmented with transcendental functions (NTA).  We
+    propose a New abstraction-refinement approach called Incremental
+    Linearization. The idea is to abstract nonlinear multiplication and
+    transcendental functions as uninterpreted functions in an abstract domain
+    limited to linear arithmetic with uninterpreted functions. The
+    uninterpreted functions are incrementally axiomatized by means of upper-
+    and lower-bounding piecewise-linear constraints. In the case of
+    transcendental functions, particular care is required to ensure the
+    soundness of the abstraction. The method has been implemented in the
+    MathSAT SMT solver, and in the nuXmv VMT model checker. An extensive
+    experimental evaluation on a wide set of benchmarks from verification and
+    mathematics demonstrates the generality and the effectiveness of our
+    approach."
+    title: "Incremental Linearization for Satisfiability and Verification
+    Modulo Nonlinear Arithmetic and Transcendental Functions"
+    speaker: "Ahmed Irfan <irfan@cs.stanford.edu>"
+    bio: "Ahmed Irfan is a Postdoc working with Prof. Clark Barrett in the
+    Computer Science Department. He did his PhD in Information and
+    Communication Technology, from University of Trento and FBK under the
+    supervision of Alessandro Cimatti, Alberto Griggio, and Roberto Sebastiani.
+    His research interests include SMT Solving, Model Checking of Hardware and
+    Software Systems."
+    food: "Makai Mann <makaim@stanford.edu>"
+
+  - date: "2019-11-21"
+    abstract: "I will summarize recent efforts in machine learning for
+    automated reasoning and the work of the N2Formal research group at Google.
+    Our mission is to build an artificial mathematician, one that can
+    understand natural mathematics found in scientific articles and books, and
+    translate it to formal representations. So far, we have built a machine
+    learning environment based on the interactive theorem prover HOL Light and
+    a neural theorem prover called DeepHOL. Given a statement to prove, DeepHOL
+    automatically selects appropriate premises and tactics, just like a human
+    mathematician would. Training DeepHOL using imitation and reinforcement
+    learning already achieves state-of-the-art performance in automated
+    reasoning."
+    title: "Deep Learning for Mathematical Reasoning"
+    speaker: "Markus Rabe"
+    bio: "Markus Rabe is a software engineer and researcher at Google Research,
+    where he works on automating mathematical reasoning using deep learning.
+    Before that, Markus was a postdoctoral researcher at UC Berkeley in the
+    group of Sanjit A. Seshia, developing fundamentally new approaches to
+    automated reasoning. Markus wrote his PhD thesis on temporal logics in
+    information flow security at Saarland University under the supervision of
+    Bernd Finkbeiner."
+    food: "Yoni Zohar"
+
+  - date: "2019-12-05"
+    abstract: "Invariant inference techniques reason simultaneously about
+    states and predicates, and it is well-known that these two kinds of
+    reasoning are in some sense dual to each other.  We make this folklore
+    precise, formalizing the first truly primal-dual algorithm for invariant
+    inference. Our primary contributions are the duality formalism itself along
+    with the application to developing the primal-dual inference algorithm, in
+    which we exploit duality to design an anologue of reachability in inductive
+    proofs that is dual to reachability in states.  We also provide preliminary
+    experiments showing that even an early prototype is able to successfully
+    handle difficult invariant inference examples from the literature."
+    title: "Induction Duality: Invariant Inference as Primal-Dual Search"
+    speaker: "Oded Padon <oded.padon@gmail.com>"
+    bio: "Oded Padon is a postdoc at Stanford University, advised by Prof. Alex
+    Aiken, working on formal methods and programming languages research. He did
+    his PhD in Tel Aviv University, advised by Prof. Mooly Sagiv, on
+    verification of distributed algorithms and systems using first-order
+    logic."
+    food: "Scott Viteri"
+
+y19_spring:
+
+  location: "Gates 415"
+  year: "2019"
+  quarter: "spring"
+  talks:
+
+  - date: "2019-04-04"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: "Andrew"
+
+  - date: "2019-04-11"
+    abstract: "The NeuroSAT neural network architecture was introduced for predicting properties of propositional formulae. When trained to predict the satisfiability of toy problems, it was shown to find solutions and unsatisfiable cores on its own. However, the authors saw \"no obvious path\" to using the architecture to improve the state-of-the-art. In this work, we train a simplified NeuroSAT architecture to directly predict the unsatisfiable cores of real problems, and modify several state-of-the art SAT solvers to periodically replace their variable activity scores with NeuroSAT's prediction of how likely the variables are to appear in an unsatisfiable core. The modified MiniSat solves 10% more problems on SAT-COMP 2018 within the standard 5,000 second timeout than the original does. The modified Glucose 4.1 solves 11% more problems than the original, while the modified Z3 solves 6% more. The gains are even greater when the training is specialized for a specific distribution of problems; on a benchmark of hard problems from a scheduling domain, the modified Glucose solves 20% more problems than the original does within a one-hour timeout. Our results demonstrate that NeuroSAT can provide effective guidance to high-performance SAT solvers on real problems."
+    title: "Guiding High-Performance SAT Solvers with Unsat-Core Predictions"
+    speaker: "Daniel Selsam <dselsam@stanford.edu>"
+    bio: "Daniel Selsam is a 5th year Ph.D. student co-advised by Percy Liang and David L. Dill."
+    food: "Yoni"
+
+  - date: "2019-04-18"
+    abstract: "Deep neural networks are revolutionizing the way complex systems are designed. Consequently, there is a pressing need for tools and techniques for network analysis and certification. To help in addressing that need, we present Marabou, a framework for verifying deep neural networks. Marabou is an SMT-based tool that can answer queries about a network's properties by transforming these queries into constraint satisfaction problems. It can accommodate networks with different activation functions and topologies, and it performs high-level reasoning on the network that can curtail the search space and improve performance. It also supports parallel execution to further enhance scalability. Marabou accepts multiple input formats, including protocol buffer files generated by the popular TensorFlow framework for neural networks. We describe the system architecture and main components, evaluate the technique and discuss ongoing work."
+    title: "The Marabou Framework for Verification and Analysis of Deep Neural Networks"
+    speaker: "Aleksandar Zeljic <zeljic@stanford.edu>"
+    bio: "Aleksandar Zeljic is a postdoc in Clark Barrett's group working on  SMT-based techniques to verify properties of neural networks. He earned a PhD in Computer Science from Uppsala University in Sweden for his work on SMT reasoning in the domains of bit-vector and floating-point arithmetic."
+    food: "Jason"
+
+  - date: "2019-04-25"
+    abstract: "Inspired by the extremely successful TRANSFORMER architecture from Natural Language Processing, we propose a novel architecture that extends to source code and its underlying structure induced by the Abstract Syntax Tree representation. This model is able to efficiently compose local and global co-occurrence patterns to achieve deep contextual embeddings of both structural and contextual features of source code. Differently from other approaches in the field of machine learning on source code, we obtained state-of-the-art results on standard prediction tasks (such as VarNaming and MethodNaming) without leveraging any hand-crafted features or augmented representation over the standard AST. We argue that this advancement brings us one step closer to cracking the arduous problem of capturing the semantic similarity of code fragments across different programming languages.
+Joint work with Dylan Bourgeois and Jure Leskovec.
+"
+    title: "Learning Representations of Source Code from Structure & Context"
+    speaker: "Michele Catasta <pirroh@stanford.edu>"
+    bio: "Michele Catasta is an Instructor and Postdoctoral Research Fellow at Stanford University, advised by Prof. Jure Leskovec. His research currently focuses on Machine Learning for Source Code, while his agenda covered different areas of Data Science. He graduated at EPFL with a Ph.D. in Computer Science, and worked also for MIT Media Lab, Google and Yahoo Labs. Before his academic journey, Michele was in the founding team of Sindice.com (back then, the largest Semantic Web search engine) which later evolved into an investigative intelligence platform (now Siren.io)."
+    food: "Makai"
+
+  - date: "2019-05-02"
+    abstract: "Finding inductive invariants is a core problem for formal verification. I will continue my talk from last quarter and discuss an ongoing attempt to attack this problem from a new angle. The talk will be accessible for those who did not attend the previous talk, and will focus on duality inspired invariant search algorithms. This is a work in progress, so discussion and comments will be much appreciated.
+
+The new angle is rooted in the following three related perspectives:
+
+1. Trying to characterize a measure of complexity or learnability for inductive invariants. That is, trying to distinguish between a simple proof by inductionand a complex one (e.g., induction \"width\" or \"depth\" vs. \"length\"), with the hope that a simple proof is also easier to discover. Some inspiration here is taken from learning theory and analysis of Boolean functions, where for example some classes of Boolean functions are known to be learnable in a precise sense (e.g., Fourier-sparse, CDNF, etc.).
+
+2. Exploring a duality between counterexample traces and inductive invariants, and attempting to develop a \"primal-dual\" abstract interpretation algorithm. Viewing a proof by induction as an incremental sequence of \"proof steps\", we'll see there is a way to define a duality between error traces and inductive invariants that makes them appear symmetric. This may be an interesting way to view existing invariant search algorithms such as IC3/PDR, and may suggest new search algorithms. Inspiration here is taken from model checking approaches such as IC3, and from the way DPLL/CDCL performs a \"primal-dual\" search for models and proofs.
+
+3. User interaction in abstract interpretation. Most state of the art automated verification tools do not provide useful information to their users when they fail, i.e., diverge or terminate without either a proof or a counterexample. The above directions may suggest a model for user interaction, where an automated proof search procedure can present useful information to a user, and also receive user guidance, without requiring the user to understand the innerworkings of the tool."
+    title: "Duality and complexity in abstract interpretation and induction"
+    speaker: "Oded Padon <padon@stanford.edu>"
+    bio: "Oded Padon is a postdoc in Stanford University working with Prof. Alex Aiken, working on formal methods and programming languages. He did his PhD in Tel Aviv University, under the supervision of Prof. Mooly Sagiv, working on verification of distributed protocols using first-order logic."
+    food: "Andrew"
+
+  - date: "2019-05-09"
+    abstract: "We define the problem of quantified, first order separability between structures as finding a (possibly) quantified first order formula which is satisfied for a set of positive structures and not satisfied for another set of negative structures. This problem arises naturally in the context of invariant inference, where for example separators of reachable and unsafe states are candidate invariants of the system. We show this problem is NP-complete, by reduction to and from SAT. This reduction leads to a practical algorithm which is successful in inferring most invariants from real protocols, including those that contain mixed universal and existential quantifiers which are not handled by existing techniques. We also give an analysis of failure modes of this algorithm and possible future research directions to mitigate these failures."
+    title: "Separating First Order Structures with Quantified Formula"
+    speaker: "Jason Koenig <jrkoenig@stanford.edu>"
+    bio: "Jason Koenig is a fifth year PhD candidate under Alex Aiken. He works on program synthesis and related areas."
+    food: "Florian"
+
+  - date: "2019-05-16"
+    abstract: "FPGAs can exceed the performance of general-purpose CPUs by several orders of magnitude and offer dramatically lower cost and time to market than ASICs. While the benefits are substantial, programming an FPGA can be an extremely slow process. Trivial programs can take several minutes to compile using a traditional compiler, and complex designs can take hours or longer.  Cascade is a novel solution to this problem, the world's first just-in-time compiler for Verilog. Cascade executes code immediately in a software simulator, and performs compilation in the background. When compilation is finished, the code is moved into hardware, and from the user’s perspective it simply gets faster over time. Cascade's ability to move code back and forth between software and hardware also makes it the first platform to provide generic support for the execution of unsynthesizable Verilog from hardware. The effects are substantial. Cascade encourages more frequent compilation, reduces the time required for developers to produce working hardware designs, and transforms HDL development into something which closely resembles writing JavaScript or Python. It takes the first steps towards bridging the gap between programming software and programming hardware.
+
+In this talk, I will present highlights from our recent ASPLOS paper and current work on using Cascade as a mechanism for supporting general purpose FPGA virtualization."
+    title: "Cascade --- A Just-in-Time Compiler For Verilog"
+    speaker: "Eric Schkufza <eric.schkufza@gmail.com>"
+    bio: "Eric Schkufza is a researcher with the VMware Research Group. He is interested in applying the tools of large-scale data analysis and machine learning to the design of optimizing compilers. His work focuses on the analysis and optimization of low-level machine code, often in the absence of its original source, and most recently in the context of hardware accelerators."
+    food: "Andrew Please order Jing Jing - Eric's request"
+
+  - date: "2019-05-23"
+    abstract: "This paper addresses the problem of verifying the correct usage of API protocols that are expressible in a context-free language. While prior work on typestate analysis has focused on API protocols that are expressible using a finite state automaton, such techniques cannot be used for verifying the correct usage of APIs that require matching calls to a pair of methods, such as the acquire and release functions exposed by a re-entrant lock API. Given a program P using API A and a context-free grammar specification for A, our method checks whether or not P uses A correctly. Our method is based on the paradigm of counterexample-guided abstraction refinement and uses a novel context-free grammar (CFG) abstraction of the program that over-approximates the sequence of API calls that are feasible in P. Our approach essentially reduces the problem of checking correct API usage to an inclusion check between two languages and lazily refines the program's CFG abstraction using nested sequence interpolants.
+
+We have implemented the proposed approach in a tool called CFPChecker and evaluate it in two ways: First, we compare our method against state-of-the-art safety checkers on challenging microbenchmarks by manually instrumenting the program so that the protocol is obeyed iff the instrumented version is safe. Second,  we evaluate our approach on realistic usage scenarios of real-world Java APIs. Our evaluation shows that CFPChecker expands the scope of API protocols that can be automatically verified and that it is expressive enough to prove the correct usage of Java APIs in realistic usage scenarios extracted from real-world clients."
+    title: "Verifying Context-Free API Protocols"
+    speaker: "Kostas Ferles <kferles@cs.utexas.edu>"
+    bio: "Kostas Ferles is a 4th year Ph.D. student at the University of Texas at Austin (UT), working under the supervision of Dr. Işıl Dillig. Prior to UT, Kostas received his B.Sc. and M.Sc. from the University of Athens (Greece) where he worked as a research assistant with Dr. Yannnis Smaragdakis."
+    food: "Andres"
+
+  - date: "2019-05-30"
+    abstract: "Current deep learning frameworks optimize the computation graph of a deep neural network (DNN) by using graph transformations manually designed by human experts. This approach misses many possible graph optimizations and is difficult to scale, as new DNN operators are introduced on a regular basis. We propose XFlow, the first DNN computation graph optimizer that automatically generates graph substitutions. XFlow takes as input a list of operator specifications and automatically generates candidate graph substitutions using the given operators as basic building blocks. All generated graph substitutions are formally verified against the operator specifications using an automated theorem prover. To optimize a given DNN computation graph, XFlow performs a cost-based search, applying the graph substitutions to find an optimized computation graph, which can be then used by existing DNN frameworks. Our evaluation shows that XFlow outperforms existing frameworks by up to 3x, while requiring significantly less human effort. For example, TensorFlow currently contains 30,000 lines of manual optimization rules, while the operator specifications needed by XFlow are only 800 lines of code."
+    title: "Optimizing Deep Learning Computation with Automatic Generation of Graph Substitutions"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a PhD candidate working with Alex Aiken on building automated and high performance systems to accelerate deep learning computation."
+    food: ""
+
+  - date: "2019-06-06"
+    abstract: "Machine learning has revolutionized our ability to solve challenging software problems involving perceptual inputs such as images, videos, and natural language. However, research has focused on developing learned components such as deep neural networks in isolation; as a consequence, integrating learned components into software systems largely remains an ad hoc process. In this talk, I will first introduce SkyQuery, a programming language that users can use to query video feeds from a fleet of small drones. In a case study on traffic analysis, we show how the user can write queries to identify car parking patterns or monitor pedestrian behavior. Furthermore, I will describe a number of design challenges that have arisen that we are working on addressing, including safe learning-based control, uncertainty quantification, and interactive query synthesis."
+    title: "Towards Programmable Intelligence"
+    speaker: "Osbert Bastani <obastani@seas.upenn.edu>"
+    bio: "Osbert Bastani is a research assistant professor at the University of Pennsylvania. He is broadly interested in research at the intersection of machine learning and programming languages, and is currently working on trustworthy machine learning and reliable machine learning systems."
+    food: ""
+
+  - date: "2019-06-13"
+    abstract: "Many state-of-the-art Satisfiability Modulo Theories (SMT) solvers for the theory of fixed-size bit-vectors employ an approach called bit-blasting, where a given formula is translated into a Boolean satisfibility (SAT) problem and delegated to a SAT solver. Consequently, producing bit-vector proofs in an SMT solver requires incorporating SAT proofs into its proof infrastructure. In this paper, we describe three approaches for integrating DRAT proofs generated by an off-the-shelf SAT solver into the proof infrastructure of the SMT solver CVC4 and explore their strengths and weaknesses. We implemented all three approaches uing CryptoMiniSat as the SAT back-end for its bit-blasting engine and evaluated performance in terms of proof-production and proof-checking."
+    title: "DRAT-based Bit-Vector Proofs in CVC4"
+    speaker: "Alex Ozdemir <aozdemir@stanford.edu>"
+    bio: "Alex Ozdemir is a first-year Phd. student in Computer Science at Stanford. His research interests span theoretical computer science and computer systems."
+    food: ""
+
+y19_winter:
+
+  location: "Gates 415"
+  year: "2019"
+  quarter: "winter"
+  talks:
+
+  - date: "2019-01-10"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2019-01-17"
+    abstract: "I am a Research Scientist at Facebook.  Before joining Facebook, I worked at Microsoft Azure and Microsoft Research.  I am interested in building secure distributed systems through appropriate and comprehensive application of advanced programming machinery---languages, runtimes, and (testing and verification) tools.  In this brief lunch talk, I will present an overview of two research projects I have focused on for the last decade.  The first project is a domain-specific programming framework for developing safe and reliable concurrent asynchronous programs (https://github.com/p-org/P). The second project is a program verifier that aids the construction of a correct concurrent program by attempting to derive it via stepwise refinement from an abstract atomic action that is obviously correct because it does nothing (http://pub.ist.ac.at/~bkragl/papers/cav2018-slides.pdf).  The goal of this talk is to introduce myself and my team at Facebook to you in the hope that some of you will become future collaborators and colleagues."
+    title: "An introduction to Shaz Qadeer and his attempts to reason about concurrent systems"
+    speaker: "Shaz Qadeer <shaz@fb.com>"
+    bio: ""
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2019-01-24"
+    abstract: "Scenario-based programming (SBP), also termed behavioral programming, is an emerging approach for
+      creating executable specifications for reactive systems where each artifact is a scenario that specifies a
+      separate aspect of overall system behavior. Each scenario declares desired and undesired reactions to
+      certain events and conditions or sequences thereof. New and refined requirements are often
+      implemented incrementally using new scenarios, with little or no change to existing ones. The full
+      system behavior emerges from parallel coordinated execution of all scenarios. SBP advantages include
+      structural alignment with requirements, intuitiveness, incrementality, succinctness of expression, and
+      amenability to formal analysis and verification. First introduced with the visual language of live sequence
+      charts (LSC) by Harel, Damm and Marelly, SBP principles are language independent, and are available
+      also in many other languages and formalisms, including Java, C++, JavaScript, Erlang, certain DSLs,
+      statecharts, and more. SBP executable specifications can serve in models for simulation and analysis,
+      already at the earliest stages of system development, as well as in the final running code of system
+      components. In this talk I will introduce the principles of scenario-based programming, and describe
+      recent research results. As time permits I will touch upon our current research into the wise computing
+      vision, where we try to automate unique engineering skills that are used in tasks that presently are
+      carried out only by human experts. This capability can enable earlier discovery of certain flaws in
+      requirements specifications and in system design."
+    title: "Incremental, Intuitive, Formally-Analyzable Software Development with Scenario-Based Programming"
+    speaker: "Assaf Marron <Assaf.Marron@weizmann.ac.il>"
+    bio: "Dr. Assaf Marron is a researcher in the group of David Harel, at the Weizmann Institute of Science,
+      department of Computer Science and Applied Mathematics. His current research interests include
+      scenario-based programming, machine learning and information visualization. Assaf holds a PhD in
+      computer science from the University of Houston. He worked for many years in senior management and
+      technical roles in the research and development of innovative products and technologies at leading
+      companies including IBM and BMC Software. He is the inventor or co-inventor of several patents. For
+      more information see his web page."
+    food: "Manolis Papadakis <mpapadak@stanford.edu>"
+
+  - date: "2019-01-31"
+    abstract: "Graph Neural Networks (GNNs) have revolutionized machine learning on graphs. GNNs are based on repeated aggregations of information across node’s neighbors, and because many neighbors are shared between different nodes, this leads to many repeated and inefficient computations. We propose HAG, a new GNN graph representation that explicitly avoids repeated computations by managing intermediate aggregation results hierarchically, which reduces redundant operations and eliminates unnecessary data transfers in GNN training. We introduce a cost model to quantitatively evaluate the runtime performance of different HAGs and use a novel HAG search algorithm to find optimized HAGs and provide strong theoretical guarantees. Experiments show that the HAG representation significantly outperforms the standard GNN graph representation by increasing the end-to-end training throughput by up to 2.8× and reducing the aggregations and data transfers in GNN training by up to 6.3× and 5.6×, while maintaining the original model accuracy."
+    title: "Redundancy-Free Computation Graphs for Graph Neural Networks"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a PhD candidate working with Alex Aiken on designing efficient and high performance systems for deep learning."
+    food: "Karthik Murthy <ksmurthy@stanford.edu>"
+
+  - date: "2019-02-07"
+    abstract: "Efficient deep neural networks are playing an increasingly more important role in the age of AIoT (AI + IoT), in which people hope to deploy intelligent sensors and systems at scale.  Many applications require deploying neural networks to embedded processors or dedicated accelerators with limited computational capacity. However, optimizing neural networks for high accuracy and efficiency on target devices is difficult due to the vast design space and high computational cost of training neural networks. In this talk, we discuss our recent works addressing this challenge: 1) we introduce DNAS, a differentiable algorithm for hardware-aware neural architecture search. While the search cost is two-orders-of-magnitude lower than previous works, models searched by DNAS surpass the state-of-the-art models designed manually and automatically. 2) Synetgy,  through co-design of neural nets and FPGA accelerators, our work achieves 16.9x speedup compared with the previous state-of-the-art."
+    title: "The search for efficient neural networks for the edge"
+    speaker: "Bichen Wu <bichen@berkeley.edu>"
+    bio: "Bichen Wu is a Ph.D. candidate at EECS, UC Berkeley. He works with Prof. Kurt Keutzer, and he is affiliated with Berkeley AI Research (BAIR) and Berkeley Deep Drive (BDD). His research focus is on efficient deep learning, computer vision, and autonomous driving."
+    food: "Zhihao Jia <zhihao@cs.stanford.edu>"
+
+  - date: "2019-02-14"
+    abstract: "Although data partitioning is required to enable data parallelism on distributed memory systems, data partitions are not first class objects in most distributed programming models. Thus, auto-parallelizers targeting these programming models end up hard-coding a particular partitioning strategy in the parallelized output. As a result, auto-parallelized programs are often not easily configured and composed. Proving that an auto-parallelized program is semantically equivalent to the original program is also difficult as it falls back to a whole-program equivalence proof. We present a partition driven approach to auto-parallelization. The auto-parallelizer in our approach transforms a sequential program into a parallelized form using first-class partitions and infers constraints that those partitions must satisfy to preserve the original semantics. Inferred constraints can be satisfied by auto-generated partitions or those provided by the programmer. We demonstrate that our auto-parallelizer can produce programs that are composable and yet have scalability comparable to hand-optimized programs."
+    title: "Partition Driven Auto-Parallelization"
+    speaker: "Wonchan Lee <wonchan@stanford.edu>"
+    bio: "Wonchan is a PhD student at Stanford advised by Alex Aiken. His research interest is programming language theory for high-performance computing."
+    food: "Jason Koenig <jrkoenig@stanford.edu>"
+
+  - date: "2019-02-21"
+    abstract: "Syntax-guided synthesis (SyGuS) is a recent standard for program synthesis,
+      successfully used for a number of applications in formal verification and
+      programming languages. Most SyGuS solvers use a satisfiability modulo theories
+      (SMT) to check potential solutions. CVC4 is an SMT solver that can itself act as
+      an efficient synthesizer. It won four out of five tracks in the annual SyGuS
+      competition last year.
+
+      In this talk, I am giving a brief introduction to the SyGuS format and highlight
+      some applications. Then, I’ll present different techniques that we use in CVC4
+      to solve SyGuS problems efficiently. The emphasis will be on the different
+      strategies that CVC4 uses to enumerate candidate solutions and how it chooses
+      between them."
+    title: "Syntax-Guided Synthesis in CVC4"
+    speaker: "Andres Nötzli <noetzli@stanford.edu>"
+    bio: "Andres Nötzli is a fourth year PhD student in the Computer Science Department at
+      Stanford University, advised by Prof. Clark Barrett. He works on the theory of
+      strings, preprocessing, and SyGuS in CVC4."
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2019-02-28"
+    abstract: "We consider the problem of solving floating-point constraints obtained from software verification. We present UppSAT - a new implementation of a systematic approximation refinement framework as an abstract SMT solver. Provided with an approximation and a decision procedure (implemented in an off-the-shelf SMT solver), UppSAT yields an approximating SMT solver. Additionally, UppSAT includes a library of predefined approximation components which can be combined and extended to define new encodings, orderings and solving strategies. We propose that UppSAT can be used as a sandbox for easy and flexible exploration of new approximations. To substantiate this, we explore several approximations of floating-point arithmetic into reduced precision floating-point arithmetic, real-arithmetic, and fixed-point arithmetic (encoded into the theory of bit-vectors in practice). In an experimental evaluation we compare performance of approximating solvers obtained by combining various encodings and decision procedures (based on existing, state-of-the-art SMT solvers for floating-point, real, and bit-vector arithmetic).  "
+    title: "Exploring Approximations for Floating-Point Arithmetic using UppSAT"
+    speaker: "Aleksandar Zeljic <zeljic@stanford.edu>"
+    bio: "Aleksandar Zeljic is a postdoc in Clark Barrett's group working on techniques to verify properties of neural networks. He earned a PhD in Computer Science from Uppsala University in Sweden for work on SMT techniques for reasoning about machine arithmetic."
+    food: "Oded Padon <oded.padon@gmail.com>"
+
+  - date: "2019-03-07"
+    abstract: "Finding inductive invariants is a core problem for formal verification. I will
+      discuss an ongoing attempt to attack this problem from three directions, which
+      also relate to each other. The talk will be about a work in progress, so
+      discussion and suggestions are most welcomed. We'll hopefully discuss the
+      following directions:
+
+
+        1. Trying to characterize a measure of complexity or learnability for inductive
+        invariants. That is, trying to distinguish between a simple proof by induction
+        and a complex one (e.g., induction \"width\" or \"depth\" vs. \"length\"), with the
+        hope that a simple proof is also easier to discover. Some inspiration here is
+        taken from learning theory and analysis of Boolean functions, where for example
+        some classes of Boolean functions are known to be learnable in a precise sense
+        (e.g., Fourier-sparse, CDNF, etc.).
+
+
+        2. Exploring a duality between counterexample traces and inductive invariants,
+        and attempting to develop a \"primal-dual\" abstract interpretation algorithm.
+        Viewing a proof by induction as an incremental sequence of \"proof steps\", we'll
+        see there is a way to define a duality between error traces and inductive
+        invariants that makes them appear symmetric. This may be an interesting way to
+        view existing invariant search algorithms such as IC3/PDR, and may suggest new
+        new search algorithms. Inspiration here is taken from model checking approaches
+        such as IC3, and from the way DPLL/CDCL performs a \"primal-dual\" search for
+        models and proofs.
+
+
+        3. User interaction in abstract interpretation. Most state of the art automated
+        verification tools do not provide useful information to their users when they
+        fail, i.e., diverge or terminate without either a proof or a counterexample. The
+        above directions may suggest a model for user interaction, where an automated
+        proof search procedure can present useful information to a user, and also
+        receive user guidance, without requiring the user to understand the
+        innerworkings of the tool.  "
+    title: "Duality and complexity in abstract interpretation and induction (work in progress)"
+    speaker: "Oded Padon <oded.padon@gmail.com>"
+    bio: "Oded Padon is a postdoc in Stanford University working with Prof. Alex Aiken, working on formal methods and programming languages. He did his PhD in Tel Aviv University, under the supervision of Prof. Mooly Sagiv, working on verification of distributed protocols using first-order logic."
+    food: ""
+
+  - date: "2019-03-14"
+    abstract: "Existing deep learning frameworks optimize the computation graph of a DNN model by performing greedy rule-based graph transformations, which generally only consider transformations that strictly improve runtime performance. We propose relaxed graph substitutions that enable the exploration of complex graph optimizations by relaxing the strict performance improvement constraint, which greatly increases the space of semantically equivalent computation graphs that can be discovered by repeated application of a suitable set of graph transformations. We introduce a backtracking search algorithm over a set of relaxed graph substitutions to find optimized networks and use a flow-based graph split algorithm to recursively split a computation graph into smaller subgraphs to allow efficient search. We implement relaxed graph substitutions in a system called MetaFlow and show that MetaFlow improves the inference and training performance by 1.1-1.6× and 1.1-1.2× respectively over existing deep learning frameworks."
+    title: "Optimizing DNN Computation with Relaxed Graph Substitutions"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a PhD candidate working with Alex Aiken on designing efficient and high performance systems for various deep learning applications."
+    food: "yoni206@gmail.com"
+
+y18_fall:
+
+  location: "Gates 415"
+  year: "2018"
+  quarter: "fall"
+  talks:
+
+  - date: "2018-09-27"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2018-10-04"
+    abstract: "Abstract: We consider the problem of understanding the behavior of program synthesis from input-output examples via stochastic search. We show the distribution of synthesis times is defined by the log-normal and gamma distributions, show why these distributions arise and give an algorithm that exploits this behavior to speed up synthesis by a factor of up to 27x. Our experimental results are obtained using a new program synthesis benchmark distilled from widely used production code."
+    title: "A First Step Towards Understanding Stochastic Synthesis"
+    speaker: "Jason Koenig <jrkoenig@stanford.edu>"
+    bio: "Jason Koenig is a 5th year PhD student advised by Alex Aiken. His research focuses on understanding and improving software synthesis techniques."
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2018-10-11"
+    abstract: "Existing deep learning frameworks generally optimize computation in a DNN model by performing rule-based transformations on its computation graph. This approach depends on human experts to manually design graph transformations and has two limitations. First, existing systems only consider a limited set of commonly used graph transformations and may miss subtle optimizations for particular graphs. Second, this approach can hardly scale when today's DNN models continuously introduce new DNN operators, as optimizing new DNNs requires exploring various combinations of new operators with existing operators.
+
+    To address both limitations, I will talk about MetaFlow, an ongoing research project that aims at optimizing DNN computation with automatically generated graph substitutions. I will first show that it is possible to translate an arbitrary graph substitution to a set of SMT (satisfiability modulo theories) problems and uses a SMT solver to verify the correctness of the substitution. I will also present an efficient backtracking search algorithm to explore a large space of potential computation graphs and find optimized candidates. Our initial results show that MetaFlow improves DNN inference and training performance by up to 1.6x and 1.2x respectively over existing deep learning frameworks.
+    "
+    title: "Optimizing DNN Computation with Automatically Generated Graph Substitutions"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a PhD candidate working with Alex Aiken on high performance computing, distributed systems, and deep learning."
+    food: "Oded Padon <oded.padon@gmail.com>"
+
+  - date: "2018-10-18"
+    abstract: "Various verification techniques for temporal properties transform temporal verification to safety verification. For infinite-state systems, these transformations are inherently imprecise. That is, for some instances, the temporal property holds, but the resulting safety property does not. This paper introduces a mechanism for tackling this imprecision. This mechanism, which we call *temporal prophecy*, is inspired by prophecy variables. Temporal prophecy refines an infinite-state system using first-order linear temporal logic formulas, via a suitable tableau construction. For a specific liveness-to-safety transformation based on first-order logic, we show that using temporal prophecy strictly increases the precision. Furthermore, temporal prophecy leads to robustness of the proof method, which is manifested by a cut elimination theorem. We integrate our approach into the Ivy deductive verification system, and show that it can handle challenging temporal verification examples.
+
+    Practice talk for a paper to be presented in FMCAD 2018.
+    Joint work with: Jochen Hoenicke, Kenneth L. McMillan, Andreas Podelsk, Mooly Sagiv, and Sharon Shoham."
+    title: "Temporal Prophecy for Proving Temporal Properties of Infinite-State Systems"
+    speaker: "Oded Padon <oded.padon@gmail.com>"
+    bio: "Oded Padon is a postdoc in Stanford University working with Prof. Alex Aiken. He did his PhD in Tel Aviv University, under the supervision of Prof. Mooly Sagiv. His research focuses on verification of distributed protocols using first-order logic."
+    food: "Zhihao Jia <zhihao@cs.stanford.edu>"
+
+  - date: "2018-10-25"
+    abstract: "In this talk I will present our recent successful integration of various techniques from the Artificial Intelligence (AI) literature into the software debugging and testing process.
+
+    First, we show how data that is already stored by industry standard software engineering tools can be used to learn a fault prediction model able to predict accurate the software components that are likely to contain bugs. This allows focusing testing efforts on such error-prone components.
+
+    Then, we show how this learned fault prediction model can be used to augment existing software diagnosis algorithms, providing a better understanding of which software components need to be replaced to correct an observed bug. Moreover, for the case where further tests are needed to identify the faulty software component, we present a test-planning algorithm based on Markov Decision Processes (MDP). Importantly, the presented approach for considering both a fault prediction model, learned from past failures, and a diagnosis algorithm that is model-based, is general, and can be applied to other fields, beyond software troubleshooting. If time permits, I will also show more recent work in which we extended our software diagnosis approach to diagnose system exploits and vulnerabilities."
+    title: "AI-driven software quality assurance"
+    speaker: "Roni Stern <sternron@post.bgu.ac.il>"
+    bio: "Roni Stern is a senior lecturer in Ben Gurion University (BGU) in the department of software and information systems engineering (SISE). He received his Ph.D in 2013 from BGU, M.Sc. from Bar Ilan University, and was a post-doctoral fellow at Harvard university. His main research interests are heuristic search, automated diagnosis, and automated single- and multi-agent planning. Currently, he serves the president of Symposium on Combinatorial Search (SoCS)."
+    food: "Jason Koenig <jrkoenig@stanford.edu>"
+
+  - date: "2018-11-01"
+    abstract: "Programmers often write code that is similar to existing code written somewhere. A tool that could help programmers to search such similar code would be immensely useful. Such a tool could enable programmers to find idiomatic code patterns, cross-check against similar code, and discover extensions to partially written code that would avoid common mistakes and errors. We describe Aroma, a tool and technique for creating code recommendation via structural code search. Aroma indexes a huge code corpus, takes a partial code snippet as input, and returns a set of “code recommendations” – succinct code snippets created from a cluster of similar code fragments containing the query code snippet. This is joint work with Di Yang, Koushik Sen and Satish Chandra carried out at Facebook."
+    title: "Aroma – Code Recommendation via Structural Code Search"
+    speaker: "Frank Luan <lsf@fb.com>"
+    bio: "Frank Luan is a software engineer at Facebook. His work at Facebook is building “Big Code” tools – developer assistant tools that leverage the immense amount of code existing in both Facebook and the open-source world. Frank received a bachelor’s degree in computer science and statistics from the University of Chicago."
+    food: "Sierra Kaplan-Nelson <sierrakn@stanford.edu>"
+
+  - date: "2018-11-08"
+    abstract: "Many recent programming systems for both supercomputing and data center workloads generate task graphs to express computations that run on parallel and distributed machines. Due to the overhead associated with constructing these graphs the dependence analysis that generates them is often statically computed and memoized, and the resulting graph executed repeatedly at runtime. However, many applications require a dynamic dependence analysis due to data dependent behavior, but there are new challenges in capturing and re- executing task graphs at runtime. In this work, we introduce dynamic tracing, a technique to capture a dynamic dependence analysis of a trace that generates a task graph, and replay it. We show that an implementation of dynamic tracing improves strong scaling by an average of 4.9X and up to 7.0X on a suite of already optimized benchmarks."
+    title: "Dynamic Tracing: Memoization of Task Graphs for Dynamic Task-Based Runtimes"
+    speaker: "Wonchan Lee <wonchan@stanford.edu>"
+    bio: "Wonchan is a PhD student at Stanford advised by Alex Aiken. His research interest is programming language theory for high-performance computing."
+    food: "Karthik Murthy <ksmurthy@stanford.edu>"
+
+  - date: "2018-11-15"
+    abstract: "No lunch this week."
+    title: "None"
+    speaker: "N/A"
+    bio: ""
+    food: ""
+
+  - date: "2018-11-22"
+    abstract: ""
+    title: "Thanksgiving - No Lunch"
+    speaker: "N/A"
+    bio: ""
+    food: ""
+
+  - date: "2018-11-29"
+    abstract: "We introduce a robust semantics-driven technique for program equivalence checking. Given two functions we find a trace alignment over a set of concrete executions of both programs and construct a product program particularly amenable to checking equivalence.
+
+      We demonstrate that our algorithm is applicable to challenging equivalence problems beyond the scope of existing techniques. For example, we verify the correctness of the hand-optimized vector implementation of strlen that ships as part of the GNU C Library, as well as the correctness of vectorization optimizations for 56 benchmarks derived from the Test Suite for Vectorizing Compilers.
+      "
+    title: "Semantic Program Alignment  for Equivalence Checking"
+    speaker: "Berkeley Churchill <berkc@stanford.edu>"
+    bio: "Berkeley Churchill is a 7th year PhD student in Alex Aiken's lab."
+    food: "Oded Padon <oded.padon@gmail.com>"
+
+  - date: "2018-12-06"
+    abstract: "Algorithmic Improvisation is a framework for automatically synthesizing systems with random but controllable behavior. It can be used in a wide variety of applications where randomness can provide variety, robustness, or unpredictability but safety guarantees or other properties must be ensured. These include software fuzz testing, robotic surveillance, machine music improvisation, randomized control of systems mimicking human behavior, and generation of synthetic data sets to train and test machine learning algorithms. In this talk, I will discuss both the theory of algorithmic improvisation and its practical applications. I will define the underlying formal language-theoretic problem, “control improvisation”, analyze its complexity and give efficient algorithms to solve it. I will describe in detail two applications: planning randomized patrol routes for surveillance robots, and generating random scenes of traffic to improve the reliability of neural networks used for autonomous driving. The latter application involves the design of a domain-specific probabilistic programming language to specify traffic and other scenarios.
+      "
+    title: "Algorithmic Improvisation"
+    speaker: "Daniel Fremont <dfremont@berkeley.edu>"
+    bio: "Daniel Fremont is a PhD student in the Group in Logic and the Methodology of Science at UC Berkeley, working with Sanjit Seshia. He received a B.S. degree in Mathematics and Physics from MIT in 2013. His research is generally in the area of formal methods, focusing on the problems of counting and uniform generation of solutions to Boolean formulas. This includes developing practical algorithms to solve these problems, as well as finding new applications to the construction, verification, and testing of software, hardware, and cyber-physical systems."
+    food: "Sumith Kulal <sumith1896@gmail.com>"
+
+  - date: "2018-12-13"
+    abstract: "Dynamic task graphs are used by language runtimes to achieve high parallel performance efficiency. In this talk, we highlight the need for these runtimes to deploy reboot-able dynamic task graphs. We propose a design to achieve reboot-ability, and we present preliminary performance results for an implementation of the same design in the Legion parallel programming model. Additionally, we discuss several applications of this design in achieving resilience, supporting speculation, varying the mapping decisions for tasks, and achieving task variability using LLVM-Polly."
+    title: "Deploying Reboot-able Dynamic Task Graphs"
+    speaker: "Karthik Murthy <ksmurthy@stanford.edu>"
+    bio: "Karthik Murthy is a postdoc with Alex Aiken in the CS department. He spent several wonderful years at Rice and Austin working on code generation for distributed memory models, specifically on the compiler side. He is now at Stanford crossing the software bridge to work on the runtime-side of parallel languages."
+    food: "Todd Warszawski <twarszaw@stanford.ed>"
+
+y18_summer:
+  summer: true
+
+y18_spring:
+
+  location: "Gates 415"
+  year: "2018"
+  quarter: "spring"
+  talks:
+
+  - date: "2018-04-05"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2018-04-12"
+    abstract: "With the decline and eventual end of historical rates of lithographic scaling, we arrive at a crossroad where synergistic and holistic decisions are required to preserve performance over power scaling in digital computing. Numerous technologies are emerging with this exact aim, from devices (transistors), memories, 3D integration, specialization, photonics, and others. With so many emerging technologies, the landscape of computer architecture in the 10-15 year time frame may be radically different. This talk will present an overview of potential game-changing technologies, and will then move to a discussion of what this means to the software and how to start preparing for the future now."
+    title: "Upcoming hardware changes in the \\\"post Moore\\\" world and how to prepare"
+    speaker: "Georgios Michelogiannakis <mixelogj13@yahoo.co.uk>"
+    bio: "Dr. George Michelogiannakis is a research scientist in the computer architecture group (CAG) in the computational research division (CRD). He has extensive work on networking (both off- and on-chip) and computer architecture. His latest work focuses on the post Moore's law era looking into specialization, emerging devices (transistors), memories, photonics, and 3D integration. He is also currently working on optics and architecture for HPC and datacenter networks."
+    food: "Yoni Zohar <yoni206@gmail.com>"
+
+  - date: "2018-04-19"
+    abstract: "Software reliability is critical and challenging, for which program analysis offers a principled methodology. However, developing practical program analyses that are scalable and precise is difficult, both conceptually and engineering-wise. This talk highlights two lines of my research that significantly advance the state-of-the-art of program analysis.  First, I will present a new reachability-based analysis framework and asymptotically faster algorithms that drastically outperform existing frameworks/algorithms in both speed and precision. The popular LLVM compiler infrastructure has adopted the techniques for fast, precise alias analysis. Second, I will describe a principled, scalable program enumeration framework for rigorous compiler testing. This work has led to 300+ confirmed/fixed bugs in important production/research compilers (such as GCC/LLVM/CompCert, Scala, and Rust) and enjoyed wide public acknowledgments from the compiler developer community. I will conclude the talk by discussing my research vision and plan for building reliable and performant software."
+    title: "Practical Program Analysis: Principles and Techniques"
+    speaker: "Qirun Zhang <helloqirun@gmail.com>"
+    bio: "Qirun Zhang is a postdoctoral fellow at the University of California, Davis, before which he was a postdoctoral fellow at the Hong Kong University of Science and Technology. He received his Ph.D. in Computer Science and Engineering from The Chinese University of Hong Kong and his B.E. in Computer Science from Zhejiang University. His main area of research is programming languages, focusing on program analysis and testing. His work has appeared in top venues (e.g., PLDI, POPL, OOPSLA, and ICSE), and led to new analysis foundations and algorithms, and high-impact practical results."
+    food: "Wonchan Lee <wonchan@stanford.edu>"
+
+  - date: "2018-04-26"
+    abstract: "Industrial software-defined networks (SDNs) like Google's Espresso and VMWare's NSX are written today using general-purpose languages like Java or C/C++ that expose programmers to details of low-level flow tables and control/dataplane synchronization, resulting in large, hard to maintain code bases. We introduce Nerpa, an SDN programming language, which we believe dramatically simplifies real-world SDN development by effectively combining relational and imperative constructs.  A from-scratch implementation of OVN, an open source virtual network, takes ~1000 lines of Nerpa code, 20x less than the native C implementation. Our implementation is modular and extensible, making it easy to add new features with a few lines of code. Nerpa's high-level abstractions perform on par with hand-optimized code.  Nerpa computes an incremental update to a large virtual network with 20,000 virtual machines in one millisecond; the native OVN implementation takes 17 seconds for an equivalent computation."
+    title: "Nerpa: Concise, Modular Programming of Industrial SDNs"
+    speaker: "Leonid Ryzhyk <lryzhyk@vmware.com>"
+    bio: "Leonid Ryzhyk is a senior researcher at VMware Research.  Prior to joining VMware, he got his PhD from the University of New South Wales, worked as researcher at NICTA (2009-2013), a postdoc at the University of Toronto (2013-2014) and at the Carnegie Mellon University (2014-2015), and a researcher at Samsung Research America. The main theme of Leonid's work is applying formal methods to build better operating systems and networks."
+    food: "Zhihao Jia <zhihao@cs.stanford.edu>"
+
+  - date: "2018-05-03"
+    abstract: "Programs operating “close to the metal” necessarily handle memory directly. Because of this, they must be written in languages like C or C++. These languages lack any kind of guarantee on memory or race safety, often leading to security vulnerabilities and unreliable software. Ideally, we would like a practical language that gives programmers direct control over memory and aliasing while also offering race and memory safety guarantees.
+
+    This talk describes Metal, our formally specified Rust-based language that enjoys memory-safe and race-free references through ownership and restricted aliasing in the type system. Metal's type system models references and ownership as capabilities, where bindings have indirect capabilities on value locations.  Syntactically, Metal is a strict subset of Rust. Semantically, Metal can track locations, and thus capabilities, with greater precision and thus accepts a wider range of safe programs in its syntactic subset. On the other hand, Metal lacks Rust’s region-based “lifetimes”, leading to coarser grained capability restoration. A small subset of the syntax, semantics, and type system of Metal are presented, as well as a comparison between Metal and Rust and speculative extensions to Metal and Rust that allow greater flexibility in single threaded programs.
+    "
+    title: "Not Given"
+    speaker: "Sergio Benitez <sbenitez@stanford.edu>"
+    bio: "Sergio is a fourth-year PhD student at Stanford. His research focuses on converging research in systems, formal veriﬁcation, programming languages, and security to create secure, usable, and performant systems. Before Stanford, Sergio spent time working at Google, Apple, and SpaceX where he worked on projects ranging from designing anomaly detection algorithms to tuning the performance of operating systems running on rockets and other spacecraft."
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2018-05-10"
+    abstract: "Deep learning has led to breakthroughs in various application areas; it also starts to find exciting applications in software development, a key mission of Computer Science.  Through cross-disciplinary research in machine learning, programming languages and software engineering, my goal is to develop practical deep learning-powered techniques and tools to significantly advance the state-of-the-art science and practice of software development.  This talk highlights my research in this direction that bridges deep learning and program analysis. In particular, I will present my “Search, Align, and Repair” data-driven framework (SARFGEN) for generating instant, precise and complex fixes for MOOC-scale introductory programming exercises, which has been in production use in the Microsoft-DEV204.1X and Microsoft-DEV330x class. I will describe SARFGEN’s core algorithms for identifying similar programs, and aligning correct/incorrect programs, and its novel deep neural architecture for discovering minimal repairs. I will conclude the talk by discussing my research vision and plan for developing practical, intelligent software analysis and engineering tools."
+    title: "Data-Driven Program Analysis with Deep Learning"
+    speaker: "Ke Wang <kewangad@gmail.com>"
+    bio: "Ke Wang is a PhD candidate in Computer Science at the University of California, Davis. He obtained his MSc and BSc degrees in Computer Science from Imperial College London and Birmingham City University, respectively. His primary research interests lie in the cross-disciplinary areas of artificial intelligence, deep learning, program languages and education. He was a summer research intern at Microsoft Research Redmond in 2016 and 2017. His research has been published in top venues in artificial intelligence (IJCAI), deep learning (ICLR), and programming languages (PLDI). His work on automated feedback generation for programming exercises has been in production use in the Microsoft C# (Microsoft-DEV204.1X) and Python (Microsoft-DEV330x) edX class, benefiting tens of thousands of online students. He was awarded an Honorable Mention for Outstanding Graduate Research in Computer Science at UC Davis. He also has industrial experience at Facebook and Siemens Corporate Technology/Research."
+    food: "Zhihao Jia <zhihao@cs.stanford.edu>"
+
+  - date: "2018-05-17"
+    abstract: "Data transfers in parallel systems have a significant impact on the performance of applications. Most existing systems generally support only data transfers between memories with a direct hardware connection and have limited facilities for handling transformations to the data’s layout in memory. As a result, to move data between memories that are not directly connected, higher levels of the software stack must explicitly divide a multi-hop transfer into a sequence of single-hop transfers and decide how and where to perform data layout conversions if needed. This approach results in inefficiencies, as the higher levels lack enough information to plan transfers as a whole, while the lower level that does the transfer sees only the individual single-hop requests.
+
+    We present Isometry, a path-based distributed data transfer system. The Isometry path planner selects an efficient path for a transfer and submits it to the Isometry runtime, which is optimized for managing and coordinating the direct data transfers. The Isometry runtime automatically pipelines sequential direct transfers within a path and can incorporate flexible scheduling policies, such as prioritizing one transfer over another. Our evaluation shows that Isometry can speed up data transfers by up to 2.2× and reduce the completion time of high priority transfers by up to 95% compared to the baseline Realm data transfer system. We evaluate Isometry on three benchmarks and show that Isometry reduces transfer time by up to 80% and overall completion time by up to 60%."
+    title: "Isometry: A Path-Based Distributed Data Transfer System"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a PhD candidate working with Alex Aiken on on high performance computing, distributed systems, and deep learning."
+    food: "Manolis Papadakis <mpapadak@stanford.edu>"
+
+  - date: "2018-05-24"
+    abstract: "Callbacks are essential in many programming environments, but drastically complicate program understanding and reasoning because they allow to mutate object’s local states by external objects in unexpected fashions, thus breaking modularity. The famous DAO bug in the cryptocurrency framework Ethereum, employed callbacks to steal $150M. We defne the notion of Effectively Callback Free (ECF) objects in order to allow callbacks without preventing modular reasoning. An object is ECF in a given execution trace if there exists an equivalent execution trace without callbacks to this object. An object is ECF if it is ECF in every possible execution trace. We study the decidability of dynamically checking ECF in a given execution trace and statically checking if an object is ECF. We also show that dynamically checking ECF in Ethereum is feasible and can be done online. By running the history of all execution traces in Ethereum, we were able to verify that virtually all existing contract executions, excluding these of the DAO or of contracts with similar known vulnerabilities, are ECF. Finally, we show that ECF, whether it is verified dynamically or statically, enables modular reasoning about objects with encapsulated state."
+    title: "Online Detection of Effectively Callback Free Objects with Applications to Smart Contracts"
+    speaker: "Mooly Sagiv <mooly.sagiv@gmail.com>"
+    bio: "Mooly Sagiv is a professor in the School of Computer Sciences at Tel-Aviv University and a visiting scholar at Vmware Research Group
+    He is a leading researcher in the area of large scale (inter-procedural) program analysis, and one of the key contributors to shape analysis. His fields of interests include programming languages, compilers, abstract interpretation, profiling, pointer analysis, shape analysis, inter-procedural dataflow analysis, program slicing, and language-based programming environments. Sagiv is a recipient of a 2013 senior ERC research grant for Verifying and Synthesizing Software Composition. Prof.Sagiv served as Member of the Advisory Board of Panaya Inc (Acquired by Infosys). He received best-paper awards at PLDI'11 and PLDI'12  for his work on composing concurrent data structures and a ACM SIGSOFT Retrospective Impact Paper Award (2011) for program slicing. He is an ACM fellow and a recipient of Microsoft Research Outstanding Collaborator Award 2016."
+    food: "Cristian Mattarei <mattarei@stanford.edu>"
+
+  - date: "2018-05-31"
+    abstract: "The computational requirements for training deep neural networks (DNNs) have grown to the point that it is now standard practice to parallelize training. Existing deep learning systems commonly use data or model parallelism, but unfortunately, these strategies often result in suboptimal parallelization performance. In this paper, we define a more comprehensive search space of parallelization strategies for DNNs called SOAP, which includes strategies to parallelize a DNN in the Sample, Operation, Attribute, and Parameter dimensions. We also propose FlexFlow, a deep learning framework that uses guided randomized search of the SOAP space to find a fast parallelization strategy for a specific parallel machine. To accelerate this search, FlexFlow introduces a novel execution simulator that can accurately predict a parallelization strategy’s performance and is three orders of magnitude faster than prior approaches that have to execute each strategy. We evaluate FlexFlow with six real-world DNN benchmarks on two GPU clusters and show that FlexFlow can increase training throughput by up to 3.8x over state-of-the-art approaches, even when including its search time, and also improves scalability."
+    title: "Beyond Data and Model Parallelism for Deep Neural Networks"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a PhD candidate working with Alex Aiken on on high performance computing, distributed systems, and deep learning."
+    food: "Karthik Murthy <ksmurthy@stanford.edu>"
+
+  - date: "2018-06-07"
+    abstract: "This talk will present the design and implementation of p4v, a tool for verifying data planes specified using the P4 programming language. The tool is based on classic techniques but adds several key innovations including a novel mechanism for incorporating assumptions about the control plane, as well as domain-specific optimizations that are necessary to scale to large programs. With just a few hundred lines of control-plane annotations, p4v is able to quickly verify critical safety properties for a variety of real-world programs including switch.p4, a large program that implements all of the functionality found in a modern data center switch.
+
+    Joint work with Jed Liu (Barefoot), Bill Hallahan (Yale), Cole Schlesinger (Barefoot), Milad Sharif (Barefoot), Robert Soulé (Lugano), Han Wang (Barefoot), Calin Cascaval (Barefoot), and Nick McKeown (Stanford)."
+    title: "p4v: Practical Verification for Programmable Data Planes"
+    speaker: "Nate Foster <jnfoster@cs.cornell.edu>"
+    bio: "Nate Foster is an Associate Professor of Computer Science at Cornell University and a Principal Research Engineer at Barefoot Networks. His current work focuses on the design and implementation of languages for programmable networks."
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+y18_winter:
+
+  location: "Gates 415"
+  year: "2018"
+  quarter: "winter"
+  talks:
+
+  - date: "2018-01-11"
+    speaker: ""
+    food: "Stefan Heule <sheule@cs.stanford.edu>"
+    title: "Organizational Lunch"
+    abstract:
+    bio:
+
+  - date: "2018-01-18"
+    abstract: |
+      We describe algorithms for symbolic reasoning about executable models of type systems, supporting three queries intended for designers of type systems. First, we check for type soundness bugs and synthesize a counterexample program if such a bug is found. Second, we compare two versions of a type system, synthesizing a program accepted by one but rejected by the other. Third, we minimize the size of synthesized counterexample programs.
+      These algorithms symbolically evaluate typecheckers and interpreters, producing formulas that characterize the set of programs that fail or succeed in the typechecker and the interpreter. However, symbolically evaluating interpreters poses efficiency challenges, which are caused by having to merge execution paths of the various possible input programs. Our main contribution is the Bonsai tree, a novel symbolic representation of programs and program states which addresses these challenges. Bonsai trees encode complex syntactic information in terms of logical constraints, enabling more efficient merging.
+      We implement these algorithms in the BONSAI tool, an assistant for type system designers. We perform case studies on how BONSAI helps test and explore a variety of type systems. BONSAI efficiently synthesizes counterexamples for soundness bugs that have been inaccessible to automatic tools, and is the first automated tool to find a counterexample for the recently discovered Scala soundness bug SI-9633.
+    title: "Bonsai: Synthesis-Based Reasoning for Type Systems"
+    speaker: "Kartik Chandra <kach@stanford.edu>"
+    bio: "Kartik is an undergraduate at Stanford studying computer science. He is interested in CS education and programming language theory, and works on designing solver-aided type system verification tools with the University of Washington’s PLSE lab."
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2018-01-25"
+    abstract: "Writing optimizing compilers remains challenging as modern CPU architectures are incredibly complex and make it difficult to statically determine the performance of a program. Recently stochastic superoptimization has been proposed to randomly search the space of programs, guided by a cost function that estimates the performance of a proposed program during the search. Previous work on superoptimization has used a instruction latency based cost function, which fails to capture many important performance nuances. Instead, we propose a new cost function that runs the program on a test input several times, measuring its actual execution time. We address several technical challenges implementing this apparently simply idea. We find that the new cost function outperforms the latency based estimate on all metrics, sometimes by a wide margin. Perhaps surprisingly, we also show that for some benchmarks, the poorer latency estimate is still able to find programs almost as fast as the ones found by our more sophisticated cost function."
+    title: "Improving Stochastic Search for Program Optimization"
+    speaker: "Stefan Heule <sheule@cs.stanford.edu>"
+    bio: "Stefan Heule is a PhD student at Stanford University advised by Alex Aiken.  His interests include program synthesis, programming languages and their design, software verification, type systems, static analysis, and formal methods in general."
+    food: "Ben Parks <bparks@stanford.edu>"
+
+  - date: "2018-02-01"
+    abstract: "When STOKE is used to synthesize programs from scratch, the search sometimes becomes stuck in places that require two or more moves simultaneously to make progress. To avoid these long pauses, we added a new move type which rewrites a subgraph of the dataflow graph of the current program based on a trigger pattern, producing a large family of context sensitive moves. We find some programs synthesize significantly faster, whereas others substantially slow down. To determine which out of thousands of possible individual moves are responsible for these speedups and slowdowns, we introduce the idea of expected time to completion, assigning blame to moves that change this measure. This gives us a fine-grained look at the effect of moves on the search space. With some refinement to reduce the huge computational cost, we find this identifies a small set of moves for each program that are responsible for the differences with the baseline. This information suggests the balance condition in the theoretical basis for STOKE's search algorithm is damaged by certain moves, and that disabling just these moves will result in speed up some programs while not affecting (rather than slowing down) others."
+    title: "Fine-grain Analysis of STOKE Synthesis"
+    speaker: "Jason Koenig <jrkoenig@stanford.edu>"
+    bio: "Jason is a student of Alex Aiken."
+    food: "Karthik Murthy <ksmurthy@stanford.edu>"
+
+  - date: "2018-02-08"
+    abstract: "Many recent programming systems for both high performance computing and data center workloads generate task graphs to express computations that run on parallel and distributed machines. Due to the overhead associated in constructing these graphs the dependence analysis that generates them is often memoized and the resulting graph replayed. However, the complexity of the hardware and the programming systems can make it difficult to correctly reason about the generation, capture, and re-execution of task graphs. In this work, we introduce dynamic tracing, a formalism for describing how to safely and efficiently capture a trace of a dynamic dependence analysis that generates a task graph, and soundly replay it. We show that an implementation of dynamic tracing embedded in a modern task-based programming system allows already optimized applications to strong scale by an additional 4.9X, and on average 3.8X, at 256 nodes."
+    title: "Dynamic Tracing: Just-In-Time Specialization of Task Graphs for Dynamic Task-based Parallel Runtimes"
+    speaker: "Wonchan Lee <wonchan@stanford.edu>"
+    bio: "Wonchan is a PhD student at Stanford advised by Alex Aiken. His research interest is programming language theory for high-performance computing."
+    food: "James McNamara <jamesscottmcnamara@googlemail.com>"
+
+  - date: "2018-02-15"
+    abstract: "In this talk I will discuss my project during my summer internship at Schlumberger.  This project consisted of two parts: integrating Legion into an existing system and parallelizing the most expensive part of the computation in that system.  First, I will talk about integrating Legion into Schlumberger's reservoir simulator, and discuss key optimizations that were necessary to achieve good performance in this mixed environment.  Next, I will introduce the ILU0 solve, the most expensive part of the computation, and the benefits and drawbacks of the existing parallelization scheme.  This solve is run many times on matrices with different values but the same structure, allowing an efficient parallelization strategy to be reused throughout the computation.  Finally, I will present my approach to parallelize the solver by partitioning the work to minimize the critical path through the computation graph while creating tasks with enough work to hide the analysis overhead."
+    title: "Schlumberger Internship: Parallelizing an ILU0 solver using Legion"
+    speaker: "Todd Warszawski <twarszaw@stanford.edu>"
+    bio: "Todd is currently a PhD student at Stanford advised by Alex Aiken.  His research interests lie in programming languages, compilers, and high performance computing."
+    food: "Berkeley Churchill <berkc@stanford.edu>"
+
+  - date: "2018-02-22"
+    abstract: "Existing cloud computing control planes do not scale to more
+than a few hundred cores, while frameworks without control planes
+scale but take seconds to reschedule a job. We propose an asynchronous
+control plane for cloud computing systems, in which a central
+controller can dynamically reschedule jobs but worker nodes never
+block on communication with the controller.  By decoupling control
+plane traffic from program control flow in this way, an asynchronous
+control plane can scale to run millions of computations per second
+while being able to reschedule computations within milliseconds."
+    title: "A High Performance Cloud Framework Control Plane"
+    speaker: "Hang Qu <quhang@stanford.edu>"
+    bio: "Hang Qu is a PhD studeng at Stanford advised by Philip Levis. His
+research interest is software and graphics systems."
+    food: "Cristian Mattarei <mattarei@stanford.edu>"
+
+  - date: "2018-03-01"
+    abstract: "Equivalence checking -- the problem of formally verifying that two functions are equivalent -- has applications to compiler verification, regression verification and superoptimization.  Data-driven equivalence checkers utilize test cases to learn conjectures about the behavior of two functions and then prove those conjectures with an SMT solver.  However, previous data-driven equivalence checking algorithms have been limited to pairs of functions whose loops execute for the same number of iterations; thus, these algorithms have been unable to verify compiler optimizations such as loop unrolling, loop unpeeling and vectorization.  This talk is on work-in-progress research to extend data-driven equivalence checking techniques to a broader set of problems."
+    title: "Extending Data-Driven Equivalence Checking"
+    speaker: "Berkeley Churchill <berkc@stanford.edu>"
+    bio: "Berkeley Churchill is a 6th year PhD student in Alex Aiken's lab."
+    food: "Andres Nötzli <noetzli@stanford.edu>"
+
+  - date: "2018-03-08"
+    abstract: "Software bugs cost millions of dollars to US economy. Improving software reliability has been one of the primary concerns of Software Engineering (SE) research over decades. Researchers developed different techniques, e.g., new languages, automatic bug finding tools, and code review processes to reduce software defects. However, the adoption of these methods in the real-world is still limited, partly because most of them require a significant amount of manual work from developers and have a steep learning curve. To automate the bug-finding process, in this talk, I will discuss how we can leverage a large number of open source projects collected in software forges like GitHub. Thanks to such rich source of Software Engineering data that has become available to the researchers, we can now learn from common coding mistakes and how to fix them. We can then leverage such data-driven knowledge to build new bug-finding and fixing tools to improve software reliability."
+    title: "Leveraging Big Code to Improve Software Reliability"
+    speaker: "Baishakhi Ray <rayb@virginia.edu>"
+    bio: "Baishakhi Ray is an assistant professor at the University of Virginia. Her research focuses on Software Engineering with emphasis on improving software reliability and security. She analyzes large-scale software repositories to learn on-going software engineering practices. Then, leveraging this data-driven knowledge, she builds novel program analysis techniques and development tools to improve software reliability and programmer productivity. Baishakhi has received Best Paper awards at FSE 2017, MSR 2017, IEEE Symposium on Security and Privacy (Oakland), 2014.  Her research has also been published in CACM Research Highlights and has been widely covered in trade media."
+    food: "Makai Mann <makaim@stanford.edu>"
+
+  - date: "2018-03-15"
+    abstract: "With the rise of programmable network switches, network infrastructure is becoming more flexible and more capable than ever before. Programming languages such as P4 lower the barrier for changing the inner workings of network switches and offer a uniform experience across different devices. However, this programmability also brings the risk of introducing hard-to-catch bugs at a level that was previously covered by well-tested devices with a fixed set of capabilities. Subtle discrepancies between different implementations pose a risk of introducing bugs at a layer that is opaque to the user. To reap the benefit of programmable hardware and keep---or improve upon---the reliability of traditional approaches, new tools are needed. This talk is about p4pktgen, a tool for automatically generating test cases for P4 programs using symbolic execution. These test cases can be used to validate that P4 programs act as intended on a device."
+    title: "p4pktgen: Automated Test Case Generation for P4 Programs"
+    speaker: "Andres Nötzli <noetzli@stanford.edu>"
+    bio: "Andres Nötzli is a fourth year PhD student in the Computer Science Department at Stanford University, advised by Prof. Clark Barrett. His interests include SMT, compilers, bug-finding, and databases."
+    food: "Stefan Heule <sheule@stanford.edu>"
+
+
+y17_fall:
+
+  location: "Gates 415"
+  year: "2017"
+  quarter: "fall"
+  talks:
+
+  - date: "2017-09-28"
+    speaker: ""
+    food: "Stefan Heule <sheule@cs.stanford.edu>"
+    title: "Organizational Lunch"
+    abstract:
+    bio:
+
+  - date: "2017-10-05"
+    abstract: "Previous works in component-based program synthesis have struggled to synthesize loops and other control structures. We present PriMagic, a new approach to component-based synthesis that can synthesize programs from input-output examples using control structures and arbitrary libraries. Our approach combines two main ideas. We mine primitives, obtaining code fragments from partial-successes that are likely to be useful for synthesis. We also use angelic conditions to optimistically evaluate partial programs with unspecified control structure conditions. Empirically, PriMagic can synthesize interesting programs with combinations of control structures within several minutes."
+    title: "PriMagic: Component-Based Synthesis with Control Structures"
+    speaker: "Kensen Shi <kensens@stanford.edu>"
+    bio: "Kensen is a CS coterm student advised by Percy Liang. He worked on the PriMagic project for his senior honors thesis and expanded the project over the past summer."
+    food: "Zhihao Jia <zhihao@cs.stanford.edu>"
+
+  - date: "2017-10-12"
+    abstract: "In this talk I will present Seam, a domain-specific language for describing graph-like data structures and programming local modification operations over them. Based on our preliminary results, programs written in Seam are competitive with hand-written implementations in terms of performance, while being an order of magnitude shorter, easier to maintain and extend, and amenable to static verification. I will focus on the design of our verification method for Seam operations: We leverage an SMT solver to verify that operations are memory-safe and maintain referential integrity and user-specified invariants. Our verification method is sound and precise (complete modulo termination of the SMT solver)."
+    title: "Seam: Provably Safe Local Edits on Graphs"
+    speaker: "Manolis Papadakis <mpapadak@stanford.edu>"
+    bio: "Manolis is a $\\lim_{N\\to\\infty}N$-th year PhD student working with Alex Aiken. He is currently exploring language-based approaches to making scientific programming more productive. "
+    food: "Manolis Papadakis <mpapadak@stanford.edu>"
+
+  - date: "2017-10-19"
+    abstract: |
+      We present control replication, a technique for generating high-performance and scalable SPMD code from implicitly parallel programs. In contrast to traditional parallel programming models that require the programmer to explicitly manage threads and the communication and synchronization between them, implicitly parallel programs have sequential execution semantics and by their nature avoid the pitfalls of explicitly parallel programming. However, without optimizations to distribute control overhead, scalability is often poor.
+      Performance on distributed-memory machines is especially sensitive to communication and synchronization in the program, and thus optimizations for these machines require an intimate understanding of a program’s memory accesses. Control replication achieves particularly effective and predictable results by leveraging language support for first-class data partitioning in the source programming model. We evaluate an implementation of control replication for Regent and show that it achieves up to 99% parallel efficiency at 1024 nodes with absolute performance comparable to hand-written MPI(+X) codes.
+    title: "Control Replication: Compiling Implicit Parallelism to Efficient SPMD with Logical Regions"
+    speaker: "Elliott Slaughter <slaughter@cs.stanford.edu>"
+    bio: "Elliott is a recent graduate of the Stanford PhD program is now a staff scientist at SLAC National Accelerator Laboratory. His research interests are in programming languages, compilers, parallelism, and high-performance computing."
+    food: "Giovanni Campagna <gcampagn@stanford.edu>"
+
+  - date: "2017-10-26"
+    abstract: |
+      Given large amount of code available at Facebook, we started looking into ways to use it to improve developers’ productivity.
+      AI Complete is an autocomplete provider which learns on our Hack codebase and is able to suggests whole statements using surrounding code context.
+      In the talk, we will present technology behind it. Although the AI Complete’s model is relatively simple it achieves exact accuracies of 30% and is able to
+      suggest a statement that it has never seen. AI Complete is deployed at Facebook and used by thousands of engineers.
+    title: "AI Complete: Smarter code assistant"
+    speaker: "Maxim Sokolov <maxim@fb.com>"
+    bio: |
+      Maxim is a software engineer at Facebook. Over more than 4 years here he led a number of projects in the fields of real-time analytical databases, build systems (buck’s ocaml support, www static resources build system in Haskell), and machine learning for developer productivity (Stack Overflow search, Hack Line Complete, AI Complete). Before joining Facebook Maxim worked in many industries including software development (Avito, Video International) and management consulting (McKinsey & Co). Maxim is an avid kite surfer and he is regularly competing in kite-foil races.
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2017-11-02"
+    abstract: "This short paper describes an experimental prototype of in situ visualization in a task-based parallel programming framework. A set of reusable visualization tasks were composed with an existing simulation. The visualization tasks include a local OpenGL renderer, a parallel image compositor, and a display task. These tasks were added to an existing fluid-particle-radiation simulation and weak scaling tests were run on up to 512 nodes of the Piz Daint supercomputer. Benchmarks showed that the visualization components scaled and did not reduce the simulation throughput. The compositor latency increased logarithmically with increasing node count."
+    title: "In situ visualization with task-based parallelism"
+    speaker: "Alan Heirich <aheirich@stanford.edu>"
+    bio: "Alan Heirich is a staff scientist at in the Computer Science department at SLAC working with Alex Aiken.  His background includes work in high performance computing, computer graphics, and machine learning.  He has a PhD in Computer Science and MS in Computation and Neural Systems, both from Caltech."
+    food: "Andres Nötzli <noetzli@stanford.edu>"
+
+  - date: "2017-11-09"
+    abstract: |
+      Today, individuals’ information and capabilities are siloed across many web accounts and IoT devices. Users wishing to share information are limited by what the service provider supports, or resort to giving out their account credentials.
+      We propose a novel, general, and secure method of sharing data and devices with the help of communicating virtual assistants. The owner of the data can specify, in natural language, what, when, how, where, and to whom the access is given, using a new policy language called Thing Access Control Language. A requester can ask the owner to execute any virtual assistant command. The command is locally translated to a program in the formal ThingTalk language and forwarded to the owner’s assistant, which adds run-time checks to the request if necessary and executes conforming requests on behalf of the requester.
+      We show that static and dynamic conformance of policies can be derived efficiently, with formal guarantees, using an algorithm based on Satisfiability Modulo Theories. We conducted a user study to collect use cases of access controls and found that, out of 220 use cases, 67% can be supported, provided the APIs are made available to the assistant.
+    title: "User-Programmable Access Control via Communicating Virtual Asssitants"
+    speaker: "Giovanni Campagna <gcampagn@stanford.edu>"
+    bio: "Giovanni Campagna is a 2nd year PhD student in the Mobile and Social Research Group, advised by prof. Monica Lam. He has lead the development of the Almond virtual assistant, and designed the ThingTalk domain specific programming language for virtual assistants. His interests lie at the intersection of natural language processing, programming languages and systems."
+    food: ""
+
+  - date: "2017-11-16"
+    abstract: |
+      Distributed systems are notoriously difficult to get right as they must deal with concurrency and failures. In the first part of my talk, I will present P[1], a communicating state machines based domain-specific language for building reliable distributed systems. For scalable analysis of distributed systems, P implements a module system based on the theory of compositional trace refinement for both compositional (assume-guarantee) and hierarchical (refinement) reasoning of dynamic distributed systems. P was first used to implement and validate the USB device driver stack that ships with Microsoft Windows and Windows Phone.
+      Autonomous robots increasingly depend on third-party off-the-shelf components and complex machine-learning techniques. This trend makes it challenging to provide strong design-time certifications of correct operation. In the second half of my talk, I will present Drona[2], a framework for building safe robotics systems. Drona extends P with Runtime Assurance (RTA) capabilities to ensure end-to-end correctness of robotics systems. We recently did a successful DARPA demo where a team of drones was programmed using Drona to perform complex surveillance mission autonomously.
+      [1]https://github.com/p-org/P
+      [2]https://drona-org.github.io/Drona/
+    title: "Modular and Safe Event Driven Programming"
+    speaker: "Ankush Desai <ankush@eecs.berkeley.edu>"
+    bio: |
+      Ankush Desai is a graduate student in the EECS Department at UC, Berkeley and is co-advised by Prof. Sanjit Seshia and Dr. Shaz Qadeer. His research interests are programming languages, systematic testing, and verification applied for building reliable systems, in particular, distributed systems and robotics systems. Before joining graduate school he was at Indian Institute of Technology, Kanpur (IITK) where he was a proud member of the team that built India's first Nanosatellite. Webpage: http://ankushdesai.com/
+    food: "Karthik Murthy <ksmurthy@stanford.edu>"
+
+  - date: "2017-11-30"
+    abstract: "Nearly all web-based interfaces are written in JavaScript. Given its prevalence, the support for high performance JavaScript code is crucial. The ECMA Technical Committee 39 (TC39) has recently extended the ECMAScript language (i.e., JavaScript) to support shared memory accesses between different threads. The extension is given in terms of a natural language memory model specification. In this work we describe a formal approach for validating both the memory model and its implementations in various JavaScript engines. We first introduce a formal version of the memory model and report results on checking the model for consistency and other properties. We then introduce our tool, EMME, built on top of the Alloy analyzer, which leverages the model to generate all possible valid executions of a given JavaScript program. Finally, we report results using EMME together with small test programs to analyze industrial JavaScript engines. We show that EMME is able to find bugs as well as missed opportunities for optimization."
+    title: "EMME: a formal tool for ECMAScript Memory Model Evaluation"
+    speaker: "Cristian Mattarei <mattarei@stanford.edu>"
+    bio: "Cristian Mattarei is a postdoctoral researcher at the Stanford University, working on SAT and SMT based formal verification techniques. Cristian received his PhD in Information and Communication Technology, from University of Trento and Fondazione Bruno Kessler (Italy) in 2016. His research interests comprise SAT and SMT solvers; BDD, SAT, and SMT based symbolic model checking; model-based safety and reliability analyses; formal contract-based design; and formal modeling."
+    food: ""
+
+  - date: "2017-12-07"
+    abstract: "In this talk we present the design and implementation of Flow, a fast and precise type checker for JavaScript that is used by thousands of developers on millions of lines of code at Facebook every day. Flow uses sophisticated type inference to understand common JavaScript idioms precisely. This helps it find non-trivial bugs in code and provide code intelligence to editors without requiring significant rewriting or annotations from the developer. We formalize an important fragment of Flow's analysis and prove its soundness. Furthermore, Flow uses aggressive parallelization and incrementalization to deliver near-instantaneous response times. This helps it avoid introducing any latency in the usual edit-refresh cycle of rapid JavaScript development. We describe the algorithms and systems infrastructure that we built to scale Flow's analysis. "
+    title: "Flow: Fast and Precise Type Checking for JavaScript"
+    speaker: "Panagiotis Vekris <panvekris@gmail.com>"
+    bio: "I recently joined the Flow team at Facebook. Before that I received my PhD in Programming Languages from the University of California, San Diego, where I was advised by Ranjit Jhala. My area of focus was type systems for scripting languages. There I explored ways to statically type check JavaScript code, by leveraging the precision and automation offered by modern logic solvers (SMT) to overcome the challenges imposed by the dynamic nature of the language. As an intern at Facebook, I increased Flow's precision by adding support for predicate functions. Earlier in the course of my studies I also looked into gradual typing and analysis for android apps."
+    food: ""
+
+
+
+
+y17_summer:
+  summer: true
+
+
+
+y17_spring:
+
+  location: "Gates 463a"
+  year: "2017"
+  quarter: "spring"
+  talks:
+
+  - date: "2017-04-07"
+    speaker: ""
+    food: "Stefan Heule <sheule@cs.stanford.edu>"
+    title: "Organizational Lunch"
+    abstract:
+    bio:
+
+  - date: "2017-04-14"
+    abstract: |
+      Noisy data, non-convex objectives, model misspecification, and numerical instability can all cause undesired behaviors in machine learning systems.  As a result, detecting actual implementation errors can be extremely difficult.  We demonstrate a methodology based on an interactive proof assistant, in which one writes an implementation of a machine learning system along with a formal theorem stating that the implementation is correct.  The process of proving this theorem interactively in the proof assistant exposes all implementation errors since any error in the program would cause the proof to fail.  As a case study, we implement a new system, Certigrad, for optimizing over stochastic computation graphs and generate a machine-checkable proof that the gradients sampled by the system are unbiased estimates of the true mathematical gradients. We train a variational autoencoder using Certigrad and find that it is nearly as efficient as TensorFlow.
+    title: "Developing Bug-Free Machine Learning Systems With Formal Mathematics"
+    speaker: "Daniel Selsam <dselsam@stanford.edu>"
+    bio: |
+      Daniel Selsam is a Ph.D. candidate in Computer Science at Stanford University. His research focuses on developing tools based on formal logic to assist with mentally demanding tasks such as programming, algorithm design and mathematical problem-solving.
+    food: "Wonyeol Lee <wyl@stanford.edu>"
+
+  - date: "2017-04-21"
+    abstract: |
+      Programming languages have many similarities, and so, when writing a source-to-source transformation on one language, it would be nice to reuse code from a similar transformation for a different language. This is a fundamentally difficult problem, and previous attempts have either resorted to reimplementing the same transformation for many languages, or at best reducing multiple languages to a common intermediate representations, which necessarily destroys information and produces poor source-to-source results.
+      We present a new representation for programs called *incremental parametric syntax*, and show how it enables us to construct source-to-source transformations so that we can implement them once, and run them on each of C, Java, JavaScript, Lua, and Python. Instead of constructing a common representation for the languages, incremental parametric syntax allows us to instead construct a family of representations sharing common components, each specialized to a single-language, and to semi-automatically generate them from existing syntax definitions. Our evaluation shows that (1) once a transformation is written, relatively little work is required to configure it for a new language (2) transformations built this way output readable code which preserve the structure of the original, according to participants in our human study, and (3) despite dealing with many languages, our transformations can still handle language corner-cases, and pass 90% of compiler test suites.
+    title: "Cracking Multi-Language Transformations"
+    speaker: "James Koppel <jkoppel@mit.edu>"
+    bio: |
+      After winning the "20 Under 20" Thiel Fellowship, Jimmy Koppel graduated early from Carnegie Mellon University to found Tarski Technologies, a startup building commercial program repair technology. In 2014, he joined Apptimize as the third employee, where he obtained four patents in the areas of binary modification and mobile A/B testing. He is currently a third-year Ph. D. student in the Computer-Aided Programming group at MIT, with research focusing on software language engineering, generic programming, and causal inference.
+    food: "Andres Nötzli <noetzli@stanford.edu>"
+
+  - date: "2017-04-28"
+    abstract: |
+      Many verification tools build on automated solvers. These tools reduce problems in a specific application domain (e.g., compiler optimization validation) to queries that can be discharged with a highly optimized solver. But the correctness of the reductions themselves is rarely verified in practice, limiting the confidence that the solver's output establishes the desired domain-level property.
+      This paper presents SpaceSearch, a new library for developing solver-aided tools within a proof assistant. A user builds their solver-aided tool in Coq against the SpaceSearch interface, and the user then verifies that the results provided by the interface are sufficient to establish the tool's desired high-level properties. Once verified, the tool can be extracted to an implementation in a solver-aided language (e.g., Rosette), where SpaceSearch provides an efficient instantiation of the SpaceSearch interface with calls to an underlying SMT solver. This combines the strong correctness guarantees of developing a tool in a proof assistant with the high performance of modern SMT solvers. This paper also introduces new optimizations for such verified solver-aided tools, including parallelization and incrementalization.
+      We evaluate SpaceSearch by building and verifying two solver-aided tools. The first, SaltShaker, checks that RockSalt's x86 semantics for a given instruction agrees with STOKE's x86 semantics. SaltShaker identified 7 bugs in RockSalt and 1 bug in STOKE. After these systems were patched by their developers, SaltShaker verified the semantics' agreement on 15,255 instruction instantiations in under 2h. The second tool, BGProof, is a verified version of an existing Border Gateway Protocol (BGP) router configuration checker. Like the existing checker, BGProof scales to checking industrial configurations spanning over 240 KLOC, identifying 19 configuration inconsistencies with no false positives. However, the correctness of BGProof has been formally proven, and we found 2 bugs in the unverified implementation. These results demonstrate that SpaceSearch is a practical approach to developing efficient, verified solver-aided tools.
+    title: "SpaceSearch: A Library for Building and Verifying Solver-Aided Tools"
+    speaker: "Stefan Heule <sheule@cs.stanford.edu>"
+    bio: |
+      Stefan Heule is a PhD student at Stanford University advised by Alex Aiken.  His interests include program synthesis, programming languages and their design, software verification, type systems, static analysis, and formal methods in general.
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+  - date: "2017-05-05"
+    abstract: "I will discuss some recent work-in-progress on verifying floating-point programs. I will explain several useful properties of floating-point arithmetic, and then talk about how to use them to prove better error bounds of Intel's transcendental functions."
+    title: "Verifying Accurate Floating-Point Programs"
+    speaker: "Wonyeol Lee <wyl@stanford.edu>"
+    bio: "Wonyeol Lee is a third-year PhD student at Stanford University, advised by Prof. Alex Aiken."
+    food: "Berkeley Churchill <berkc@stanford.edu>"
+
+  - date: "2017-05-12"
+    abstract: "In this talk I will present Seam, a domain-specific language for describing graph-like data structures and programming local modification operations over them. Based on our preliminary results, programs written in Seam are competitive with hand-written implementations in terms of performance, while being an order of magnitude shorter, easier to maintain and extend, and amenable to static verification. I will focus on the design of our verification method for Seam operations: We leverage an SMT solver to verify that operations are memory-safe and maintain referential integrity and user-specified invariants. Our verification method is sound and precise (complete modulo termination of the SMT solver). "
+    title: "Seam: Provably Safe Local Edits on Graphs"
+    speaker: "Manolis Papadakis <mpapadak@stanford.edu>"
+    bio: "Manolis is an N-th year PhD student working with Alex Aiken. He is currently exploring language-based approaches to making scientific programming more productive. "
+    food: "Pratiksha Thaker <prthaker@stanford.edu>"
+
+  - date: "2017-05-19"
+    abstract: "At Uber, software reliability is of critical importance: outages can leave riders stranded and drivers without a way to earn a living. At the same time, Uber needs to be able to move fast in developing new features and products. Our belief is that static program analysis can play a key role in reducing the tension between these seemingly conflicting needs. In this talk, I will describe the philosophy of how analysis tools are deployed at Uber and how code is developed to be analyzable. I will present some initial experience reports from deployed analyses, plans for future analyses, and some open problems that may be interesting to the broader research community."
+    title: "Moving Fast with High Reliability: Program Analysis at Uber"
+    speaker: "Manu Sridharan <manu@sridharan.net>"
+    bio: "Manu Sridharan is a senior software engineer at Uber, working on static analysis and software quality. He received his PhD from the University of California, Berkeley in 2007. He worked as a research staff member at IBM Research from 2008-2013 and as a senior researcher at Samsung Research America from 2013-2016. His research has drawn on, and contributed to, techniques in static analysis, dynamic analysis, and program synthesis, with applications to security, software quality, code refactoring, and software performance. His work has been incorporated into multiple commercial products, including IBM's commercial security analysis tool and Samsung's developer toolkit for the Tizen operating system. For further details, see http://manu.sridharan.net."
+    food: "Lázaro Clapp <lazaro@stanford.edu>"
+
+  - date: "2017-05-26"
+    abstract: "Programs with highly structured inputs (e.g., parsers and interpreters) can be challenging for fuzzers since most randomly generated inputs have invalid syntax. One solution is to handwrite a grammar encoding valid program inputs, but this work must be performed for every program that is tested. We describe a new approach where we automatically infer the program input grammar from a small set of user-provided example inputs and blackbox access to the program, and then use this inferred grammar to fuzz the program. Our approach works out-of-the-box, without any program-specific tuning or configuration. We show that our fuzzer outperforms two grammar-unaware fuzzers on a number of large programs."
+    title: "Synthesizing Program Input Grammars"
+    speaker: "Osbert Bastani <obastani@stanford.edu>"
+    bio: "Osbert Bastani is a Ph.D. student in Computer Science at Stanford University advised by Alex Aiken. He is interested in improving the automation of program analysis tools using techniques from machine learning and artificial intelligence."
+    food: "Cristian Mattarei <mattarei@stanford.edu>"
+
+  - date: "2017-06-02"
+    abstract: |
+      Compilation for reprogrammable hardware is painfully slow, on the order of hours for non-trivial applications. This renders the compile-test-debug cycle untenable for all but a small handful of domain experts. While this situation was never acceptable, it was at least tolerable in a time when reprogrammable hardware was a niche target for application developers. Today reprogrammable hardware is on the verge of ubiquity in both public and private clouds. But unless the programming model for reprogrammable hardware changes, the average programmer will remain incapable of taking advantage of it.
+      In this talk, I'll describe a new approach to hardware compilation, which adopts a known solution from the software domain. Rather than attempt to reduce the latency of the compiler, we instead hide it behind an interpreter in a JIT. Code is executed immediately in a hardware interpreter, while the long running compilation job is performed in the background. When compilation is finished, the results are patched into hardware, and from the user's perspective, the code simply gets faster. I'll talk through the high-level design of the system, describe some neat applications which fall out of the implementation and give a quick demo. We'll write some code, we WON'T wait hours, and we'll get some buttons on an fpga to turn some lights on and off.
+    title: "Just-in-time Compilation for Reprogrammable Hardware"
+    speaker: "Eric Schkufza <eric.schkufza@gmail.com>"
+    bio: "Eric Schkufza is a researcher at the VMware research group. He graduated from Stanford University with a PhD in Computer Science in 2015. His advisor was Professor Alex Aiken. Eric is interested in applying the tools of large-scale data analysis and machine learning to the design of optimizing compilers. His work focuses on the analysis and optimization of low-level machine code, often in the absence of its original source. Those who have accused his work of being too 'high-level' will be relieved to know that he has transitioned from spending most of his time thinking about x86_64 assembly to hardware compilation using verilog and vhdl."
+    food: "Manolis Papadakis <mpapadak@stanford.edu>"
+
+  - date: "2017-06-09"
+    abstract: |
+      Because most graph algorithms have low computational intensity, graph processing systems are limited by memory bandwidth. Most existing systems store the entire graph in the shared or distributed main DRAM memory of multicore CPU nodes. GPU’s have much higher memory bandwidth than today’s CPU architectures and thus the potential for better graph processing performance. However, GPU clusters have significantly more complex and deeper memory hierarchies than CPU clusters, which must be accounted for in a graph processing system’s design if it is to actually benefit from the greater bandwidth of GPUs.
+      We present Lux, a distributed multi-GPU system that achieves fast graph processing by exploiting the aggregate memory bandwidth of multiple GPUs and taking advantage of locality in the memory hierarchy of multi-GPU clusters. Lux provides two execution models that optimize algorithmic efficiency and enable important GPU optimizations, respectively. Lux also uses a novel dynamic load balancing strategy that is cheap and achieves very good load balance across multiple GPUs on a node. In addition, we present a performance model that provides insight into improving the performance of Lux applications in different situations. Experiments show that Lux achieves up to 20× speedup over the state-of-the-art shared memory systems and up to two orders of magnitude speedup over distributed systems.
+    title: "A Distributed Multi-GPU System for Fast Graph Processing"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a Ph.D. student in Computer Science at Stanford University advised by Alex Aiken. He is interested in designing and developing high performance parallel systems for distributed heterogenous architectures."
+    food: "Guy Katz <guyk@stanford.edu>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+y17_winter:
+  location: "Gates 463a"
+  year: "2017"
+  quarter: "winter"
+  talks:
+
+
+  - date: "2017-01-13"
+    abstract: |
+      I will present Mathematical Execution (ME), a new, unconventional method for reasoning about numerical code. The idea is to reduce the problem of testing/verifying a program into the problem of minimizing a derived representing function. ME is particularly efficient for numerical code;  it directs input space exploration by only executing the representing function, which avoids static or symbolic reasoning about the program semantics. We have applied ME on four instances: (1) satisfiability solving, (2) boundary value analysis, (3) coverage-based testing, and (4) path reachability. Our results are promising. On (1), for example, evaluated on floating-point constraints from SMT-Competition benchmarks, ME provides an average speedup of more than 700X over MathSat and 800X over Z3.
+    title: "Mathematical Execution"
+    speaker: "Zhoulai Fu <zhoulai.fu@gmail.com>"
+    bio: |
+      I am a postdoc at UC Davis since 2014. I obtained my doctoral degree at INRIA, France. Earlier, I graduated from Ecole Polytechnique, France. My research interests are in the area of programming languages, with an emphasis on numerical programs. Throughout my career, I have developed different techniques in abstract interpretation, formal verification, and automated testing.
+    food: "Stefan Heule <sheule@cs.stanford.edu>"
+
+
+  - date: "2017-01-20"
+    abstract: |
+      In this talk I will present SEAM, a domain-specific language that allows programmers to describe collections of complex, interconnected data structures (e.g. unstructured meshes) over a relational data model, and program local modification operations over them. Our goal with SEAM is to make such programs easy to write and verify, while offering transparent performance and remaining competitive with manual implementations. I will describe how we've designed the language in pursuit of these goals, and our current status in its implementation.
+    title: "SEAM: A Language for Local Mutations of Graph-like Data Structures "
+    speaker: "Manolis Papadakis <mpapadak@stanford.edu>"
+    bio: "Manolis is an N-th year PhD student working with Alex Aiken. He is currently exploring language-based approaches to making scientific programming more productive. "
+    food: "Omid Mashayekhi <omidm@stanford.edu>"
+
+
+  - date: "2017-01-27"
+    abstract: |
+      In theory, database transactions protect application data from corruption and integrity violations. In practice, database transactions frequently execute under weak isolation that exposes programs to a range of concurrency anomalies, and programmers may fail to correctly employ transactions. While low transaction volumes mask many potential concurrency-related errors under normal operation, determined adversaries can exploit them programmatically for fun and profit. In this work, we formalize a new kind of attack on databse-backed applications called an ACIDRain attack, in which an adversary systematically exploits concurrency-related vulnerabilities via programmatically accessible APIs.  To proactively detect the potential for ACIDRain attacks, we extend the theory of weak isolation to analyze latent potential for non-serializable behavior under concurrent web API calls. We introduce a language-agnostic method for detecting potential isolation anomalies in web applications, called Abstract Anomaly Detection (2AD), that uses dynamic traces of database accesses to efficiently reason about the space of possible concurrent interleavings. We apply a prototype 2AD analysis tool to 12 popular self-hosted eCommerce applications written in four languages and with a total deploy base of over 2M websites. We identify and verify 22 critical ACIDRain attacks that allow attackers to corrupt store inventory, over-spend gift cards, and steal inventory.
+    title: "ACIDRain: Concurrency-Related Attacks on Database-Backed Web Applications"
+    speaker: "Todd Warszawski <twarszaw@stanford.edu>"
+    bio: |
+      Todd is a second year PhD student currently working with Alex Aiken exploring ways to express more parallelism in software through language design.  Previously he worked with Peter Bailis on looking for security vulnerabilities in real world software due to misunderstandings of database guarantees.  This talk is based on the database work.
+    food: "Pratiksha Thaker <prthaker@stanford.edu>"
+
+
+  - date: "2017-02-03"
+    abstract: |
+      I will talk about three techniques towards our goal of making scalable, semantic-based global static analysis easily available to non-expert software developers.
+      Though static analysis is widely deployed in practice (verification, bug-finding, maintenance, optimizations, and etc.), it is still of limited use. Developing an impactful static analyzer is difficult. Depending on its deployment models, every static analysis needs to strike a different balance between its soundness, scalability, and precision.
+      Our position is that sound and scalable analyzers whose precision is open as a parameter can be automatically available at least for C-like languages. I will first present our general sparse analysis framework to achieve sound, scalable, semanti-based global analysis (to globally analyze million-line C programs in about 10 hours). Given a static analysis definition as a fixpoint computation of an approximate semantics of the input program, the sparse framework guides you how to make it scalable without compromising the analysis precision.  Then I will introduce our ZooBerry system to automatically implement this sparse techniques inside static analyzers. From a high-level approximate semantics definition of a C-like language and its soundness Coq proof, ZooBerry automatically generates a sparse static analyzer and its verified validator.  Lastly, I will discuss static analysis of encrypted programs, to help sw developers enjoy static analysis service in clouds.
+    title: "Scalable Global Static Analysis, Automation, and Secrecy"
+    speaker: "Kwangkeun Yi <kwang@ropas.snu.ac.kr>"
+    bio: |
+      Kwangkeun Yi is a full professor in Computer Science and Engineering at Seoul National University, Korea. He has B.S. in Computer Science and Statistics from Seoul National University and Ph.D. in Computer Science from University of Illinois at Urbana-Champaign. His research has been on both theoretical and practical aspects of static analysis and programming language systems. He has published a number of papers in venues such as POPL, PLDI, ICSE, OOPSLA, CAV, SAS, VMCAI, TOPLAS, APLAS and served as PC members and PC chairs as well in various conferences on programming languages and static analysis. For paper links and other information, please refer to his homempage: http://kwangkeunyi.snu.ac.kr
+    food: "Andres Nötzli <noetzli@stanford.edu>"
+
+
+  - date: "2017-02-10"
+    abstract: |
+      Assuring safety and reliability is fundamental when developing a safety critical system. Road, naval and avionic transportation; water and gas distribution; nuclear, eolic, and photovoltaic energy production are only some examples where it is mandatory to guarantee those properties. The continuous increasing in the design complexity of safety critical system calls for a never ending sought of new and more advanced analytical techniques. In fact, they are required to assure that undesired consequences are highly improbable.
+      In this talk I present a novel methodology oriented to automatize the safety and reliability analyses of critical systems. The proposed approach integrates a series of techniques, based on symbolic model checking, into the current development process of safety critical systems. More specifically, the proposed techniques improved the process by covering three main aspects. First, we have provided a significant improvement in the performance of the back-end engines, by reducing the problem to parametric model checking. Second, we have defined the first fully automated technique, based on the aforementioned technique, for the generation of hierarchical fault trees i.e., a widely used artifact in safety engineering. Third, we have introduced a novel and very efficient technique for the analysis of safety critical redundant architectures.
+      The presentation will thereafter concentrate on the application of the proposed methodology and resulting techniques to a series of real-world case studies, developed in collaboration with NASA and the Boeing Company.
+    title: "Scalable Safety and Relialibity Analyses via Symbolic Model Checking"
+    speaker: "Cristian Mattarei <mattarei@stanford.edu>"
+    bio: |
+      Cristian Mattarei is a postdoctoral researcher at the Stanford University, working on SAT and SMT based formal verification techniques. Cristian received the PhD in Information and Communication Technology, from University of Trento and Fondazione Bruno Kessler (Italy) in 2016. His research interests comprise BDD, SAT, and SMT based symbolic model checking, model-based safety and reliability analyses, formal contract-based design, and formal modeling.
+    food: "Lázaro Clapp <lazaro@stanford.edu>"
+
+
+  - date: "2017-02-17"
+    abstract: |
+      Many program analysis problems can be formulated as graph reachability problems. In the literature, context-free language (CFL) reachability has been the most popular formulation and can be computed in subcubic time. The context-sensitive data-dependence analysis is a fundamental abstraction that can express a broad range of program analysis problems. It essentially describes an interleaved matched-parenthesis language reachability problem. The language is not context-free, and the problem is well-known to be undecidable. In practice, many program analyses adopt CFL-reachability to exactly model the matched parentheses for either context-sensitivity or structure-transmitted data-dependence, but not both. Thus, the CFL-reachability formulation for context-sensitive data-dependence analysis is inherently an approximation.
+      In this talk, I will introduce linear conjunctive language (LCL) reachability, a new, expressive class of graph reachability. Given a graph with n nodes and m edges, we propose an O(mn) time approximation algorithm for solving all-pairs LCL-reachability, which is asymptotically better than known CFL-reachability algorithms. We have applied the LCL-reachability framework to two existing client analyses. The experimental results show that the LCL-reachability framework is both more precise and scalable than the traditional CFL-reachability framework.
+    title: "Context-Sensitive Data-Dependence Analysis via Linear Conjunctive Language Reachability"
+    speaker: "Qirun Zhang <helloqirun@gmail.com>"
+    bio: |
+      Qirun Zhang is a postdoc at UC Davis. Qirun received his PhD in Computer Science and Engineering from The Chinese University of Hong Kong in 2013. His research interests are in programming languages, with applications to program analysis via graph reachability. Recently, he is working with Prof. Zhendong Su at UC Davis on compiler testing using enumeration techniques.
+    food: "Wonchan Lee <wonchan@stanford.edu>"
+
+
+  - date: "2017-02-24"
+    abstract: |
+      Typical optimizing compilers perform a fixed series of optimizations on an input to generate optimized assembly code.  In contrast, superoptimizers search through a space of program optimizations to generate optimal code, and previous works shows that this approach can offer significant performance improvements for straight-line programs.  In this presentation we generalize superoptimization to loops.  We apply our techniques to Google Native Client, a Software Fault Isolation system that ships inside the Google Chrome Web browser that allows web developers to run native code inside the browser within a secure sandbox.
+      Key to our results are new techniques for superoptimization of loops: we propose a new architecture for superoptimization tools that incorporates both a fully sound verification technique to ensure correctness and a bounded verification technique to guide the search to optimized code. In our evaluation we optimize 13 libc string functions, formally verify the correctness of the optimizations and report a median and average speedup of 25% over the libraries shipped by Google.
+    title: "Sound Loop Superoptimization for Google Native Client"
+    speaker: "Berkeley Churchill <berkc@stanford.edu>"
+    bio: "Berkeley Churchill is a fifth year PhD student in Alex Aiken's lab.  His current work is on software verification."
+    food: "Wonyeol Lee <wyl@stanford.edu>"
+
+
+  - date: "2017-03-03"
+    abstract: |
+      Deep neural networks have emerged as a widely used and effective means for tackling complex, real-world problems. However, a major obstacle in applying them to safety-critical systems is the great difficulty in providing formal guarantees about their behavior. We present a novel, scalable, and efficient technique for verifying properties of deep neural networks (or providing counter-examples). The technique can also be used to measure a network's robustness to adversarial inputs. Our approach is based on the simplex method, extended to handle the non-convex Rectified Linear Unit (ReLU) activation function, which is a crucial ingredient in many modern neural networks. The verification procedure tackles neural networks as a whole, without making any simplifying assumptions. We evaluated our technique on a prototype deep neural network implementation of the next-generation Airborne Collision Avoidance System for unmanned aircraft (ACAS Xu). Results show that our technique can successfully prove properties of networks that are an order of magnitude larger than the largest networks verified using existing methods.
+      Based on joint work with Clark Barrett, David Dill, Kyle Julian and Mykel Kochenderfer. https://arxiv.org/abs/1702.01135
+    title: "Reluplex: An Efficient SMT Solver for Verifying Deep Neural Networks"
+    speaker: "Guy Katz <guyk@stanford.edu>"
+    bio: "Guy Katz is a postdoctoral fellow at Stanford university, working with Prof. Clark Barrett. He received his Ph.D. at the Weizmann Institute in 2015. His research interests lie at the intersection between Software Engineering and Formal Methods, and in particular in the application of formal methods to lightweight parallel programming models."
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+
+  - date: "2017-03-17"
+    abstract: |
+      Most IoT applications are written using the eMbedded-Gateway-Cloud architecture. An unique challenge in writing IoT applications this way is the need for an end-to-end design that considers all the different issues of embedded, gateway (phone) and cloud. These are very different platforms and languages, different performance requirements and different expertise on the part of the programmers. We propose Ravel as a domain-specific language for the data pipeline of IoT applications, that abstracts away the differences between these platforms in a single unified Model-View-Controller paradigm. In Ravel, the programmer focuses on the data computation happening on each node, and the system automatically generates storage, network, and encryption code.
+      While the evaluation is not done yet, we plan to evaluate the Ravel language with a case study of 3 different IoT applications from the literature, as well as benchmarks that would show the impact of using Ravel in embedded (where performance is the most critical). At this stage, we welcome feedback on the language and on the evaluation plan.
+    title: "Data pipeline programming for IoT Applications with Ravel"
+    speaker: "Giovanni Campagna <gcampagn@stanford.edu>"
+    bio: |
+      I'm (officially) a first year PhD student, currently in the rotation program with prof. Phil Levis, although I have been a graduate student at Stanford for 3 years now. My interests can be summed up in "letting more people write better code", which means domain-specific languages, program analysis and program synthesis from various high level specifications (including natural language).
+    food: "Manolis Papadakis <mpapadak@stanford.edu>"
+
+
+
+
+
+
+y16_fall:
+  location: "Gates 463a"
+  year: "2016"
+  quarter: "fall"
+  talks:
+
+
+  # - date: "2016-10-21"
+  #   abstract:
+  #   title: ""
+  #   speaker: ""
+  #   bio:
+  #   food: ""
+
+
+  - date: "2016-09-30"
+    title: "Organizational Lunch"
+    speaker: ""
+    food: "Stefan Heule <sheule@cs.stanford.edu>"
+
+
+
+  - date: "2016-10-07"
+    abstract: |
+      Programs have become powerful arbitrators of a range of significant decisions with far-reaching societal impact -- hiring, welfare allocation, prison sentencing, policing, amongst an ever-growing list. In such scenarios, the program is carrying out a sensitive task, and could potentially be illegally discriminating -- advertently or inadvertently -- against a protected group, e.g., African Americans in the United States.
+      With the range and sensitivity of algorithmic decisions expanding by the day, the question of whether an algorithm is fair (unbiased) has captured the attention of a broad spectrum of experts, from law scholars to  computer science theorists. Ultimately, algorithmic fairness is a question about programs and their properties: Does a program discriminate against a subset of the population?  In this talk, I will view algorithmic fairness through the lens of program verification. Specifically, I will begin by formalizing the notion of fairness as a probabilistic property of programs. To enable automated verification of fairness, I will show how to reduce the probabilistic verification question to that of volume computation over first-order formulas, and describe a new symbolic volume computation algorithm. Finally, I will present results of applying FairSquare -- the first fairness verification tool -- to a variety of decision-making programs.
+    title: "Proving that Programs do not Discriminate"
+    speaker: "Aws Albarghouthi <aws@cs.wisc.edu>"
+    bio: |
+      Aws Albarghouthi is an Assistant Professor of Computer Science at the University of Wisconsin-Madison. He works on software verification, analysis, and synthesis.
+    food: "Berkeley Roshan Churchill <berkc@stanford.edu>"
+
+
+  - date: "2016-10-14"
+    abstract: |
+      Most “Big Data” systems are written in managed languages such as Java, C#, or Scala. These systems suffer from severe memory problems due to massive volumes of objects created to process input data. Allocating and deallocating a sea of data objects puts a severe strain on existing garbage collectors (GC), leading to high memory management overhead and reduced performance. We have developed a series of techniques at UC Irvine to tackle this problem. In this talk, I will first talk about Facade (ASPLOS'15), a compiler and runtime system that can statically bound the number of data objects created in the heap. Next, I will talk about our recent work on Yak  (OSDI'16), a new hybrid garbage collector that splits the managed heap into a control and a data space, and uses a generational GC and a region-based technique to manage them, respectively.
+    title: "Marrying Generational GC and Region Techniques for High-Throughput, Low-Latency Big Data Memory Management"
+    speaker: "Harry Xu <guoqingx@ics.uci.edu>"
+    bio: |
+      Guoqing (Harry) Xu is an assistant professor at UC Irvine. He is broadly interested in program languages, (distributed, operating, and runtime) systems, as well as computer architecture. His recent interests center on (1) how to exploit language/compiler techniques to build scalable Big Data systems and (2) how to build Big Data systems to parallelize and scale sophisticated program analyses. He publishes broadly in PL, systems, and SE conferences such as SOSP/OSDI, ASPLOS, PLDI, and OOPSLA and is an author of several papers awarded or nominated for distinguished paper awards. food: ""
+    food: "Lázaro Clapp <lazaro@stanford.edu>"
+
+
+  - date: "2016-10-21"
+    abstract: |
+      Parallel (and distributed) programming is required for performance on a variety of machines. Existing parallel programming models select trade-offs that enable performance and scalability but impose responsibilities on the user which make programming difficult and error-prone, in a manner analogous to manual memory management. Implicit parallel removes many of these burdens in a manner analogous to an automatic garbage collector. Some success has been demonstrated for implicitly parallel programming models on structured codes with regular array accesses. However, no implementation of implicit parallelism has been able to successfully generate efficient codes for unstructured applications while maintaining performance equivalent to the best hand-tuned alternatives for parallel, distributed-memory machines.
+      Regent is a programming language for implicit parallelism which generates efficient code for structured and unstructured applications on parallel, distributed machines. By leveraging a carefully designed programming model with first-class support for partitioning computations (via tasks: functions eligible to be parallelized) and data (via logical regions: collections of data elements), an optimizing compiler for Regent is able to generate efficient code which matches the performance of the best hand-tuned codes for parallel, distributed-memory machines.
+    title: "Regent: A High-Productivity Programming Language for Implicit Parallelism with Logical Regions"
+    speaker: "Elliott Slaughter <slaughter@cs.stanford.edu>"
+    bio: |
+      Elliott Slaughter is a Ph.D. student in computer science working with Alex Aiken on the Legion runtime and Regent programming language. His research interests include programming languages, and optimizing compilers for parallel and distributed machines. In his free time he works on trying to sneak research ideas into science fiction novels.
+    food: "Wonchan Lee <wonchan@stanford.edu>"
+
+
+  - date: "2016-10-28"
+    abstract: |
+      Deep neural networks have achieved impressive experimental results in image classification, but can surprisingly be unstable with respect to adversarial perturbations, that is, minimal changes to the input image that cause the network to misclassify it. With potential applications including perception modules and end-to-end controllers for self-driving cars, this raises concerns about their safety. We develop the first SMT-based automated verification framework for feed-forward multi-layer neural networks that works directly with the code of the network, exploring it layer by layer. We define safety for a region around a data point in a given layer by requiring that all points in the region are assigned the same class label. Working with a notion of a manipulation, a mapping between points that intuitively corresponds to a modification of an image, we employ discretisation to enable exhaustive search of the region. Our method can guarantee that adversarial examples are found for the given region and set of manipulations. If found, adversarial examples can be shown to human testers and/or used to fine-tune the network, and otherwise the network is declared safe for the given parameters. We implement the techniques using Z3 and evaluate them on state-of-the-art networks, including regularised and deep learning networks.
+    title: "Safety Verification of Deep Neural Networks"
+    speaker: "Marta Kwiatkowska <marta.kwiatkowska@cs.ox.ac.uk>"
+    bio: |
+      Marta Kwiatkowska is Professor of Computing Systems and Fellow of Trinity College, University of Oxford. She led the development of the PRISM model checker (www.prismmodelchecker.org), the leading software tool in the area, winner of the HVC Award 2016, and widely used for research and teaching. Applications of probabilistic model checking have spanned communication and security protocols, nanotechnology designs, power management, game theory, planning and systems biology, with genuine flaws found and corrected in real-world protocols. Kwiatkowska gave the Milner Lecture in 2012 in recognition of "excellent and original theoretical work which has a perceived significance for practical computing" and was awarded an honorary doctorate from KTH Royal Institute of Technology in Stockholm in 2014. Her research is supported by the ERC Advanced Grant VERIWARE "From software verification to everyware verification" and the EPSRC Programme Grant in Mobile Autonomy.
+    food: "Andres Nötzli <noetzli@stanford.edu>"
+
+
+  - date: "2016-11-04"
+    abstract: |
+      A key challenge in programming-by-example is to minimize the number of input-output examples a user must annotate in order for the synthesis system to determine the correct program. Prior work in the programming languages community proposes heuristics to choose an informative set of examples. In contrast, we cast the task of proposing examples as an active learning problem: we start with a prior distribution over programs and then sequentially choose inputs so as to maximally reduce entropy in the posterior at each step. We propose solutions for several technical challenges that arise in the process: how to avoid having syntactically-specified priors induce unintended distributions in semantic space; how to efficiently sample from a posterior over programs; and how to select an informative next input while taking into account program semantics. We demonstrate that casting the problem as active learning leads to better query complexity than an SMT-based query generator. Finally, we describe how our approach can be practically useful in a SQL-like domain.
+      Joint work with Daniel Tarlow, Marc Brockschmidt, Alex Gaunt, Pushmeet Kohli, Rishabh Singh.
+    title: "Active learning for programming by example"
+    speaker: "Pratiksha Thaker <prthaker@stanford.edu>"
+    bio: "Pratiksha Thaker is a second-year Ph.D. student advised by Alex Aiken."
+    food: "Stefan Heule <sheule@cs.stanford.edu>"
+
+
+  - date: "2016-11-11"
+    abstract: |
+      Rocket is a new web framework for Rust that uses code generation to provide a clean, simple, and flexible API that enforces type safety at every layer of the web request/response path. Rocket's philosophy is that request handling should be well-typed. In other words, a request handler should be called only if the incoming request has been validated. Rocket enables this through two mechanisms. First, data handlers parse incoming data before handing it off to a request handler. As a result, a request handler never operates on invalid data. Second, request guards verify that an incoming request satisfies some arbitrary policy. As a result, a request handler never operates under invalid assumptions. Programmers declare the use of these mechanisms by simply including types in the request handler’s arguments; Rocket’s code generation does the rest. Together, these mechanisms result in web applications that are more secure, correct, and easier to write, read, and reason about.
+    title: "Rocket: A Type-Safe Web Framework for Rust"
+    speaker: "Sergio Benitez <sbenitez@stanford.edu>"
+    bio: |
+      Sergio is a third-year PhD student at Stanford advised by Professors David Mazières and Phil Levis. His research focuses on converging programming language theory with operating systems and security. His recent work introduced Rusty Types, a formal typing discipline based on the Rust programming language. Before Stanford, Sergio spent time interning at Google, Apple, and SpaceX where he worked on projects ranging from designing anomaly detection algorithms to tuning the performance of operating systems running on rockets and other spacecraft.
+    food: "Elliott Slaughter <slaughter@cs.stanford.edu>"
+
+
+  - date: "2016-11-18"
+    abstract: |
+      Data transfers within parallel systems have a significant impact on the performance of applications. Most existing systems generally support only data transfers between memories with a direct hardware connection and have limited facilities for handling transformations to the data’s layout in memory. As a result, to move data between memories that are not directly connected, higher levels of the software stack must explicitly divide a multi-hop transfer into a sequence of single-hop transfers and decide how and where to perform data layout conversions if needed. This approach results in inefficiencies, as the higher levels lack enough information to plan transfers as a whole, while the lower level that does the transfer sees only the individual single-hop requests.
+      We present Isometry, a path-based distributed data transfer system. The Isometry path planner selects an efficient path for a transfer and submits it to the Isometry runtime, which is optimized for managing and coordinating the direct data transfers. The Isometry runtime automatically pipelines sequential direct transfers within a path and can incorporate flexible scheduling policies, such as prioritizing one transfer over another. Our evaluation shows that Isometry can speed up data transfers by up to 2.2× and reduce the completion time of high priority transfers by up to 95% compared to the Realm data transfer system. We evaluate Isometry on three benchmarks and show that Isometry reduces transfer time by up to 80% and overall completion time by up to 60%.
+    title: "Isometry: A Path-Based Distributed Data Transfer System"
+    speaker: "Zhihao Jia <zhihao@cs.stanford.edu>"
+    bio: "Zhihao Jia is a PhD student working with Alex Aiken on the Legion project."
+    food: "Manolis Papadakis <mpapadak@stanford.edu>"
+
+
+  - date: "2016-12-02"
+    abstract: |
+      Many static analyses, e.g., taint analysis, depend on points-to analysis to resolve aliasing relations. However, points-to analysis faces significant challenges when analyzing programs that use large libraries. For example, Android apps use the Android framework, which in turn uses native code and Java reflection (which cannot be statically analyzed), and deep abstractions (which hinder precision and scalability). One solution is to have a human analyst provide points-to specifications that summarize the relevant behaviors of library code, which are much easier to analyze than the library implementation.
+      We propose ATLAS, a tool that automatically infers points-to specifications. ATLAS synthesizes test cases that exercise the library code, and then generates points-to specifications based on the input-output examples observed from these executions. In particular, ATLAS uses a novel representation of points-to specifications as a formal language, so specification inference reduces to language learning. Then, ATLAS employs a novel language learning algorithm to infer points-to specifications. We show that ATLAS infers a large number of new specifications compared to existing, manually written specifications, and that these specifications significantly improve the points-to analysis.
+    title: "Active Learning of Points-To Specifications"
+    speaker: "Osbert Bastani <obastani@stanford.edu>"
+    bio: "Osbert is a 5th year Ph.D. student advised by Alex Aiken. He has spent most of his Ph.D. working on the STAMP project, which aims to use static analysis to identify malicious Android apps."
+    food: "Todd Warszawski <twarszaw@stanford.edu>"
+
+
+  - date: "2016-12-09"
+    abstract: |
+      ProbNetKAT is a probabilistic extension of NetKAT with a denotational semantics based on Markov kernels. The language is expressive enough to generate continuous distributions, which raises the question of how to compute effectively in the language. This paper gives an new characterization of ProbNetKAT's semantics using domain theory, which provides the foundation needed to build a practical implementation. We show how to use the semantics to approximate the behavior of arbitrary ProbNetKAT programs using distributions with finite support. We develop a prototype implementation and show how to use it to solve a variety of problems including characterizing the expected congestion induced by different routing schemes and reasoning probabilistically about reachability in a network.
+    title: "Cantor meets Scott - Semantic Foundations for Probabilistic Networks"
+    speaker: "Steffen Smolka <smolka@cs.cornell.edu>"
+    bio: |
+      Steffen Smolka is a PhD student in Computer Science at Cornell University advised by Nate Foster. Currently his research focuses on languages, tools, and formal foundations for software defined networking. General areas of interest include (probabilistic) semantics, automata theory, and compilers.
+    food: "Omid Mashayekhi <omidm@stanford.edu>"
