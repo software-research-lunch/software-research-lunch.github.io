@@ -26,6 +26,111 @@
 # Oded Padon <oded.padon@gmail.com>
 # Jason Koenig <jrkoenig@stanford.edu>
 # Haoze Wu <haozewu@stanford.edu>
+# Anjiang Wei <anjiang@stanford.edu>
+
+y22_fall:
+
+  location: "Gates 304"
+  year: "2022"
+  quarter: "fall"
+  talks:
+
+  - date: "2022-09-06"
+    abstract: "Formal verification is a well-understood topic in computer science, still awaiting ideal application domains. There are several challenges in industrializing formal verification:
+        1. Most code is either not safety critical or rarely changed.
+        2. It is difficult, if not impossible, for developers to formally specify program behavior.
+        3. Formally verifying program correctness is computationally complex and requires enormous human resources with both domain knowledge and formal verification knowledge.
+        DeFi is an interesting application domain for formal verification since DeFi programs (e.g., smart contracts) are typically small yet carry tremendous value. These programs often change between deployments. Due to the high financial cost of errors, developers in this domain value strong invariants that guarantee program correctness.
+        I will show four complementary technologies developed by Certora for verifying smart contracts that leverage modern SMT solvers:
+        1. A language, CVL, for expressing high-level invariants of low-level code.
+        2. The Certora Prover, which converts EVM Bytecode and the CVL spec into a mathematical formula and then harnesses SMT solvers for formal verification.
+        3. A fuzzer for finding executions leading to CVL violations.
+        4. A mutation tester for checking that the CVL spec is not vacuous."
+    title: "Continuous Formal Verification of Smart Contracts: Mooly Sagiv, Certora and TAU"
+    speaker: "Mooly Sagiv"
+    bio: "Professor Mooly (Shmuel) Sagiv is an ACM Fellow, and Chair of Software Systems, from Tel Aviv University. His research focuses on easing the task of developing reliable and efficient software systems. He is particularly interested in static program analysis which combines two disciplines: automated theorem proving and abstract interpretation.
+          In the next decade, he is hoping to develop useful techniques in order to change the ways modern software is built. He is particularly interested in proof automation, given a program and a requirement, automatically proving or disproving that all executions of the program satisfy the requirements. This problem is in general undecidable and untractable."
+    food: ""
+
+  - date: "2022-09-15"
+    abstract: "I will describe the Pathways system and the larger research project that it is a part of.
+               We are building a cluster-wide runtime system with two related goals:
+                1) to improve the overall utilization of contended accelerator resources;
+                2) to support novel ML research that moves beyond lockstep SPMD computations, to exploit computational sparsity and sharing of learned components between different clients and ML models.
+              The long term goal of Pathways is to let us build ML models trained for orders of magnitude more tasks, without deploying orders of magnitude more hardware.
+              I will describe some requirements of a system built with the above goals in mind, and the systems research opportunities that they expose.
+              I will also do a deep dive into how the current Pathways systems executes computations on the cluster."
+    title: "Pathways: A Cluster-wide Runtime for Distributed ML"
+    speaker: "Michael Isard"
+    bio: "Michael Isard received his D.Phil in computer vision from the Oxford University Engineering Science Department in 1998.
+          His current research projects focus on programming models for large-scale distributed systems."
+    food: ""
+
+  - date: "2022-09-29"
+    abstract: "First-order logic, and quantifiers in particular, are widely used in deductive verification of programs and systems.
+              Significant effort has been dedicated to finding quantifier instantiations that establish unsatisfiability of quantified formulas, thus ensuring validity of a system's verification conditions.
+              However, in many cases the formulas are satisfiable --- this is often the case in intermediate steps of the verification process, e.g., when an invariant is not yet inductive. For such cases, existing tools are limited to finding finite models.
+              We tackle the problem of finding infinite models. When displayed to the user, these models give insight into the verification failure, and allow the user to identify and fix bugs in the modeling of the system and its properties.
+              Our approach consists of three parts. Firstly, we introduce templates as a way to represent certain infinite models.
+              Secondly, we identify a new decidable fragment of first-order logic that extends and subsumes EPR, where satisfiable formulas always have a model representable by a template of a bounded size. Lastly, we describe an effective decision procedure to symbolically explore this (usually vast) search space of templates.
+              We implement our approach in a tool called FIT and evaluate it on examples from a variety of domains.
+              Our results show that FIT quickly finds infinite counter-models that distill the source of failure and demonstrate it in a simple way, even in cases beyond the decidable fragment, while state-of-the-art SMT solvers, such as Z3 and cvc5, and resolution-based theorem provers, such as Vampire and SPASS, diverge or return unknown."
+    title: "An Infinite Needle in a Finite Haystack: Finding Infinite Counter-Models in Deductive Verification"
+    speaker: "Neta Elad"
+    bio: "Neta Elad is a Ph.D. student at the School of Computer Science at Tel Aviv University.
+          He earned his M.Sc. in Computer Science from Tel Aviv University in 2020, and his B.Sc. in Computer Science and Physics from Israel Institute of Technology (Techion) in 2016.
+          Neta's research focus is formal verification. In particular, he is interested in deductive verification and invariant inference using first-order logic."
+    food: ""
+
+  - date: "2022-10-06"
+    abstract: "TBD"
+    title: "Proof-Stitch: Proof Combination for Divide-and-Conquer SAT Solvers"
+    speaker: "Abhishek Anil Nair"
+    bio: "TBD"
+    food: ""
+
+  - date: "2022-10-13"
+    abstract: "TBD"
+    title: "UNITY"
+    speaker: "Colin"
+    bio: "TBD"
+    food: ""
+
+  - date: "2022-10-20"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "TBD"
+    bio: "TBD"
+    food: ""
+
+ - date: "2022-10-27"
+    abstract: "TBD"
+    title: "Perfermance Modelling for Sparse Matrix Multiplication"
+    speaker: "Mert"
+    bio: "TBD"
+    food: ""
+
+ - date: "2022-11-03"
+    abstract: "TBD"
+    title: "IPDL"
+    speaker: "Josh"
+    bio: "TBD"
+    food: ""
+
+ - date: "2022-11-10"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "TBD"
+    bio: "TBD"
+    food: ""
+
+- date: "2022-11-17"
+    abstract: "TBD"
+    title: "Ray: A unified framework for distributed computing"
+    speaker: "Ion Stoica"
+    bio: "TBD"
+    food: ""
+
 
 y21_winter:
   location: "Zoom"
