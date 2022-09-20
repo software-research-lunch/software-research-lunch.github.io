@@ -29,12 +29,10 @@
 # Anjiang Wei <anjiang@stanford.edu>
 
 y23_winter:
-
   location: "Gates 304"
   year: "2023"
   quarter: "winter"
   talks:
-
   - date: "2023-01-01"
     abstract: ""
     title: "Organizational Lunch"
@@ -44,12 +42,10 @@ y23_winter:
 
 
 y22_fall:
-
   location: "Gates 304"
   year: "2022"
   quarter: "fall"
   talks:
-
   - date: "2022-09-06"
     abstract: "Formal verification is a well-understood topic in computer science, still awaiting ideal application domains. There are several challenges in industrializing formal verification:
         1. Most code is either not safety critical or rarely changed.
