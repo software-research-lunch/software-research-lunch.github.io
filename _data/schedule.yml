@@ -45,13 +45,6 @@ y22_fall:
   year: "2022"
   quarter: "fall"
   talks:
-  - date: "2020-09-05"
-    abstract: ""
-    title: "Organizational Lunch"
-    speaker: ""
-    bio: ""
-    food: ""
-
   - date: "2022-09-06"
     abstract: "Formal verification is a well-understood topic in computer science, still awaiting ideal application domains. There are several challenges in industrializing formal verification:
         1. Most code is either not safety critical or rarely changed.
