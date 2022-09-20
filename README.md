@@ -12,7 +12,7 @@ To test the site locally, run `make serve` (requires jekyll).
 4. Update `calendar.ics` to use the new quarter's data.
 5. Create the file `archive/YEAR-QUARTER.html` (and fill it based on one of the other templates).
 6. Add a link to the now past quarter in `_includes/main.html` under "Past quarters".  If you had a upcoming quarter listed as "Future quarter", remove that.
-7. Make sure that the domain does not need to be renewed.  See https://tools.stanford.edu/cgi-bin/vhost-request.
+7. Make sure that the domain does not need to be renewed.  See https://vanityurl.stanford.edu/.
 
 
 ## When to hold talks
@@ -21,9 +21,7 @@ So far, the rule has been: Every week of the quarter, including end-of-quarter p
 
 ## Managing the Stanford subdomain
 
-Todd Warszawski (twarszaw) owns software-research-lunch.stanford.edu and it can be changed via https://tools.stanford.edu/cgi-bin/vhost-request.
-
-The URL setup is a bit hacky, and for reasons I (Stefan Heule) don't quite remember, goes through a CNAME of software-research-lunch.stefanheule.com.  I'm happy to keep that CNAME for as long as it seems useful.
+Anjiang Wei owns software-research-lunch.stanford.edu and it can be changed via https://vanityurl.stanford.edu/. The website is automatically published via Github Pages here: https://software-research-lunch.github.io/
 
 ## Email to Non-Stanford Speakers
 
