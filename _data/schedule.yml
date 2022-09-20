@@ -27,9 +27,9 @@
 # Jason Koenig <jrkoenig@stanford.edu>
 # Haoze Wu <haozewu@stanford.edu>
 
-y21_winter:
+y20_winter:
   location: "Zoom"
-  year: "2021"
+  year: "2020"
   quarter: "winter"
   talks:
   - date: "2020-01-14"
