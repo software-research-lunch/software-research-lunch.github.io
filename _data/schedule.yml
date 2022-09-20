@@ -27,19 +27,19 @@
 # Jason Koenig <jrkoenig@stanford.edu>
 # Haoze Wu <haozewu@stanford.edu>
 
-y20_winter:
+y21_winter:
   location: "Zoom"
-  year: "2020"
+  year: "2021"
   quarter: "winter"
   talks:
-  - date: "2020-01-14"
+  - date: "2021-01-14"
     abstract: "While there exist several successful techniques for supporting programmers in deriving static resource bounds for sequential code, analyzing the resource usage of message-passing concurrent processes poses additional challenges. To meet these challenges, this talk presents an analysis for statically deriving worst-case bounds on the computational complexity of message-passing processes, respectively. The analysis is based on novel resource-aware session types that describe resource contracts by allowing both messages and processes to carry potential and amortize cost. The talk then applies session types to implement digital contracts. Digital contracts are protocols that describe and enforce execution of a contract, often among mutually distrusting parties. Programming digital contracts comes with its unique challenges, which include describing and enforcing protocols of interaction, analyzing resource usage and tracking linear assets. The talk presents the type-theoretic foundations of Nomos, a programming language for digital contracts whose type system addresses the aforementioned domain-specific requirements. To express and enforce protocols, Nomos is based on shared binary session types rooted in linear logic. To control resource usage, Nomos uses resource-aware session types and automatic amortized resource analysis, a type-based technique for inferring resource bounds. To track assets, Nomos employs a linear type system that prevents assets from being duplicated or discarded. The talk concludes with future work directions on designing an efficient implementation for Nomos and making it robust to attacks from malicious entities."
     title: "Resource-Aware Session Types for Digital Contracts"
     speaker: "Ankush Das"
     bio: "Ankush Das is a final year PhD student at Carnegie Mellon University. He is advised by Prof. Jan Hoffmann. He is broadly interested in programming languages with a specific focus on resource analysis, session types and language design for smart contracts on the blockchain. He is the lead designer and developer of Nomos, a domain-specific language for implementing smart contracts based on resource-aware session types. In the past, he has worked jointly with Prof. Frank Pfenning and his advisor on designing resource-aware session types for parallel complexity analysis of concurrent programs implemented in a programming language called Rast. Before joining CMU, he worked as a Research Fellow at Microsoft Research, India with Akash Lal where he developed an efficient method to perform precise alias analysis for C and C++ programs for Windows driver modules to automatically infer safe null pointer dereferences. He completed his undergraduate at IIT Bombay, India in 2014 where he worked with Prof. Supratik Chakraborty and Prof. Akshay S on deciding termination of linear loop programs."
     food: "Doordash, see list email"
 
-  - date: "2020-02-04"
+  - date: "2021-02-04"
     abstract: "Mapping is the process of selecting a processor for each computation, or task, and memories for the data collections that those tasks access.  On parallel, heterogeneous, and distributed computing platforms, finding a mapping that yields high performance for a given application is  challenging. We show that fast mappings are sensitive to the machine, application, and even input used. Porting to a new machine, modifying the application, or running on a substantially different input may all necessitate re-tuning the application mapping to maintain the best possible performance.
 
 We present AutoMap, a system which, given an application and an input, automatically tunes the mapping to the hardware used. AutoMap searches over the space of possible mappings dynamically, using a search algorithm and judicious pruning methods. We demonstrate that AutoMap finds fast mappings in minutes to a few hours, whereas handwritten mappings often require days of experimentation.
@@ -50,7 +50,7 @@ We also describe  em constrained coordinate-wise descent (CCD), a search algorit
     bio: ""
     food: "Doordash, see list email"
 
-  - date: "2020-02-11"
+  - date: "2021-02-11"
     abstract: "Probabilistic programming languages offer an intuitive way to model uncertainty
 by representing complex probability models as simple probabilistic programs.
 Thus, even a programmer with limited exposure to statistical machine learning
@@ -79,14 +79,14 @@ errors and approximation opportunities."
 
 
 
-  - date: "2020-02-18"
+  - date: "2021-02-18"
     abstract: "Symbolic model checking is an important tool for finding bugs (or proving the absence of bugs) in modern system designs. Because of this, improving the ease of use, scalability, and performance of model checking tools and algorithms continues to be an important research direction. In service of this goal, we present Pono, an open-source SMT-based model checker. Pono is designed to be both a research platform for developing and improving model checking algorithms, as well as a performance-competitive tool that can be used for academic and industry verification applications. In addition to performance, Pono prioritizes transparency (developed as an open-source project on GitHub), flexibility (Pono can be adapted to a variety of tasks by exploiting its general SMT-based interface), and extensibility (it is easy to add new algorithms and new back-end solvers)."
     title: "Pono Model Checker"
     speaker: "Makai Mann"
     bio: ""
 
 
-  - date: "2020-02-25"
+  - date: "2021-02-25"
     abstract: "Program reification is a new approach to the construction of verified concurrent programs and their proofs.  This approach simplifies and scales (human and automated) reasoning by enabling a concurrent program to be represented and manipulated at multiple layers of abstraction.  These abstraction layers are chained together via simple program transformations; each transformation is justified by a collection of automatically checked verification conditions. Program reification makes proofs maintainable and reusable, specifically eliminating the need to write complex invariants on the low-level encoding of the concurrent program as a flat transition system.
 
 I will present Civl, a reifier for concurrent programs.  Civl has been used to construct verified low-level implementations of complex systems such as a concurrent garbage collector, consensus protocol, and shared-memory data structures.  Civl is publicly available: https://civl-verifier.github.io/.
