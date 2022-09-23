@@ -112,7 +112,9 @@ y22_fall:
                http://arxiv.org/abs/2209.08383"
     title: "langcc: A Next-Generation Compiler Compiler"
     speaker: "Joe Zimmerman"
-    bio: "TBD"
+    bio: "Joe is a researcher with a variety of interests, including theoretical cryptography, compilers and programming language design, and machine learning.
+          He completed his undergraduate studies in computer science, with a focus on software verification, then attended Stanford University for a PhD in cryptography and security, advised by Dan Boneh and John Mitchell.
+          Joe is always driven by finding elegant solutions to challenging problems, both of which occur in abundance at Protocol Labs."
     food: ""
 
   - date: "2022-10-27"
