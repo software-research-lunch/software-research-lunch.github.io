@@ -107,9 +107,11 @@ y22_fall:
     food: ""
 
   - date: "2022-10-20"
-    abstract: "TBD"
-    title: "TBD"
-    speaker: "TBD"
+    abstract: "Given a declarative language spec in BNF, langcc automatically generates a full compiler frontend (from BNF), including AST + traversals, lexer, parser, and pretty-printer. langcc can serve as a replacement for lex+yacc, but also provides many additional features, including novel optimizations and grammar transformations, semantic attributes, AST source-line mapping, and user-friendly presentation of LR conflicts. Its generated parsers are faster than the standard parsers for Go 1.17.8 and Python 3.9.12, and the tool is general enough to be self-hosting, i.e., it generates its own frontend.
+               Under the hood, langcc is based on several novel innovations on the LR parsing paradigm of Knuth; see the companion technical report for further details:
+               http://arxiv.org/abs/2209.08383"
+    title: "langcc: A Next-Generation Compiler Compiler"
+    speaker: "Joe Zimmerman"
     bio: "TBD"
     food: ""
 
