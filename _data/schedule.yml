@@ -93,7 +93,16 @@ y22_fall:
     food: ""
 
   - date: "2022-10-06"
-    abstract: "TBD"
+    abstract: "With the increasing availability of parallel computing power, there is a growing focus on parallelizing algorithms
+              for important automated reasoning problems such as Boolean satisfiability (SAT). Divide-and-Conquer (D&C) is a popular
+              parallel SAT solving paradigm that partitions SAT instances into independent sub-problems which are then solved in parallel.
+              For unsatisfiable instances, state-of-the-art D&C solvers generate DRAT refutations for each sub-problem. However, they do not
+              generate a single refutation for the original instance. To close this gap, we present Proof-Stitch, a procedure for combining
+              refutations of different sub-problems into a single refutation for the original instance. We prove the correctness of the procedure
+              and propose optimizations to reduce the size and checking time of the combined refutations by invoking existing trimming tools
+              in the proof-combination process. We also provide an extensible implementation of the proposed technique. Experiments
+              on instances from last year’s SAT competition show that the optimized refutations are checkable up to seven times faster than
+              unoptimized refutations."
     title: "Proof-Stitch: Proof Combination for Divide-and-Conquer SAT Solvers"
     speaker: "Abhishek Anil Nair"
     bio: "TBD"
