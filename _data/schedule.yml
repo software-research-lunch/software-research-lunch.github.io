@@ -147,6 +147,20 @@ y22_fall:
     bio: "TBD"
     food: ""
 
+  - date: "2022-11-24"
+    abstract: "TBD"
+    title: "Small Model Properties"
+    speaker: "Matthew Sotoudeh"
+    bio: "TBD"
+    food: ""
+
+  - date: "2022-12-01"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "TBD"
+    bio: "TBD"
+    food: ""
+
 
 y21_winter:
   location: "Zoom"
