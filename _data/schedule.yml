@@ -120,7 +120,7 @@ y22_fall:
                We evaluate Unity on seven real-world DNNs running on up to 192 GPUs on 32 nodes and show that Unity outperforms
                existing DNN training frameworks by up to 3.6× while keeping optimization times under 20 minutes. Unity is available
                to use as part of the open-source DNN training framework FlexFlow at https://github.com/flexflow/flexflow."
-    title: "UNITY"
+    title: "Unity: Accelerating DNN Training Through Joint Optimization of Algebraic Transformations and Parallelization"
     speaker: "Colin Unger"
     bio: "I am a third year Computer Science Ph.D. student at Stanford University advised by Alex Aiken.
           I received my bachelor’s degree in Computing from the College of Creative Studies at UC Santa Barbara,
