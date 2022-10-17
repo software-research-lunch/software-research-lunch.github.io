@@ -153,16 +153,17 @@ y22_fall:
 
   - date: "2022-11-03"
     abstract: "TBD"
-    title: "IPDL"
-    speaker: "Josh"
+    title: "TBD"
+    speaker: "TBD"
     bio: "TBD"
     food: ""
 
   - date: "2022-11-10"
-    abstract: "TBD"
-    title: "TBD"
-    speaker: "TBD"
-    bio: "TBD"
+    abstract: "Many proofs of interactive cryptographic protocols (e.g., as in Universal Composability) operate by proving the protocol at hand to be observationally equivalent to an idealized specification. While pervasive, formal tool support for observational equivalence of cryptographic protocols is still a nascent area of research. Current mechanization efforts tend to either focus on diff-equivalence, which establishes observational equivalence between protocols with identical control structures, or require an explicit witness for the observational equivalence in the form of a bisimulation relation.
+    Our goal is to simplify proofs for cryptographic protocols by introducing a core calculus, IPDL, for cryptographic observational equivalences. Via IPDL, we aim to address a number of theoretical issues for cryptographic proofs in a simple manner, including probabilistic behaviors, distributed message-passing, and resource-bounded adversaries and simulators. We demonstrate IPDL on a number of case studies, including a distributed coin toss protocol, Oblivious Transfer, and the GMW multi-party computation protocol. All proofs of case studies are mechanized via an embedding of IPDL into the Coq proof assistant."
+    title: "A Core Calculus for Equational Proofs of Cryptographic Protocols"
+    speaker: "Joshua Gancher"
+    bio: "Joshua Gancher is a postdoc at Carnegie Mellon University working with Bryan Parno. He works at the intersection of programming languages and cryptography, applying formal methods and verification techniques to certify cryptographic protocols."
     food: ""
 
   - date: "2022-11-17"
@@ -178,7 +179,7 @@ y22_fall:
     such as linked lists and binary search trees."
     title: "Provably Exhaustive Testing for Tree-Manipulating Programs"
     speaker: "Matthew Sotoudeh"
-    bio: "TBD"
+    bio: "Matthew Sotoudeh is a second year PhD student working with Dawson Engler. His research interests include program analysis, verification, and understanding."
     food: ""
 
   - date: "2022-12-01"
