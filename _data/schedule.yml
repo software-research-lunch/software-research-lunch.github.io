@@ -146,8 +146,8 @@ y22_fall:
 
   - date: "2022-10-27"
     abstract: "TBD"
-    title: "Perfermance Modelling for Sparse Matrix Multiplication"
-    speaker: "Mert"
+    title: "Performance Modelling for Sparse Matrix Multiplication"
+    speaker: "Mert Hidayetoglu"
     bio: "TBD"
     food: ""
 
@@ -173,8 +173,10 @@ y22_fall:
     food: ""
 
   - date: "2022-11-24"
-    abstract: "TBD"
-    title: "Completeness Thresholds for Heap Programs"
+    abstract: "When a total function has only finitely-many possible inputs, questions about its behavior can be answered by testing on all of those inputs.
+    In this talk I will present work-in-progress research extending the notion of exhaustive testing to functions that operate on tree-shaped, integer-valued inputs,
+    such as linked lists and binary search trees."
+    title: "Provably Exhaustive Testing for Tree-Manipulating Programs"
     speaker: "Matthew Sotoudeh"
     bio: "TBD"
     food: ""
