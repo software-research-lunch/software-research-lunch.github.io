@@ -185,10 +185,23 @@ y22_fall:
   - date: "2022-12-01"
     abstract: "TBD"
     title: "TBD"
+    speaker: "Christopher Hahn"
+    bio: "TBD"
+    food: ""
+
+  - date: "2022-12-08"
+    abstract: "TBD"
+    title: "TBD"
     speaker: "TBD"
     bio: "TBD"
     food: ""
 
+  - date: "2022-12-15"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "TBD"
+    bio: "TBD"
+    food: ""
 
 y21_winter:
   location: "Zoom"
