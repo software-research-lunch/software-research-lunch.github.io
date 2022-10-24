@@ -175,12 +175,10 @@ y22_fall:
     food: ""
 
   - date: "2022-11-24"
-    abstract: "When a total function has only finitely-many possible inputs, questions about its behavior can be answered by testing on all of those inputs.
-    In this talk I will present work-in-progress research extending the notion of exhaustive testing to functions that operate on tree-shaped, integer-valued inputs,
-    such as linked lists and binary search trees."
-    title: "Provably Exhaustive Testing for Tree-Manipulating Programs"
-    speaker: "Matthew Sotoudeh"
-    bio: "Matthew Sotoudeh is a second year PhD student working with Dawson Engler. His research interests include program analysis, verification, and understanding."
+    abstract: ""
+    title: "Thanksgiving"
+    speaker: ""
+    bio: ""
     food: ""
 
   - date: "2022-12-01"
@@ -191,10 +189,12 @@ y22_fall:
     food: ""
 
   - date: "2022-12-08"
-    abstract: "TBD"
-    title: "TBD"
-    speaker: "TBD"
-    bio: "TBD"
+    abstract: "When a total function has only finitely-many possible inputs, questions about its behavior can be answered by testing on all of those inputs.
+    In this talk I will present work-in-progress research extending the notion of exhaustive testing to functions that operate on tree-shaped, integer-valued inputs,
+    such as linked lists and binary search trees."
+    title: "Provably Exhaustive Testing for Tree-Manipulating Programs"
+    speaker: "Matthew Sotoudeh"
+    bio: "Matthew Sotoudeh is a second year PhD student working with Dawson Engler. His research interests include program analysis, verification, and understanding."
     food: ""
 
   - date: "2022-12-15"
