@@ -152,11 +152,10 @@ y22_fall:
     food: ""
 
   - date: "2022-11-03"
-    abstract: "Differentiation lies at the core of many machine-learning algorithms, and is well supported by popular autodiff systems, such as TensorFlow and PyTorch. Originally, these systems have been developed to compute derivatives of differentiable functions, but in practice, they are commonly applied to functions with non-differentiabilities. For instance, neural networks using ReLU define nondifferentiable functions in general, but the gradients of losses involving those functions are computed using autodiff systems in practice. This status quo raises a natural question: are autodiff systems correct in any formal sense when they are applied to such non-differentiable functions?
-    In this talk, I will provide a positive answer to this question. Using counterexamples, we first point out flaws in often used informal arguments, such as: non-differentiabilities arising in deep learning do not cause any issues because they form a measure-zero set. We then investigate a class of functions, called PAP functions, that includes nearly all (possibly nondifferentiable) functions in deep learning nowadays. For these PAP functions, we propose a new type of derivatives, called intensional derivatives, and prove that these derivatives always exist and coincide with standard derivatives for almost all inputs. We also show that these intensional derivatives are what most autodiff systems compute or try to compute essentially. In this way, we formally establish the correctness of autodiff systems applied to non-differentiable functions. This talk is based on my paper, published at NeurIPS 2020 (Spotlight) and presented at Differentiable Programming Workshop in 2022."
-    title: "On Correctness of Automatic Differentiation for Non-Differentiable Functions"
-    speaker: "Wonyeol Lee"
-    bio: "Wonyeol Lee is a Ph.D. student in Computer Science at Stanford University, advised by Alex Aiken. His research interests lie in the intersection of programming languages and machine learning. In particular, he focuses on various challenges in machine learning that arise from how mathematical functions of interest are specified in practice: by programs."
+    abstract: "We introduce SpDISTAL, a compiler for sparse tensor algebra that targets distributed systems. SpDISTAL com- bines separate descriptions of tensor algebra expressions, sparse data structures, data distribution, and computation distribution. Thus, it enables distributed execution of sparse tensor algebra expressions with a wide variety of sparse data structures and data distributions. SpDISTAL is implemented as a C++ library that targets a distributed task-based runtime system and can generate code for nodes with both multi-core CPUs and multiple GPUs. SpDISTAL generates distributed code that achieves performance competitive with hand-written distributed functions for specific sparse tensor algebra expressions and that outperforms general interpretation-based systems by one to two orders of magnitude."
+    title: "SpDISTAL: Compiling Distributed Sparse Tensor Computations"
+    speaker: "Rohan Yadav"
+    bio: "Rohan Yadav is a second year computer science PhD student at Stanford University, advised by Alex Aiken and Fredrik Kjolstad. He is generally interested in programming languages and computer systems, with a focus in systems for parallel and distributed computing."
     food: ""
 
   - date: "2022-11-10"
@@ -189,10 +188,11 @@ y22_fall:
     food: ""
 
   - date: "2022-12-08"
-    abstract: "TBD"
-    title: "TBD"
-    speaker: "TBD"
-    bio: "TBD"
+    abstract: "Differentiation lies at the core of many machine-learning algorithms, and is well supported by popular autodiff systems, such as TensorFlow and PyTorch. Originally, these systems have been developed to compute derivatives of differentiable functions, but in practice, they are commonly applied to functions with non-differentiabilities. For instance, neural networks using ReLU define nondifferentiable functions in general, but the gradients of losses involving those functions are computed using autodiff systems in practice. This status quo raises a natural question: are autodiff systems correct in any formal sense when they are applied to such non-differentiable functions?
+    In this talk, I will provide a positive answer to this question. Using counterexamples, we first point out flaws in often used informal arguments, such as: non-differentiabilities arising in deep learning do not cause any issues because they form a measure-zero set. We then investigate a class of functions, called PAP functions, that includes nearly all (possibly nondifferentiable) functions in deep learning nowadays. For these PAP functions, we propose a new type of derivatives, called intensional derivatives, and prove that these derivatives always exist and coincide with standard derivatives for almost all inputs. We also show that these intensional derivatives are what most autodiff systems compute or try to compute essentially. In this way, we formally establish the correctness of autodiff systems applied to non-differentiable functions. This talk is based on my paper, published at NeurIPS 2020 (Spotlight) and presented at Differentiable Programming Workshop in 2022."
+    title: "On Correctness of Automatic Differentiation for Non-Differentiable Functions"
+    speaker: "Wonyeol Lee"
+    bio: "Wonyeol Lee is a Ph.D. student in Computer Science at Stanford University, advised by Alex Aiken. His research interests lie in the intersection of programming languages and machine learning. In particular, he focuses on various challenges in machine learning that arise from how mathematical functions of interest are specified in practice: by programs."
     food: ""
 
   - date: "2022-12-15"
