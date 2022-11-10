@@ -167,10 +167,10 @@ y22_fall:
     food: ""
 
   - date: "2022-11-17"
-    abstract: "TBD"
-    title: ""
+    abstract: "There has been significant interest in high-performance graph processing due to their applications in many domains, including social network and Web analytics, machine learning, biology, and physical simulations. However, writing efficient parallel graph programs for processing the large-scale graphs available today can be very difficult and time consuming, and therefore it is important to have tools that make the task easier. In this talk, I will present our work on designing frameworks for parallel graph processing, for both static graphs and streaming graphs. I will first present GraphIt, a domain-specific language that separates algorithm logic from performance optimizations to achieve high performance across different static graph algorithms and datasets. I will then present Aspen, a framework for processing streaming graphs that introduces a new purely-functional compressed tree data structure to enable graph queries and updates to be performed concurrently with low latency. Our solutions provide high-level programming interfaces that simplify the task of writing parallel graph programs, while achieving high performance at the same time."
+    title: "High-Performance Frameworks for Static and Streaming Graph Processing"
     speaker: "Julian Shun"
-    bio: "TBD"
+    bio: "Julian Shun is an Associate Professor of Electrical Engineering and Computer Science at MIT and a lead investigator in MIT Computer Science and Artificial Intelligence Laboratory (CSAIL). His research focuses on the theory and practice of parallel algorithms and programming, with particular emphasis on designing algorithms and frameworks for large-scale graph processing and spatial data analysis. Prior to joining MIT, he was a postdoctoral Miller Research Fellow at UC Berkeley. His honors include the NSF CAREER award, DOE Early Career Award, ACM Doctoral Dissertation Award, the CMU School of Computer Science Doctoral Dissertation Award, Google Faculty Research Award, Google Research Scholar Award, SoE Ruth and Joel Spira Award for Excellence in Teaching, Facebook Graduate Fellowship, and best paper awards at PLDI, SPAA, CGO, and DCC."
     food: ""
 
   - date: "2022-11-24"
