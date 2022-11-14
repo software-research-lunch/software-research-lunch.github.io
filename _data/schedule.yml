@@ -33,7 +33,7 @@ y23_winter:
   year: "2023"
   quarter: "winter"
   talks:
-  - date: "2023-01-01"
+  - date: "2023-01-05"
     abstract: ""
     title: "Organizational Lunch"
     speaker: ""
@@ -44,6 +44,12 @@ y23_winter:
     title: "Smoothness Analysis for Probabilistic Programs with Application to Optimised Variational Inference"
     speaker: "Wonyeol Lee"
     bio: "Wonyeol Lee is a final year PhD student in Computer Science at Stanford University, advised by Alex Aiken. His research has been in the intersection of programming languages and machine learning. He is particularly interested in identifying and addressing various challenges in machine learning (ML) that arise from the discrepancy between the theory and practice of ML: in theory, mathematical functions of interest are assumed to be well-behaved, but in practice, those mathematical functions are usually expressed by programs which can be ill-behaved."
+    food: ""
+  - date: "2023-01-19"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "TBD"
+    bio: ""
     food: ""
 
 y22_fall:
