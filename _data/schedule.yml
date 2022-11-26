@@ -199,10 +199,10 @@ y22_fall:
     food: ""
 
   - date: "2022-12-01"
-    abstract: "TBD"
-    title: "TBD"
+    abstract: "Formal or semi-formal specifications are essential for automated verification tasks. In this talk, we study the abilities of language models (LMs) to translate natural language into formal specifications with complex semantics. The primary motivation is a) to facilitate the writing of formal specifications and b) to enable verification of the output of LMs for code. We will consider a variety of experiments in diverse domains (Regex, FOL, LTL): Can LMs achieve sufficient accuracy on this non-traditional translation task to be helpful, i.e., generalize to the semantics? Can LMs simultaneously maintain their generalization capabilities from pre-trained knowledge of natural language? We will reserve some time at the end of the talk for a prototype demo for interactively generating formal specifications."
+    title: "Formal Specifications from Natural Language"
     speaker: "Christopher Hahn"
-    bio: "TBD"
+    bio: "Christopher (Chris) Hahn is a Visiting Assistant Professor in Computer Science at Stanford University and an Independent Research Group Leader at the CISPA Helmholtz Center for Information Security. His research interests are in the areas of deep learning, formal verification, automated reasoning, and security. He received a Ph.D. in Computer Science from Saarland University in 2021 under the supervision of Bernd Finkbeiner."
     food: ""
 
   - date: "2022-12-08"
