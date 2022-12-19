@@ -28,6 +28,18 @@
 # Haoze Wu <haozewu@stanford.edu>
 # Anjiang Wei <anjiang@stanford.edu>
 
+y23_spring:
+  location: "Gates 459"
+  year: "2023"
+  quarter: "spring"
+  talks:
+  - date: "2023-04-06"
+    abstract: ""
+    title: "Organizational Lunch"
+    speaker: ""
+    bio: ""
+    food: ""
+
 y23_winter:
   location: "Gates 459"
   year: "2023"
