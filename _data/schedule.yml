@@ -87,6 +87,12 @@ y23_winter:
     speaker: ""
     bio: ""
     food: ""
+  - date: "2023-03-16"
+    abstract: ""
+    title: ""
+    speaker: "Matthew Sotoudeh"
+    bio: "Matthew Sotoudeh is a second year PhD student working with Dawson Engler. His research interests include program analysis, verification, and understanding."
+    food: ""
 
 y22_fall:
   location: "Gates 459"
