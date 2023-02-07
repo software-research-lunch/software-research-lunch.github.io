@@ -29,7 +29,7 @@
 # Anjiang Wei <anjiang@stanford.edu>
 
 y23_spring:
-  location: "Gates 459"
+  location: "Gates 415"
   year: "2023"
   quarter: "spring"
   talks:
@@ -41,7 +41,7 @@ y23_spring:
     food: ""
 
 y23_winter:
-  location: "Gates 459"
+  location: "Gates 415"
   year: "2023"
   quarter: "winter"
   talks:
