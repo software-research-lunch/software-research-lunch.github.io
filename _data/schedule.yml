@@ -28,6 +28,17 @@
 # Haoze Wu <haozewu@stanford.edu>
 # Anjiang Wei <anjiang@stanford.edu>
 
+y23_fall:
+  location: "Gates 415"
+  year: "2023"
+  quarter: "fall"
+  talks:
+  - date: "2023-09-28"
+    abstract: ""
+    title: ""
+    speaker: ""
+    bio: ""
+
 y23_spring:
   location: "Gates 415"
   year: "2023"
@@ -39,6 +50,11 @@ y23_spring:
     speaker: "Eric Zelikman"
     bio: "I'm a current Stanford CS PhD student (and Symbolic Systems graduate) fascinated by how (and whether) algorithms can learn meaningful representations and reason, advised by Nick Haber and Noah Goodman. Perhaps the most exciting gap between biological and machine learning is the ease with which we learn to create and apply concepts about our world from experience: not only do we need much less experience to construct these concepts, but our understanding is flexible in novel situations, robust to slight changes, and generally disentangled. Ultimately, I hope machine learning can teach us about non-machine learning and help us overcome the challenges facing humanity."
     food: ""
+  - date: "2023-06-13"
+    abstract: ""
+    title: ""
+    speaker: ""
+    bio: ""
 
 y23_winter:
   location: "Gates 415"
