@@ -78,10 +78,14 @@ In addition to the simplicity, the approach has significant theoretical and prac
     speaker: "David Zhang"
     bio: ""
   - date: "2023-05-18"
-    abstract: ""
-    title: ""
+    abstract: "In a parallel and distributed application, a mapping is a selection of a processor for each computation or task and memories for the data collections each task accesses.
+Finding high-performance mapping is challenging, particularly on heterogeneous hardware with multiple choices for processors and memories.
+We show that fast mappings are sensitive to the machine, application, and input.
+We present Automap, a system that automatically tunes the mapping to the hardware used without user intervention or code modification.
+Automap utilizes a novel search algorithm called constrained coordinate-wise descent (CCD) that explicitly balances the trade-off between running computations fast and minimizing data movement. With CCD, Automap discovers mappings up to 2.41x faster than custom, hand-written mappers."
+    title: "Automated Mapping of Task-Based Programs onto Distributed and Heterogeneous Machines"
     speaker: "Thiago Teixeira"
-    bio: ""
+    bio: "Thiago is a postdoctoral scholar in computer science at Stanford University, working with Alex Aiken. He received his Ph.D. in computer science from the University of Illinois at Urbana-Champaign. He is broadly interested in compilers, programming models, and parallel computing."
   - date: "2023-05-25"
     abstract: "We present FPIR: a portable and performant language for fixed-point digital signal processing; and Pitchfork: a two-stage system that first lifts legacy C-style code into FPIR before lowering FPIR to target-specific instructions on multiple backends. FPIR is specifically designed to enable automatic synthesis of interesting and powerful lifting and lowering rules. We show that our approach improves run-time performance of portably-written fixed-point signal processing code in Halide across a range of benchmarks, by geomean 1.31x on x86 with AVX2, 1.82x on ARM Neon, and 2.46x on Hexagon HVX compared to a standard LLVM-based compiler flow, while maintaining or improving existing compile times, and decreasing the amount of code required to implement each backend."
     title: "Fast Instruction Selection for Fast Digital Signal Processing"
