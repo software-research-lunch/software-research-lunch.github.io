@@ -102,10 +102,10 @@ Automap utilizes a novel search algorithm called constrained coordinate-wise des
     speaker: "Manya Bansal"
     bio: "Manya Bansal is currently an undergraduate student at Stanford University."
   - date: "2023-06-15"
-    abstract: ""
-    title: ""
+    abstract: "We introduce indexed streams, a formal operational model and intermediate representation that describes the fused execution of a contraction language that encompasses both sparse tensor algebra and relational algebra. We prove that the indexed stream model is correct with respect to a functional semantics. We also develop a compiler for contraction expressions that uses indexed streams as an intermediate representation. The compiler is only 540 lines of code, but we show that its performance can match both the TACO compiler for sparse tensor algebra and the SQLite and DuckDB query processing libraries for relational algebra."
+    title: "Indexed Streams: A Formal Intermediate Representation for the Fused Execution of Contraction Operations"
     speaker: "Scott Kovach"
-    bio: ""
+    bio: "I am a PhD student in computer science at Stanford advised by Fredrik Kjolstad. I work on compilers to support new high-level programming styles and mathematical techniques to verify their correctness. Currently my focus is on sparse array programs."
 
 y23_winter:
   location: "Gates 415"
