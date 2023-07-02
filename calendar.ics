@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-{% assign data = site.data.schedule.y23_spring %}BEGIN:VCALENDAR
+{% assign data = site.data.schedule.y23_fall %}BEGIN:VCALENDAR
 VERSION:2.0
 NAME:Stanford Software Research Lunch
 X-WR-CALNAME:Stanford Software Research Lunch
