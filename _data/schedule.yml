@@ -93,10 +93,14 @@ imparts significant benefits."
     speaker: ""
     bio: ""
   - date: "2023-11-02"
-    abstract: ""
-    title: ""
+    abstract: "From Fortran to Numpy, TensorFlow, and Halide, programming languages have evolved to effectively handle dense arrays. However, real-world data often exhibits underlying structures like sparsity, run-length-encoding, or symmetry. This talk discusses how programming languages can provide a versatile vocabulary to describe and analyze tensor data structures and operations, including their asymptotic costs and intermediate representations. We introduce Finch, a compiler which adapts dense array programs to the structure of data automatically. Finch uses a language of basic loop building blocks called Looplets to hierarchically decompose structured sparsity and generate efficient code. Our approach enables new loop optimizations across multiple domains, unifying techniques such as sparse tensors, databases, and lossless compression.
+
+https://dl.acm.org/doi/10.1145/3579990.3580020
+https://dl.acm.org/doi/10.1145/3519939.3523442
+https://github.com/willow-ahrens/Finch.jl"
+    title: "Finch: Compiler techniques for versatile sparse and structured data processing"
     speaker: "Willow Ahrens"
-    bio: ""
+    bio: "Willow Ahrens (http://willowahrens.io) is a Ph.D. student at MIT studying tensor compilers, advised by Saman Amarasinghe and graduating next year. She is the developer of Finch, a datastructure-driven array programming language. Willow received her BS in Computer Science with a minor in Mathematics from University of California, Berkeley. Willow is a Department of Energy Computational Science Graduate Fellow, and values scientific applications. Willow is also a glassblower, and teaches first-time glassblowers at the MIT Glass Lab."
   - date: "2023-11-09"
     abstract: "In a parallel and distributed application, a mapping is a selection of a processor for each computation or task and memories for the data collections that each task accesses. Finding high-performance mappings is challenging, particularly on heterogeneous hardware with multiple choices for processors and memories. We show that fast mappings are sensitive to the machine, application, and input. Porting to a new machine, modifying the application, or using a different input size may necessitate re-tuning the mapping to maintain the best possible performance. We present AutoMap, a system that automatically tunes the mapping to the hardware used and finds fast mappings without user intervention or code modification. In contrast, hand-written mappings often require days of experimentation. AutoMap utilizes a novel constrained coordinate-wise descent search algorithm that balances the trade-off between running computations quickly and minimizing data movement. AutoMap discovers mappings up to 2.41× faster than custom, hand-written mappers."
     title: "Automated Mapping of Task-Based Programs onto Distributed and Heterogeneous Machines"
