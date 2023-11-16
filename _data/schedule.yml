@@ -135,15 +135,37 @@ https://github.com/willow-ahrens/Finch.jl"
     speaker: "Will Crichton"
     bio: "Will Crichton is a postdoc at Brown University advised by Shriram Krishnamurthi. His research is about designing systems to amplify the intelligence of programmers, drawing on ideas from programming languages and human-computer interaction. Will's recent research has focused on the Rust programming language, where his tools have been used by tens of thousands of Rust learners and developers. Will completed his PhD at Stanford University in 2022."
   - date: "2023-11-30"
+    abstract: "Over the last couple of years, Jane Street has greatly increased
+    its investment in OCaml, and has started developing major
+    extensions to the OCaml's type system, with the primary goal of
+    making OCaml a better language for writing high-performance
+    systems.
+
+    In this talk, I'll attempt to provide a developer's-eye view of
+    these changes.  We'll cover two major directions of innovation:
+    first, the addition of modal types to OCaml, which opens up a
+    variety of ambitious features, like memory-safe stack-allocation;
+    type-level tracking of effects, and data-race freedom guarantees
+    for multicore code.  The second is the addition of a kind system
+    to OCaml, which will provides more control over the representation
+    of memory, in particular allowing for structured data to be
+    represented in a cache-and-prefetch-friendly tabular form.
+    Together, these features pull together some of the most important
+    features for writing high performance code in Rust, while
+    maintaining the relative simplicity of programming in OCaml.
+
+    In all of this, I'll focus less on the type theory, and more on
+    how these features are surfaced to users, the practical problems
+    that they help us solve, and the place in the design space of
+    programming languages that this leaves us in."
+    title: "Making OCaml Safe for Performance Engineering"
+    speaker: "Ron Minsky"
+    bio: "Yaron Minsky heads the Technology group at Jane Street, a proprietary trading firm that is the largest industrial user of OCaml. He was responsible for introducing OCaml to the company and for managing the company's transition to using OCaml for all of its core infrastructure. Today, billions of dollars worth of securities transactions flow each day through those systems. Yaron obtained his PhD in Computer Science from Cornell University, where he studied distributed systems. Yaron has lectured, blogged and written about OCaml for years, with articles published in Communications of the ACM and the Journal of Functional Programming. He chairs the steering committee of the Commercial Users of Functional Programming, and is a member of the steering committee for the International Conference on Functional Programming."
+  - date: "2023-12-07"
     abstract: "Scalable static analysis of parallel programs is crucial in ensuring the correctness, safety, and performance of large-scale software applications. As software projects grow in size and complexity, analyzing them becomes more challenging. Analyzing parallel programs, which can run concurrently on multiple processors or cores, poses additional challenges due to the intricacies of synchronization, data races, and deadlocks. In this talk, I will present a static analysis tool developed by my research team at Texas A&M and a startup company, Coderrect Inc, over the last five years based on the LLVM toolchain. The tool has been used to analyze over tens of millions lines of source code in languages such as C/C++, Fortran, Rust, and Smalltalk, and has identified hundreds of previously undetected concurrency issues in popular open source and proprietary projects.  I will focus on a few precision-preserving techniques to scale the compiler analyses,  including an abstraction of origins, pointer analysis solvers, OpenMP logical threading, and an IR for dynamic languages.  Some of these ideas have been published in recent PLDI, SC, and ICSE conferences, including an ACM SigSoft distinguished paper award."
     title: "Scalable Static Analysis of Parallel Programs with Tens of Millions Lines of Code"
     speaker: "Jeff Huang"
     bio: "Jeff Huang is currently an Associate Professor in the Department of Computer Science and Engineering at Texas A&M University. His research focuses on developing intelligent techniques and tools for improving software performance and reliability based on fundamental program analyses and programming language theory. His research has won awards including ACM SIGSOFT Early Career Researcher Award, ACM SIGSOFT Outstanding Dissertation Award, ACM SIGPLAN PLDI Distinguished Paper Award, SIGPLAN Research Highlights, Google Faculty Research Award, Mozilla Research Award, Facebook Research Award, NSF CAREER Award and DARPA Young Faculty Award."
-  - date: "2023-12-07"
-    abstract: ""
-    title: ""
-    speaker: "Benjamin Driscoll"
-    bio: ""
   - date: "2023-12-14"
     abstract: ""
     title: ""
