@@ -167,10 +167,10 @@ https://github.com/willow-ahrens/Finch.jl"
     speaker: "Jeff Huang"
     bio: "Jeff Huang is currently an Associate Professor in the Department of Computer Science and Engineering at Texas A&M University. His research focuses on developing intelligent techniques and tools for improving software performance and reliability based on fundamental program analyses and programming language theory. His research has won awards including ACM SIGSOFT Early Career Researcher Award, ACM SIGSOFT Outstanding Dissertation Award, ACM SIGPLAN PLDI Distinguished Paper Award, SIGPLAN Research Highlights, Google Faculty Research Award, Mozilla Research Award, Facebook Research Award, NSF CAREER Award and DARPA Young Faculty Award."
   - date: "2023-12-14"
-    abstract: ""
-    title: ""
+    abstract: "We show how to build a compiler for a sparse array language that supports shape operators (e.g. reshaping or concatenating arrays) in addition to compute operators. Existing sparse array programming systems implement generic shape operators for only some sparse data structures, reduce shape operators on other data structures to those, and do not support fusion. Our system compiles sparse array expressions to code that efficiently iterates over reshaped views of irregular sparse data structures, without needing to materialize temporary storage for intermediates. Our evaluation shows that our approach generates sparse array code competitive with popular sparse array libraries: shape operators perform on average 1.49x faster than hand-written kernels in scipy.sparse and 28x faster than handwritten kernels in pydata/sparse; for operators whose library implementations perform data structure conversions, our generated code performs on average 4.19x faster than scipy.sparse and 54.6x faster than pydata/sparse. Lastly, we show that fusion of shape and compute operators can improve the performance of some sparse array programs, with 1.16x-2.79x speed-ups on selected programs over unfused code."
+    title: "Compiling Shape Operators for Sparse Array Programming"
     speaker: "Alexander J. Root"
-    bio: ""
+    bio: "I am a Stanford CS PhD student advised by Fredrik Kjolstad, currently working on sparse data reorganization. My research interests broadly include domain-specific languages, compilers, and architectures for high-performance numerical computing, with an emphasis on visual computing applications."
 
 y23_spring:
   location: "Gates 415"
