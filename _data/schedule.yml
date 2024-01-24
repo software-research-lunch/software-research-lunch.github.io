@@ -85,7 +85,9 @@ shortcomings under various conditions."
     title: "Fairness in serving large language models"
     speaker: "Ying Sheng"
   - date: "2024-02-01"
-    abstract: ""
+    abstract: "We'll answer some natural questions regarding asymptotic lower
+      and upper bounds on the performance of garbage collection in adversarial
+      environments."
     title: "Garbage Collection"
     speaker: "Matthew Sotoudeh"
     bio: ""
