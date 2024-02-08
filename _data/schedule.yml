@@ -92,8 +92,25 @@ shortcomings under various conditions."
     speaker: "Matthew Sotoudeh"
     bio: ""
   - date: "2024-02-08"
-    abstract: ""
-    title: ""
+    abstract: "We present KDRSolvers, a novel framework for representing sparse
+      linear systems and implementing Krylov subspace algorithms on
+      heterogeneous, distributed-memory parallel computers. KDRSolvers unifies
+      a variety of sparse matrix storage formats (e.g., COO, CSR, CSC) with the
+      language of dependent partitioning, representing the formats as abstract
+      maps that relate a matrix's domain, range, and nonzero entries. This
+      unification enables KDRSolvers to define universal co-partitioning
+      operators for matrix and vector data, not tied to any specific storage
+      format, which facilitates rapid prototyping and performance evaluation of
+      different data layouts and partitioning strategies. KDRSolvers also
+      introduces multi-operator systems in which matrices and vectors can be
+      constructed from multiple non-contiguous pieces without data movement.
+      Our implementation of KDRSolvers, which targets the Legion runtime
+      system, achieves greater flexibility and competitive performance compared
+      to established systems, such as PETSc and Trilinos. In experiments with
+      up to 256 nodes on the Lassen supercomputer, our implementation achieves
+      up to a 9.6% reduction in execution time per iteration on large problem
+      sizes."
+    title: "KDRSolvers: Scalable, Flexible, Task-Oriented Krylov Solvers"
     speaker: "David K. Zhang"
     bio: ""
   - date: "2024-02-15"
