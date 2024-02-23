@@ -157,8 +157,8 @@ shortcomings under various conditions."
         modification to or information from the compiler beyond what is already
         in the DWARF symbol information, and can improve debug coverage metrics
         on a variety of production-sized programs even at O3.  Time permitting,
-        we will also talk about why I now prefer the Earley parser approach to
-        PEGs."
+        we will also talk about why I now prefer the Earley parser approach
+        over PEGs."
     speaker: "Matthew Sotoudeh"
     bio: ""
       # - date: "2024-02-21"
