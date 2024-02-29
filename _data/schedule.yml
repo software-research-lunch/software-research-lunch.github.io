@@ -168,20 +168,20 @@ shortcomings under various conditions."
     title: ""
     speaker: "Brando Miranda"
     bio: ""
-  - date: "2024-03-14"
-    title: "Smarter DWARFs"
-    abstract: "Do you hate it when you really need to know the value of some
-      variable, yet GDB refuses to tell it to you? I'll use my organizer's
-      prerogative to present a second project this quarter: a tool that takes
-        your compiled binary and magically improves the DWARF information so
-        that fewer values appear optimized out to GDB. Our tool requires no
-        modification to or information from the compiler beyond what is already
-        in the DWARF symbol information, and can improve debug coverage metrics
-        on a variety of production-sized programs even at O3.  Time permitting,
-        we will also talk about why I now prefer the Earley parser approach
-        over PEGs."
-    speaker: "Matthew Sotoudeh"
-    bio: ""
+      # - date: "2024-03-14"
+      #   title: "Smarter DWARFs"
+      #   abstract: "Do you hate it when you really need to know the value of some
+      #     variable, yet GDB refuses to tell it to you? I'll use my organizer's
+      #     prerogative to present a second project this quarter: a tool that takes
+      #       your compiled binary and magically improves the DWARF information so
+      #       that fewer values appear optimized out to GDB. Our tool requires no
+      #       modification to or information from the compiler beyond what is already
+      #       in the DWARF symbol information, and can improve debug coverage metrics
+      #       on a variety of production-sized programs even at O3.  Time permitting,
+      #       we will also talk about why I now prefer the Earley parser approach
+      #       over PEGs."
+      #   speaker: "Matthew Sotoudeh"
+      #   bio: ""
   - date: "2024-03-21"
     abstract: ""
     title: ""
