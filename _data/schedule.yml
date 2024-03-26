@@ -33,6 +33,11 @@ y24_spring:
   year: "2024"
   quarter: "spring"
   talks:
+    - date: "2024-04-04"
+      abstract: ""
+      title: ""
+      speaker: "Akshay Srivatsan (Tentative)"
+      bio: ""
     - date: "2024-04-11"
       abstract: ""
       title: ""
