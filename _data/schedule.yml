@@ -34,7 +34,14 @@ y24_spring:
   quarter: "spring"
   talks:
     - date: "2024-04-04"
-      abstract: ""
+      abstract: "We propose putting computation at the center of what networked
+      computers and cloud services do for their users. We envision a shared
+      representation of a computation: a deterministic procedure, run in an
+        environment of well-specified dependencies. This suggests an end-to-end
+        argument for serverless computing, shifting the service model from
+        “renting CPUs by the second” to “providing the unambiguously correct
+        result of a computation.” Accountability to these higher-level
+        abstractions could permit agility and innovation on other axes."
       title: ""
       speaker: "Akshay Srivatsan"
       bio: ""
