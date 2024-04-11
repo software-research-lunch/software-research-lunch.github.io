@@ -46,9 +46,23 @@ y24_spring:
       speaker: "Akshay Srivatsan"
       bio: ""
     - date: "2024-04-11"
-      abstract: ""
-      title: ""
-      speaker: "Haoran Xu (Tentative)"
+      abstract: " Building a high-performance VM for a dynamic language has
+        traditionally required a huge amount of time, money, and expertise. To
+        reduce the high engineering cost, we present Deegen, a
+        compiler-compiler that generates a high-performance VM automatically
+        from a semantic description of the bytecodes. The generated VM has
+      three execution tiers, similar to the state-of-the-art VMs like V8 or
+      JSC: an optimized interpreter, a baseline JIT, and an optimizing JIT (the
+        work for the optimizing JIT is still in progress). This allows the user
+        to get a high-performance VM for their own language at an engineering
+        cost similar to writing an interpreter. To demonstrate Deegen's
+        capability in the real world, we implemented LuaJIT Remake (LJR), a
+        standard-compliant VM for Lua 5.1. Across a variety of benchmarks, we
+        demonstrated that LJR's interpreter significantly outperforms LuaJIT's
+        interpreter, and LJR's baseline JIT generates high-quality code with a
+        negligible compilation cost."
+      title: "Deegen: a compiler-compiler for high performance VMs at low engineering cost"
+      speaker: "Haoran Xu"
       bio: ""
     - date: "2024-04-18"
       abstract: "Zero-knowledge proofs are powerful cryptographic protocols for
