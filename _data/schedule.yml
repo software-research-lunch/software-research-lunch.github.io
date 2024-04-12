@@ -99,6 +99,11 @@ y24_spring:
       title: ""
       speaker: "Charles Yuan (Tentative)"
       bio: ""
+    - date: "2024-06-06"
+      abstract: ""
+      title: ""
+      speaker: "David Broman"
+      bio: ""
 
 y24_winter:
   location: "Gates 415"
