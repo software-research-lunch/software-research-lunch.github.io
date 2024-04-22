@@ -80,7 +80,23 @@ y24_spring:
       speaker: "Yu Feng"
       bio: ""
     - date: "2024-04-25"
-      abstract: ""
+      abstract: "The mapping of data and computation to processors in a machine
+        is crucial for performance in distributed programming. In this work, we
+        propose Mapple, a high-level programming interface for distributed
+        mapping, which overcomes the limitations of generality,
+        programmability, and complexity in existing designs. The core
+        abstraction of Mapple is the mapping from a multi-dimensional iteration
+        space (defined by the logical loop structure of an application) onto a
+        multi-dimensional processor space (defined by a hierarchical machine).
+        Mapple features a set of transformation primitives to bridge the
+        potential dimension difference between the two spaces, and also
+        provides a way for users to write generic mappers that can perform well
+        across different input sizes and machine sizes. We demonstrate that
+        Mapple provides the programmability to concisely express mappings for
+        six distributed matrix-multiplication algorithms, and show that an
+        input-sensitive, machine-aware mapper in Mapple can outperform an
+        input-agnostic mapper by up to 83% for applications with a
+        nearest-neighbor communication pattern."
       title: ""
       speaker: "Anjiang Wei"
       bio: ""
