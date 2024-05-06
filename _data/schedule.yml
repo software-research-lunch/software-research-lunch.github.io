@@ -131,9 +131,27 @@ y24_spring:
       speaker: "Sophie Andrews"
       bio: ""
     - date: "2024-05-23"
-      abstract: ""
-      title: ""
-      speaker: "Charles Yuan (Tentative)"
+      abstract: "Bringing the promise of quantum computation into reality
+        requires not only building a quantum computer but also correctly
+        programming it to run a quantum algorithm. To obtain asymptotic
+        advantage over classical algorithms, quantum algorithms rely on the
+        ability of data in quantum superposition to exhibit phenomena such as
+        interference and entanglement. In turn, an implementation of the
+        algorithm as a program must correctly orchestrate these phenomena in
+        the states of qubits.  Otherwise, the algorithm would yield incorrect
+        outputs or lose its computational advantage.
+
+        Given a quantum algorithm, what are the challenges and costs to
+        realizing it as an executable program? In this talk, I answer this
+        question by showing how basic programming abstractions – such as data
+        structures and control flow – upon which many quantum algorithms rely
+        can fail to work correctly or efficiently on a quantum computer. I then
+        show how we can leverage insights from programming languages to
+        re-invent these  abstractions to meet the demands of quantum
+        algorithms. This approach holds out a promise of expressive and
+        efficient tools for programming a quantum computer."
+      title: "Building the Tools to Program a Quantum Computer"
+      speaker: "Charles Yuan"
       bio: ""
     - date: "2024-06-06"
       abstract: ""
