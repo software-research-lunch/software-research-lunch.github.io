@@ -121,8 +121,31 @@ y24_spring:
       speaker: "Rohan Yadav"
       bio: ""
     - date: "2024-05-09"
-      abstract: ""
-      title: ""
+      abstract: "Geometric queries are everywhere in graphics: ray tracing,
+        collision detection, closest point queries, and nearest neighbor
+        queries are central to many import graphics algorithms and systems. The
+        database community similarly cares about geometric queries, such as
+        rectangle filters, range joins, and distance joins. Each of these
+        queries can be accelerated via various bounding volume hierarchies
+        (e.g. AABBs, Bounding Spheres, OBBs, SVVs, k-DOPs), each with various
+        trade-offs. Further optimizations, such as parallelism, vectorization,
+        restart trails, bit-packing, and quantization, are manually employed to
+        achieve even greater performance for many of these queries, but
+        typically require developers to hand-write low-level primitives (e.g.
+        directly in assembly). These performance optimizations generally reduce
+        portability, both across data structures and across architectures (e.g.
+        various CPU and GPU types). In this (exploratory) work, we sketch an
+        approach to achieve high-performance geometric queries that are
+        portable across accelerator data structures and machines, by decoupling
+        the query from the accelerator data structure and various performance
+        optimizations, similar to Halide’s decoupling of algorithm and
+        schedule. We draft a functional map-reduce-like programming language
+        for geometric queries, describe an algorithm for compiling our query
+        language onto an abstract bounding volume hierarchy, coupled with a
+        scheduling language inspired by a long line of performance
+        optimizations from the ray tracing community, and discuss an
+        in-the-works language for optimizing memory layouts. "
+      title: "Compiling Geometric Queries on Accelerator Data Structures"
       speaker: "Alexander J. Root"
       bio: ""
     - date: "2024-05-16"
