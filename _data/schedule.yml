@@ -149,8 +149,25 @@ y24_spring:
       speaker: "Alexander J. Root"
       bio: ""
     - date: "2024-05-16"
-      abstract: ""
-      title: ""
+      abstract: "SAT-based bounded model checking is a common technique used by
+      industry practitioners to find bugs in computer systems. However, these
+      systems are rarely designed in a single step: instead, designers
+        repeatedly make small modifications, reverifying after each change.
+        With current tools, this reverification step takes as long as a full,
+        from-scratch verification, even if the design has only been modified
+        slightly. We propose a novel technique for SAT-based bounded model
+        checking that performs significantly better than the naive approach in
+        the setting of evolving systems. The key idea is to store information
+        learned during the verification of earlier versions of the system and
+        then reuse this information to speed up the verification of later
+        versions. We instantiate our technique in a bounded model checking tool
+        for SystemVerilog code. We also provide and apply our technique to a
+        new benchmark set based on real edit history for a set of open source
+        RISC-V cores. Our tool shows strong performance on that benchmark set,
+        more than halving the time required to verify properties on later
+        versions of the cores compared to the current state-of-the-art,
+        verify-from-scratch approach."
+      title: "Efficient SAT-Based Bounded Model Checking of Evolving Systems"
       speaker: "Sophie Andrews"
       bio: ""
     - date: "2024-05-23"
