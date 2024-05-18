@@ -196,8 +196,9 @@ y24_spring:
     - date: "2024-05-30"
       abstract: "If you would like to present a short lightning talk, please
         contact Matthew"
-      title: "Lightning Talks (Tentative)"
-      speaker: "TBD"
+      title: "Lightning Talks"
+      speaker: "Matthew Sotoudeh, Shiv Sundram, Scott Kovach, Jibiana Kajpor,
+        (others TBD)"
       bio: ""
     - date: "2024-06-06"
       abstract: ""
