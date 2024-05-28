@@ -201,10 +201,46 @@ y24_spring:
         (others TBD)"
       bio: ""
     - date: "2024-06-06"
-      abstract: ""
-      title: ""
+      abstract: "
+        A key aspect of domain-specific languages is that engineers and
+        scientists can describe problems declaratively at a high level of
+        abstraction. Specifically, users can focus on what to model rather than
+        how to create an efficient implementation. Although there are many
+        benefits to well-engineered modeling languages, the development and
+        maintenance costs can be very high. In this talk, I will present a
+        relatively new framework called Miking, with the purpose of enabling
+        users to design and construct efficient domain-specific language
+        compilers easily. A central aspect of the framework is modularity,
+        where independent language fragments can be composed when building new
+        languages. The framework's core consists of a typed functional
+        intermediate language, which can be compiled for different target
+        platforms. In particular, I will briefly discuss some aspects of the
+        framework, including language fragments composition, DSLs for
+        probabilistic programming, and a new concept called statically
+        resolvable ambiguity."
+      title: "Miking: A Modular Framework for Constructing Domain-Specific Compilers"
       speaker: "David Broman"
-      bio: ""
+      bio: "David Broman is a Professor at the Department of Computer Science,
+        KTH Royal Institute of Technology, a Visiting Professor at the Computer
+        Science Department, Stanford University, and an Associate Director
+        Faculty for Digital Futures. He received his Ph.D. in Computer Science
+        in 2010 from Linköping University, Sweden. Between 2012 and 2014, he
+        was a visiting scholar at the University of California, Berkeley, where
+        he also was employed as a part-time researcher until 2016. His research
+        focuses on the intersection of (i) programming languages and compilers,
+        (ii) real-time and cyber-physical systems, and (iii) probabilistic
+        machine learning. David has received the Best ETAPS paper award on on
+        programming languages and systems (the EAPLS Award, co-authored 2023),
+        a Distinguished Artifact Award at ESOP (co-authored 2022), an
+        outstanding paper award at RTAS (co-authored 2018), a best paper award
+        in the journal Software & Systems Modeling (SoSyM award 2018), the
+        award as teacher of the year, selected by the student union at KTH
+        (2017), the best paper award at IoTDI (co-authored 2017), and awarded
+        the Swedish Foundation for Strategic Research's individual grant for
+        future research leaders (2016). He has worked several years within the
+        software industry, co-founded companies, co-founded the EOOLT workshop
+        series, and is a member of IFIP WG 2.4, Modelica Association, a senior
+        member of IEEE, and a former board member of Forskning och Framsteg."
 
 y24_winter:
   location: "Gates 415"
