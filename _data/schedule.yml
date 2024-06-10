@@ -241,6 +241,19 @@ y24_spring:
         software industry, co-founded companies, co-founded the EOOLT workshop
         series, and is a member of IFIP WG 2.4, Modelica Association, a senior
         member of IEEE, and a former board member of Forskning och Framsteg."
+    - date: "2024-06-13"
+      abstract: "We show that synthesizing recursive functional programs using
+        a class of primitive recursive combinators is both simpler and solves
+        more benchmarks from the literature than previously proposed
+        approaches. Our method synthesizes paramorphisms, a class of programs
+        that includes the most common recursive programming patterns on
+        algebraic data types. The crux of our approach is to split the synthesis
+        problem into two parts: a multi-hole template that fixes the recursive
+        structure, and a search for non-recursive program fragments to fill the
+        template holes."
+      title: "Recursive Program Synthesis using Paramorphisms"
+      speaker: "Qiantan Hong"
+      bio: ""
 
 y24_winter:
   location: "Gates 415"
