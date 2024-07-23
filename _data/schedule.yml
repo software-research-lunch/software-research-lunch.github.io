@@ -59,9 +59,29 @@ y24_summer:
       speaker: "Zu-Ming Jiang"
       bio: ""
     - date: "2024-07-25"
-      abstract: "Tentative"
-      title: "TBD"
+      abstract: "This talk will present Deterministic Client (DeCl), a software
+        sandboxing system for ARM64 that runs untrusted machine code at
+        near-native speeds while guaranteeing deterministic execution and
+        termination before a specified instruction count. DeCl derives its
+        security from a trusted machine code verifier, resulting in a small and
+        simple trusted computing base (TCB).  One key application is a smart
+        contract engine in a digital currency system, which requires both
+        deterministic execution and metered runtime. Today's blockchains, for
+        example, run bytecode in a virtual machine, such as WebAssembly or the
+        Ethereum Virtual Machine, which either incurs the extremely high
+        overhead of a software interpreter or expands the TCB to include a
+        just-in-time compiler, while still paying significant runtime overhead.
+        Instead, with DeCl we can directly execute smart contracts as native
+        ARM64 programs, after validating them with a simple and efficient
+        verification pass that ensures memory isolation, determinism, and
+        deterministic metering."
+      title: "DeCl: Deterministic and Metered Native Sandboxes"
       speaker: "Zachary Yedidia"
+      bio: ""
+    - date: "2024-08-01"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "Rohan Yadav"
       bio: ""
 
 y24_spring:
