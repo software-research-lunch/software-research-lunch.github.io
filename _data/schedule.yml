@@ -27,6 +27,58 @@
 # Jason Koenig <jrkoenig@stanford.edu>
 # Haoze Wu <haozewu@stanford.edu>
 # Anjiang Wei <anjiang@stanford.edu>
+# Federico Mora <fmora@cs.berkeley.edu>
+# Reese Levine <reeselevine@ucsc.edu>
+
+y24_fall:
+  location: "Gates 415"
+  year: "2024"
+  quarter: "fall"
+  talks:
+    - date: "2024-10-3"
+      abstract: "Proving the equivalence between SQL queries is a fundamental
+        problem in database research. Existing provers model queries using
+        algebraic representations and convert such representations into
+        first-order logic formulas so that query equivalence can be verified by
+        solving a satisfiability problem. The main   challenge lies in
+        'unbounded summations', which is used to model common SQL features.
+        Unfortunately, existing provers handle unbounded summations in an
+        ad-hoc manner, which severely limits the verification capability.
+
+        SQLSolver is a new SQL equivalence prover, which can handle unbounded
+        summations in a principled way. Our key insight is to use the theory of
+        LIA*, which extends linear integer arithmetic formulas with unbounded
+        sums. We augment the basic LIA* theory to handle several complex
+        scenarios that arise from modeling real-world queries. Evaluated on 400
+        equivalent query pairs derived from Apache Calcite, Spark SQL, TPC-C,
+        and TPC-H, SQLSolver successfully proves 388 pairs of them, which
+        significantly outperforms existing provers.
+
+        https://dl.acm.org/doi/abs/10.1145/3626768"
+      title: "Proving Query Equivalence Using Linear Integer Arithmetic"
+      speaker: "Haoran Ding"
+      bio: "Haoran Ding is a PhD candidate at the Institute of Parallel and
+        Distributed Systems (IPADS) of Shanghai Jiao Tong University. His
+        research focuses on the intersection of formal verification and systems
+        software, aiming to develop practical theories and tools that can
+      enhance both system correctness and performance. His research has been
+      published in OSDI, SOSP, and SIGMOD.  Homepage:
+        https://ipads.se.sjtu.edu.cn/pub/members/haoran_ding"
+    - date: "2024-10-10"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "Ke Wang"
+      bio: ""
+    - date: "2024-10-24"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "Federico Mora"
+      bio: ""
+    - date: "2024-10-31"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "Reese Levine"
+      bio: ""
 
 y24_summer:
   location: "Gates 415"
