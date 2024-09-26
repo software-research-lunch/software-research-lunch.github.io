@@ -69,6 +69,11 @@ y24_fall:
       title: "TBD"
       speaker: "Ke Wang"
       bio: ""
+    - date: "2024-10-17"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "TBD"
+      bio: ""
     - date: "2024-10-24"
       abstract: "TBD"
       title: "TBD"
@@ -78,6 +83,11 @@ y24_fall:
       abstract: "TBD"
       title: "TBD"
       speaker: "Reese Levine"
+      bio: ""
+    - date: "2024-11-7"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "Scott Kovach"
       bio: ""
 
 y24_summer:
