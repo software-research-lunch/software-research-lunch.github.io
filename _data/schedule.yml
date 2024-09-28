@@ -85,10 +85,17 @@ y24_fall:
       speaker: "Reese Levine"
       bio: ""
     - date: "2024-11-7"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "
+      Today, applications that require high-performance rely on libraries of hand-
+optimized kernels, with thousands available across various domains and architectures, while Domain-Specific Languages (DSLs) and their accompanying compilers remain relatively rare. A well-designed DSL can describe a much wider variety of programs within a given domain than even the most comprehensive library, while also unlocking powerful cross- function and global domain-specific optimizations that hand-optimized kernels cannot achieve. However, building high-performance DSLs is complex and time-consuming, often requiring compiler experts to devote years to development.
+
+In this talk, I will introduce BuildIt, a C++ framework designed for the rapid prototyping of high-performance DSLs. BuildIt uses a multi-stage programming approach to combine the flexibility of libraries with the performance and specialization of code generation. With BuildIt, domain experts can transform existing libraries into efficient, specialized compilers simply by modifying types of the variables. Moreover, it allows them to implement analyses and transformations without needing to write traditional compiler code. Currently, BuildIt supports code generation for multi-core CPUs and GPUs, with FPGA support coming soon. I will also showcase three DSLs created with BuildIt to highlight its power and ease of use: a reimplementation of the GraphIt graph computing language, the BREeze DSL for regular expressions, and NetBlocks, a DSL for custom network protocol development.
+      "
+      title: "Democratizing High-Performance DSL development with BuildIt"
       speaker: "Ajay Brahmakshatriya"
-      bio: ""
+      bio: "
+      Ajay Brahmakshatriya is a 7th year PhD student advised by Prof. Saman Amarasinghe at CSAIL, MIT. His research interests are making it easier for folks to create their own programming languages with focus on high-performance systems domains. In the past he has worked on DSLs for domains like graphs and networks targeting a variety of architectures like CPUs, GPUs and domain specific hardware. His current work on BuildIt makes the process of designing and implementing DSLs easier while also providing other toolchain support like debugging.
+      "
     - date: "2024-11-14"
       abstract: "TBD"
       title: "TBD"
