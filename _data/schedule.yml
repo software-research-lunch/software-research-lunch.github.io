@@ -105,6 +105,11 @@ In this talk, I will introduce BuildIt, a C++ framework designed for the rapid p
       title: "TBD"
       speaker: "Scott Kovach"
       bio: ""
+    - date: "2024-12-12"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "Umut Acar"
+      bio: ""
 
 y24_summer:
   location: "Gates 415"
