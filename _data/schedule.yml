@@ -79,10 +79,12 @@ We are currently in active discussions with LLVM engineers on the possible incor
       speaker: "Rohan Yadav, AJ Root, David Zhang, Matthew Soutoudeh"
       bio: ""
     - date: "2024-10-24"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Designing and implementing distributed systems is still an enormous task for software engineers. Much of this challenge stems from the fact that bugs can arise from complex combinations of machine failures and message interleavings that are difficult for humans to reason about manually. As distributed systems become increasingly critical infrastructure, engineers will need more and more computational support to correctly build and deploy them.
+
+In this talk, I will present three automated reasoning techniques that can help software engineers build and deploy correct distributed systems. First, a verification framework for message-passing distributed systems that allows users to write specifications as monitors and execute them alongside deployed systems. Second, a decision procedure for a relevant fragment of logic. Third, a new approach for semi-automatically modelling distributed systems in formal languages."
+      title: "Automated Reasoning About Distributed Systems"
       speaker: "Federico Mora"
-      bio: ""
+      bio: "Federico Mora is a PhD candidate at the University of California, Berkeley, where he is advised by Sanjit A. Seshia. Federico’s research focuses on designing and implementing languages for automated reasoning. His studies have been supported by a Qualcomm Innovation Fellowship and three internships at Amazon Web Services, where he has applied many of the ideas in his thesis."
     - date: "2024-10-31"
       abstract: "TBD"
       title: "TBD"
