@@ -87,10 +87,12 @@ In this talk, I will present three automated reasoning techniques that can help 
       speaker: "Federico Mora"
       bio: "Federico Mora is a PhD candidate at the University of California, Berkeley, where he is advised by Sanjit A. Seshia. Federico’s research focuses on designing and implementing languages for automated reasoning. His studies have been supported by a Qualcomm Innovation Fellowship and three internships at Amazon Web Services, where he has applied many of the ideas in his thesis."
     - date: "2024-10-31"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Memory consistency specifications (MCSs) are a difficult, yet critical, part of a concurrent programming framework. Existing MCS testing tools are not immediately accessible, and thus, have only been applied to a limited number of devices. However, in the post-Dennard scaling landscape, there has been an explosion of new architectures and frameworks, exemplified by graphics processing units (GPUs). Studying the shared memory semantics of these new platforms is important for understanding program behavior and ensuring conformance to framework specifications.
+
+In this talk, I will discuss our work on widescale GPU MCS testing. We developed a new methodology, MC Mutants, which utilizes mutation testing to evaluate the effectiveness of MCS testing techniques. MC Mutants is built into an accessible testing tool, GPUHarbor, which we used to collect data from over 100 devices from seven GPU vendors. This massive testing campaign revealed bugs in several GPU compilers and provided insights into weak behavior characteristics across diverse architectures. Furthermore, these results were used to tune testing environments across different devices, allowing us to make testing portable and contribute our tests to the official conformance test suite for WebGPU. Our ongoing work is investigating how to increase the safety and security of GPU programming languages in the face of their weak shared memory guarantees, as well as the challenges and opportunities that come with evolving architectures."
+      title: "Testing GPU Memory Consistency at Large"
       speaker: "Reese Levine"
-      bio: ""
+      bio: "Reese is a PhD candidate at the University of California, Santa Cruz, and an NDSEG Fellow. His research focuses on GPU memory models, designing and evaluating techniques to test the conformance of compilers and hardware to specifications."
     - date: "2024-11-7"
       abstract: "
       Today, applications that require high-performance rely on libraries of hand-
