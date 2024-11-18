@@ -110,6 +110,34 @@ In this talk, I will introduce BuildIt, a C++ framework designed for the rapid p
       title: "Improving Parallel Program Performance Through DSL-Driven Code Generation with LLM Optimizers"
       speaker: "Anjiang Wei"
       bio: "I'm Anjiang Wei, a PhD student in Computer Science at Stanford University, working under the guidance of Alex Aiken. My research focuses on leveraging large language models (LLMs) for code, including areas like program analysis and performance optimization. I have a background in high-performance computing (particularly with the Legion parallel computing framework), software engineering, and compilers. During my undergraduate studies at Peking University, where I was a part of the Turing class, I collaborated with Darko Marinov, Tao Xie, Lingming Zhang, and Yun (Eric) Liang."
+    - date: "2024-11-21"
+      abstract: "This talk (on work in progress) will discuss a domain specific language for turn-based games, with applications to GUI software and game design.
+We'll argue that games (as a model of computation) are more suitable than algorithms/functions for modeling interactive software like GUIs.
+Additionally, board games (as a subset of games) have several properties that are also desirable software properties:
+  their logic is usually specified in small, easily learnable pieces, such as playing cards containing natural language rules;
+  they are designed to be extended with new packs of rules that augment previous rules without replacing or editing them;
+  their state is concrete and visual, and state changes bear simple causal explanations;
+  they're fun :)
+The language features are designed to support concise game definitions.
+A program in the language consists of a set of rules, each of which may observe the current state and then produce events in response.
+The language uses relational state to compose rule effects and defines higher level concepts using relational queries.
+Actors and choice are a first-class concept, and choices can be interleaved with observations.
+Actors can be multiple and cooperative (as in games like 'Pandemic' or 'Google Sheets'), or can model other factors such as randomness and algorithmic entities like play strategies and heuristics.
+The language uses an explicit, simple model of time that divides action into episodes, which may be composed sequentially or concurrently.
+There will be a demo of the language in action."
+      title: "Composing Turn-Based Games"
+      speaker: "Scott Kovach"
+      bio: ""
+    - date: "2024-11-28"
+      abstract: "Enjoy Thanksgiving!"
+      title: "Cancelled for Thanksgiving"
+      speaker: "No Speaker"
+      bio: ""
+    - date: "2024-12-5"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "TBD"
+      bio: ""
     - date: "2024-12-12"
       abstract: "TBD"
       title: "TBD"
