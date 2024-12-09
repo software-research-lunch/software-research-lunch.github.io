@@ -139,10 +139,37 @@ There will be a demo of the language in action."
       speaker: "The attendees"
       bio: ""
     - date: "2024-12-12"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "As computer scientists, we have long wrestled with a perceived
+trade-off between safety and performance.  Choosing performance meant
+using low-level languages, which help optimize for performance but at
+the expense of safety.  Choosing safety meant using high-level
+languages, which guarantee safety at the expense of performance.
+Historically, we have chosen performance over safety.  This choice has
+not aged well, because societal significance and economic costs of
+safety has been steadily increasing. Therefore, it is (past) time to
+challenge this rigid dichotomy.  Obvious question is: why can't we
+have both? 
+
+In this talk, I show that we can have both safety and performance, by
+developing programming languages and systems that integrate both. I
+present two advances in this direction by considering classic
+problems.  First, I show that parallel functional programming
+languages, which are traditionally regarded as safe but slow, can
+deliver impressive performance.  Second, I show that parallel
+programming languages, including both functional and procedural, can
+automatically and safely optimize their own performance, reducing
+reliance on labor-intensive manual optimizations.  The method
+underpinning these advances blends several 'ingredients'
+1) 'Theory A' (algorithms and complexity, a.k.a., 'Turing' theory) for
+asymptotic efficiency,
+2) 'Theory B' (theory of programming, a.k.a., 'Church' theory) for safety, and
+3) system building and empirical computer science for practical efficiency."
+      title: "Bridging Safety and Performance"
       speaker: "Umut Acar"
-      bio: ""
+      bio: "Umut Acar is an Associate Professor of Computer Science at
+Carnegie Mellon University.  He is interested in bridging safety and
+performance.  He completed his degrees at Bilkent University (BS), 
+UT Austin (MA), and Carnegie Mellon University (PhD)."
 
 y24_summer:
   location: "Gates 415"
