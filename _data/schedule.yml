@@ -85,10 +85,12 @@ all aspects of explicit data movement and asynchronous computation from applicat
       speaker: "Colin Unger"
       bio: "Colin Unger is a fifth year PhD student at Stanford advised by Alex Aiken. He received his bachelor's degree from UC Santa Barbara, where he worked with Giovanni Vigna and Christopher Kruegel on binary analysis. He is broadly interested in compilers, program analysis, and optimization, especially in emerging applications such as deep learning."
     - date: "2025-2-27"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Fix is a new architecture for 'serverless' computing that Yuhan Deng and Akshay Srivatsan are leading in our group. It's based on an operating system that understands the computational relationships between data, and the dataflow of computations. In this system, each task is a fine-grained block of deterministic machine code run in a hermetic environment of deterministically addressed data-dependencies. The OS guarantees that all computations are reproducible (even if they try hard not to be). In this system, user code can't load files from disk, can't talk over the network, and won't necessarily decide when to memoize a computation: these are the responsibility of the runtime evaluator and scheduler.
+
+What I'd like to talk about are our efforts to let users write their own evaluators/schedulers, based on their understanding of a particular computing job -- but without letting an incorrect evaluator ever produce an incorrect answer. There's some similarity to Halide schedulers and Legion mappers in this. We're trying to 'operationalize' the operational semantics of the OS abstractions, by letting users write evaluators that effectively prove that a given evaluation is correct. We'd like to prove the soundness of the module that checks these proofs -- e.g., it should be impossible for the user to write an evaluator that 'proves' that two different byte strings are equivalent. I would welcome any feedback from this group or interest in helping us write this module in a way that it admits a mechanized proof of soundness."
+      title: "Letting users write evaluators for Fix, while guaranteeing correctness"
       speaker: "Keith Winstein"
-      bio: "TBD"
+      bio: "Keith Winstein is an associate professor of computer science. This work is led by PhD students Yuhan Deng and Akshay Srivatsan."
     - date: "2025-3-6"
       abstract: "TBD"
       title: "TBD"
