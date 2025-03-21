@@ -30,6 +30,27 @@
 # Federico Mora <fmora@cs.berkeley.edu>
 # Reese Levine <reeselevine@ucsc.edu>
 
+y25_spring:
+  location: "CoDa E401"
+  year: "2024"
+  quarter: "spring"
+  talks:
+    - date: "2025-4-3"
+      abstract: "Abstract redacted due to in-progress work."
+      title: "Optimizing DNN Training with SP-ization"
+      speaker: "Colin Unger"
+      bio: "Colin Unger is a fifth year PhD student at Stanford advised by Alex Aiken. He received his bachelor's degree from UC Santa Barbara, where he worked with Giovanni Vigna and Christopher Kruegel on binary analysis. He is broadly interested in compilers, program analysis, and optimization, especially in emerging applications such as deep learning."
+   - date: "2025-4-10"
+     abstract: "TBD"
+     title: "TBD"
+     speaker: "Genghan Zheng"
+     bio: "TBD"
+  - date: "2025-4-17"
+    abstract: "TBD"
+    title: "TBD"
+    speaker: "Satish Chandra"
+    bio: "TBD"
+
 y25_winter:
   location: "CoDa E401"
   year: "2024"
