@@ -64,10 +64,14 @@ y25_spring:
       speaker: "David Zhang"
       bio: "David K. Zhang is a 6th-year PhD student in Stanford’s Institute for Computational and Mathematical Engineering, working under Alex Aiken and Gianluca Iaccarino. He is broadly interested in computational science, numerical algorithms, and performance engineering, and he has published work in condensed matter physics, numerical analysis, computer networking, and high-performance computing."
     - date: "2025-5-15"
-      abstract: "Simon Guo and Anne Ouyang"
-      title: "TBD"
-      speaker: "TBD"
-      bio: "TBD"
+      abstract: "Efficient GPU kernels are crucial for building performant machine learning architectures, but writing them is a time-consuming challenge that requires significant expertise. This talk explores how language models (LMs) can be leveraged to automate this process. We introduce KernelBench, an open-source framework for evaluating LMs’ ability to write fast and correct kernels on a suite of 250 carefully selected PyTorch ML workloads. KernelBench represents a real-world engineering environment and making progress on the introduced benchmark directly translates to faster practical kernels. We also highlight recent work built on KernelBench that reflect growing momentum in using LMs for low-level systems optimization and underscore KernelBench’s role as a central testbed for this emerging area."
+      title: "KernelBench –– Can LLMs Write Efficient Kernels?"
+      speaker: "Simon Guo and Anne Ouyang"
+      bio: "
+      Anne Ouyang is a first year CS PhD student at Stanford. Her research focuses on scalable, self-improving machine learning systems, with broader interests in empirical ML and performance engineering. Prior to Stanford, she earned her B.S. and M.Eng. degrees from the Massachusetts Institute of Technology (MIT). She then worked at NVIDIA on the cuDNN team, developing high-performance CUDA kernels to accelerate deep learning workloads on GPUs.
+
+Simon Guo is a first-year CS PhD at Stanford. He is interested in building high-performance systems for ML and more recently leveraging ML to optimize systems. He has worked across the stack in research and industry, from silicon at Apple and NVIDIA to large-scale model pretraining at Cohere. Simon graduated from UC Berkeley with a B.S. in Electrical Engineering and Computer Sciences.
+      "
     - date: "2025-5-22"
       abstract: "TBD"
       title: "TBD"
