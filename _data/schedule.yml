@@ -73,10 +73,12 @@ y25_spring:
 Simon Guo is a first-year CS PhD at Stanford. He is interested in building high-performance systems for ML and more recently leveraging ML to optimize systems. He has worked across the stack in research and industry, from silicon at Apple and NVIDIA to large-scale model pretraining at Cohere. Simon graduated from UC Berkeley with a B.S. in Electrical Engineering and Computer Sciences.
       "
     - date: "2025-5-22"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "HiCCL (Hierarchical Collective Communication Library) addresses the growing complexity and diversity in high-performance network architectures. As GPU systems have evolved into networks of GPUs with different multilevel communication hierarchies, optimizing each collective function for a specific system has become a challenging task. Consequently, many collective libraries struggle to adapt to different hardware and software, especially across systems from different vendors. HiCCL’s library design decouples the collective communication logic from network-specific optimizations through a compositional API. The communication logic is composed using multicast, reduction, and fence primitives, which are then factorized for a specified network hierarchy using only point-to-point operations within a level. Finally, striping, and pipelining optimizations applied as specified for streamlining the execution. Performance evaluation of HiCCL across four different machines—two with Nvidia GPUs, one with AMD GPUs, and one with Intel GPUs demonstrates an average 17x higher throughput than the collectives of highly specialized GPU aware MPI implementations, and competitive throughput with those of vendor-specific libraries (NCCL, RCCL, and OneCCL), while providing portability across all four machines."
+      title: "HICCL: A Hierarchical Collective Communication Library"
       speaker: "Simon Garcia de Gonzalo"
-      bio: "TBD"
+      bio: "Simon Garcia de Gonzalo is a Senior Member of Technical Staff in scalable computer architectures and exascale technologies at Sandia National Laboratories (SNL). His work spans key initiatives including the Vanguard Advanced Architecture Prototype program and the Application Performance Team, focusing on performance-portable solutions for emerging high-performance computing (HPC) platforms. Prior to joining SNL, Simon was a Postdoctoral Researcher at the Barcelona Supercomputing Center (BSC), where he contributed to performance optimization for large-scale GPU systems.
+
+Simon is a co-author of the SC’20 Best Paper, which demonstrated efficient computation at scale using 24,576 GPUs on the Summit supercomputer. During his Ph.D. at the University of Illinois at Urbana-Champaign (UIUC), he collaborated with scientific and engineering teams at the National Center for Supercomputing Applications (NCSA) to support accelerator adoption on the Blue Waters supercomputer. His doctoral research focused on compilers and automatic code generation for GPU architectures."
     - date: "2025-5-29"
       abstract: "
           Bespoke data structure operations are common in real-world C code.
