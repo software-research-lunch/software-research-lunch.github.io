@@ -30,6 +30,23 @@
 # Federico Mora <fmora@cs.berkeley.edu>
 # Reese Levine <reeselevine@ucsc.edu>
 
+y25_fall:
+  location: "CoDa E401"
+  year: "2025"
+  quarter: "fall"
+  talks:
+    - date: "2025-9-11"
+      abstract: "TBD"
+      title: "TBD"
+      speaker: "TBD"
+      bio: "TBD"
+    - date: "2025-9-25"
+      abstract: "Come sign up to give a talk!"
+      title: "Organizational Lunch"
+      speaker: "Organizational Lunch"
+      bio: "Organizational Lunch"
+
+
 y25_spring:
   location: "CoDa E401"
   year: "2024"
