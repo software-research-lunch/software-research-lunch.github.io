@@ -45,7 +45,11 @@ y25_fall:
       title: "Organizational Lunch"
       speaker: "Organizational Lunch"
       bio: "Organizational Lunch"
-
+    - date: "2025-11-20"
+      abstract: "TBA"
+      title: "TBA"
+      speaker: "Justin Lubin"
+      bio: "TBA"
 
 y25_spring:
   location: "CoDa E401"
