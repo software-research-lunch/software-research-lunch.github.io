@@ -36,10 +36,41 @@ y25_fall:
   quarter: "fall"
   talks:
     - date: "2025-9-11"
-      abstract: "TBD"
-      title: "TBD"
-      speaker: "TBD"
-      bio: "TBD"
+      abstract: "Quantum computers have grown rapidly in size and
+qubit quality in recent years, enabling the execution of complex
+quantum circuits. However, for most researchers, access to
+compute time on quantum hardware is limited. This necessitates
+the need to build simulators that mimic the execution of quantum
+circuits on noisy quantum hardware accurately and scalably.
+In this work, we propose TUSQ - Tracking, Uncomputation,
+and Sampling for Noisy Quantum Simulation. TUSQ is a simu-
+lator that can perform noisy simulation of up to 30-qubit Adder
+circuits on a single Nvidia A100 GPU in less than 820 seconds.
+To represent the stochastic noisy channels accurately, we average
+the output of multiple quantum circuits with fixed noisy gates
+sampled from the channels. However, this leads to a substantial
+increase in circuit overhead, which slows down the simulation.
+To eliminate this overhead, TUSQ uses two modules: the Error
+Characterization Module (ECM), and the Tree-based Execution
+Module (TEM).
+The ECM tracks the number of unique circuit executions
+needed to accurately represent the noise. That is, if initially we
+needed n1 circuit executions, ECM reduces that number to n2 by
+eliminating redundancies so that n2 < n1. This is followed by the
+TEM, which reuses computation across these n2 circuits. This
+computational reuse is facilitated by representing all n2 circuits
+as a tree. We sample the significant leaf nodes of this tree and
+prune the remaining ones. We traverse this tree using depth-first
+search. We use uncomputation to perform rollback-recovery at
+several stages which reduces simulation time. We evaluate TUSQ
+for a total of 186 benchmarks and report an average speedup
+of 52.5× and 12.53× over Qiskit and CUDA-Q, which goes up
+to 7878.03× and 439.38× respectively. For larger benchmarks
+(more than than 15 qubits), the average speedup is 55.42× and
+23.03× over Qiskit and CUDA-Q respectively."
+      title: "Noisy Quantum Simulation Using Tracking, Uncomputation and Sampling"
+      speaker: "Siddharth Dangwal"
+      bio: "Siddharth Dangwal is a fifth year PhD student in the department of Computer Science at UChicago. He is advised by Fred Chong. His research broadly involves making software for quantum error mitigation, error correction and quantum simulation."
     - date: "2025-9-25"
       abstract: "Come sign up to give a talk!"
       title: "Organizational Lunch"
