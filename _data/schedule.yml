@@ -77,10 +77,29 @@ to 7878.03× and 439.38× respectively. For larger benchmarks
       speaker: "Organizational Lunch"
       bio: "Organizational Lunch"
     - date: "2025-10-02"
-      abstract: ""
-      title: ""
+      abstract: "Software fault isolation (SFI) is a popular way to sandbox untrusted
+    software. A key component of SFI is the verifier that checks the
+    untrusted code is written in a subset of the machine language that
+    guarantees it never reads or writes outside of a region of memory
+    dedicated to the sandbox. Soundness bugs in the SFI verifier would
+    break the SFI security model and allow the supposedly sandboxed code
+    to read protected memory. In this paper, we address the concern of
+    SFI verifier bugs by performing an automated formal verification of
+    a recent SFI system called Lightweight Fault Isolation (LFI). In
+    particular, we formally verify that programs accepted by the LFI
+    verifier never read or write to memory outside of a designated
+    sandbox region. Joint work with Zachary Yedidia.
+
+    The talk will be a short practice talk, and I'm hoping for feedback
+    from attendees on the presentation. If time permits, I'll also give
+    a practice talk for some garbage collection work and/or tell you
+    about how I've been abusing dynamic linkers to make large software
+    systems easier to hack on.
+"
+      title: "Automated Formal Verification of a Software Fault Isolation System"
       speaker: "Matthew Sotoudeh"
-      bio: ""
+      bio: "Matthew Sotoudeh is a 5th year PhD candidate advised by Dawson
+    Engler."
     - date: "2025-10-09"
       abstract: ""
       title: ""
