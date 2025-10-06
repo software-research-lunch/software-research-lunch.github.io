@@ -111,7 +111,7 @@ to 7878.03× and 439.38× respectively. For larger benchmarks
       speaker: "Keith Winstein"
       bio: "TBD"
     - date: "2025-10-23"
-      abstract: "We describe a system for serverless computing where users, programs, and the underlying platform share a common representation of a computation: a deterministic procedure, run in an environment of well-specified data or the outputs of other computations. This representation externalizes I/O: data movement over the network is performed exclusively by the platform. Applications can describe the precise data needed at each stage, helping the provider schedule tasks and network transfers to reduce starvation. The design suggests an end-to-end argument for outsourced computing, shifting the service model from "pay-for-effort''  to "pay-for-results.'' 
+      abstract: "We describe a system for serverless computing where users, programs, and the underlying platform share a common representation of a computation: a deterministic procedure, run in an environment of well-specified data or the outputs of other computations. This representation externalizes I/O: data movement over the network is performed exclusively by the platform. Applications can describe the precise data needed at each stage, helping the provider schedule tasks and network transfers to reduce starvation. The design suggests an end-to-end argument for outsourced computing, shifting the service model from ''pay-for-effort''  to ''pay-for-results.'' 
 
 This is a practice talk, and feedback would be greatly appreciated."
       title: "Fix: Externalizing Network I/O in Serverless Computing"
