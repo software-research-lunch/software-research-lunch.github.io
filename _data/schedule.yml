@@ -101,10 +101,11 @@ to 7878.03× and 439.38× respectively. For larger benchmarks
       bio: "Matthew Sotoudeh is a 5th year PhD candidate advised by Dawson
     Engler."
     - date: "2025-10-09"
-      abstract: ""
-      title: ""
-      speaker: ""
-      bio: ""
+      abstract: "Data movement has become the dominant cost in modern computer systems. Near-Data Processing (NDP)---also known as Processing-in-Memory (PIM)---is re-emerging as a promising approach to mitigate this cost by enabling computation resources embedded within memory modules. While considerable recent work has been published on the architectural and technological fronts, the theoretical and programming foundations of NDP remain under-explored. This absence of algorithmic analysis makes it difficult to identify the fundamental principles in the complicated design space.
+In this talk, we address two central questions in designing programming systems for NDP: How should programming models and algorithm design for NDP systems differ from traditional parallel or distributed settings? and What are the fundamental trade-offs and limitations inherent in NDP? To answer these, we focus in this talk on NDP-friendly indexing structures: specifically, PIM-optimized B-trees, radix trees, and space-partitioning indexes. Our designs directly address the fundamental tension between minimizing communication and maintaining load balance, achieving provable guarantees under arbitrary query and data skew. Experimental results on UPMEM’s 2,560-module PIM system show up to 59× speedups over prior state-of-the-art PIM indexes. Finally, we discuss how these NDP techniques generalize to end-to-end transactional (OLTP) databases on NDP platforms; and extend to broader programming systems for distributed and/or heterogeneous architectures."
+      title: "Building Programming Systems for Near-Data-Processing: Theory and Practice"
+      speaker: "Yiwei Zhao"
+      bio: "Yiwei Zhao is a fifth-year Ph.D. student at Carnegie Mellon University, advised by Prof. Phillip B. Gibbons. His research broadly spans high-performance computing, with a recent focus on bridging the gap between algorithms, systems, and architectures for future hardware. His work won the Best Paper Runner-up in VLDB, and was supported by several competitive fellowships in CMU. Prior to his Ph.D., he received his Bachelor’s degree with highest honors from Tsinghua University."
     - date: "2025-10-16"
       abstract: "TBD"
       title: "TBD"
