@@ -107,10 +107,13 @@ In this talk, we address two central questions in designing programming systems 
       speaker: "Yiwei Zhao"
       bio: "Yiwei Zhao is a fifth-year Ph.D. student at Carnegie Mellon University, advised by Prof. Phillip B. Gibbons. His research broadly spans high-performance computing, with a recent focus on bridging the gap between algorithms, systems, and architectures for future hardware. His work won the Best Paper Runner-up in VLDB, and was supported by several competitive fellowships in CMU. Prior to his Ph.D., he received his Bachelor’s degree with highest honors from Tsinghua University."
     - date: "2025-10-16"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Keith Winstein will discuss ongoing work to create a new frosh-level CS/EE course, emphasizing the joy and playfulness of these disciplines and their fundamental concepts through real-time interaction. The students will create programs that understand sounds and play with them in real time by making noise with real-world musical instruments. We want students to learn about the Nyquist sampling theorem, discover Minsky's circle algorithm for themselves, create an interpreter for a simple programming language, understand concepts like computability, and write code that understands information encoded in the notes of a toddler xylophone playing in real time in the real world.
+
+A big part of the course will involve programming in raw WebAssembly in a new live programming environment we call 'Codillon' -- a structured or projectional editor similar in spirit to systems like Hazel (POPL 2019), that ensure that every input typechecks and is runnable, even if there are 'holes'. The environment will execute students' code as they type, showing the execution trajectory alongside the code (similar to some of Bret Victor's demos). Unlike with Hazel, however, we are doing this for an existing, text-based programming language and allowing arbitrary text manipulations, which creates some new challenges -- not to mention the challenge of teaching freshman computer science in a typed assembly language that few students will have previously encountered. A prior lack of familiarity is probably helpful in the sense of creating an equalizer and encouraging students to think and learn, but not if it makes them hate computer science. I'll discuss some of our UI/IDE concepts and will be grateful for feedback on this ongoing work.
+"
+      title: "Keith Talks About Intro CS/EE"
       speaker: "Keith Winstein"
-      bio: "TBD"
+      bio: "Keith is a professor at Stanford."
     - date: "2025-10-23"
       abstract: "We describe a system for serverless computing where users, programs, and the underlying platform share a common representation of a computation: a deterministic procedure, run in an environment of well-specified data or the outputs of other computations. This representation externalizes I/O: data movement over the network is performed exclusively by the platform. Applications can describe the precise data needed at each stage, helping the provider schedule tasks and network transfers to reduce starvation. The design suggests an end-to-end argument for outsourced computing, shifting the service model from ''pay-for-effort''  to ''pay-for-results.'' 
 
