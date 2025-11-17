@@ -139,10 +139,18 @@ In this talk, I’ll focus on a key source of this inefficiency for SDAs — an 
       speaker: "Pu (Luke) Yi"
       bio: "Luke is a 4th-year PhD student working with Sara Achour. He’s interested in efficient machine learning models and systems, and their co-design with the compute primitives of emerging hardware technologies."
     - date: "2025-11-20"
-      abstract: ""
-      title: ""
+      bio: "Justin (https://jlubin.net/) is a PhD candidate in computer science advised by Sarah E. Chasins at UC Berkeley. His research mission is to co-design programming systems with scientists to enable them to write the code they need with only domain expertise, not programming expertise. As part of this process, he collaborates closely with the Nuñez Lab at UC Berkeley, a group of experimental biologists who blend CRISPR-based genome and epigenome editing, functional genomics, cell biology, and biochemistry to understand the regulatory principles of the human genome."
+      title: "Programming by Navigation"
       speaker: "Justin Lubin"
-      bio: ""
+      abstract: "Decades of research from the programming languages community has resulted in a wide array of programming systems operating at increasingly high levels of abstraction, from program synthesizers, to database query optimizers, to automatic proof search tactics in interactive theorem provers. We can now provide high-level specifications to the computer and automatically get back programs that provably satisfy these specifications.
+
+In many cases, though, a specification does not specify a unique solution. Sometimes, the program we get back is the smallest program that satisfies the specification. Sometimes, it’s chosen via a user-defined cost function. And, sometimes, it’s just the one that the system found first! But what should we do if we want to hand control back to the user and let the user pick from among all the valid solutions?
+
+To answer this question, I will discuss my recent work on Programming by Navigation, a new program synthesis problem designed specifically for supporting iterative specification refinement in order to find a particular target solution of an initial underspecification. In Programming by Navigation, step *providers* provide a set of 'next steps' (refinements) satisfying Strong Soundness (all provided steps lead to a valid solution) and Strong Completeness (all remaining valid solutions are reachable among the provided steps). Step *deciders* are then free to choose among any of the provided steps.
+
+I will show how we solve the Programming by Navigation problem for one domain—component-based synthesis with logical validity conditions—by turning a type inhabitation oracle (which we implement efficiently with Datalog) into a fully constructive program synthesizer. This technique results in an efficient Programming by Navigation synthesizer that solves tasks that are either impossible or too large for baselines to solve.
+
+Finally, I will show how I have applied Programming by Navigation to create Honeybee, a programming system I have been co-designing with and for experimental biologists for 3+ years to enable them to write code to analyze the complex and fascinating data they generate in the lab."
     - date: "2025-12-4"
       abstract: "TBD"
       title: "TBD"
