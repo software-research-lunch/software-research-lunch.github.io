@@ -152,10 +152,10 @@ I will show how we solve the Programming by Navigation problem for one domain—
 
 Finally, I will show how I have applied Programming by Navigation to create Honeybee, a programming system I have been co-designing with and for experimental biologists for 3+ years to enable them to write code to analyze the complex and fascinating data they generate in the lab."
     - date: "2025-12-4"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "The architecture of GPUs has continued to grow in complexity, with recent incarnations introducing increasingly powerful asynchronous fixed-function units for matrix multiplication and data movement to go along with highly parallel general-purpose cores. Applications must expose ample instruction-level parallelism to maximally utilize all hardware resources. Many high-performance programs apply two key strategies to do so: software pipelining (SWP), a technique for statically scheduling a loop to maximize its throughput, and warp specialization (WS), a technique for issuing different components of the program from different groups of threads. However, SWP and WS strategies are currently either discovered by human experts or instantiated by architecture-specific heuristics in GPU compilers. To address this, we introduce Twill, the first system that automatically derives optimal SWP and WS strategies for modern GPUs. Twill introduces a novel formulation of SWP and WS as a joint optimization problem that can be discharged to off-the-shelf constraint solvers. Twill's approach is heuristic-free, polymorphic over the architecture of the GPU, and guaranteed to produce optimal schedules. We show that Twill can rediscover, and thereby prove optimal, the SWP and WS strategies manually developed by humans for Flash Attention on both the NVIDIA Hopper and Blackwell GPU architectures."
+      title: "Optimal Software Pipelining and Warp Specialization for Tensor Core GPUs"
       speaker: "Rupanshu Soi"
-      bio: "TBD"
+      bio: "Rupanshu Soi is a 4th-year CS PhD student advised by Alex Aiken. He is interested in programming languages and compilers."
 
 y25_spring:
   location: "CoDa E401"
