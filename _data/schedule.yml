@@ -30,6 +30,19 @@
 # Federico Mora <fmora@cs.berkeley.edu>
 # Reese Levine <reeselevine@ucsc.edu>
 
+y26_winter:
+  location: "CoDa E401"
+  year: "2026"
+  quarter: "winter"
+  talks:
+    - date: "2026-1-8"
+      abstract: "Hardware side-channel attacks occur when a victim program’s hardware resource usage is influenced by a secret, and an attacker observes this resource usage (e.g., via its effect on execution time) to infer the secret’s value. Hardware side-channel attacks were once thought to threaten only secret-processing code and to be mitigated by constant-time programming, which avoids passing secrets as inputs to certain unsafe instructions that leak their operands via hardware side channels. However, Spectre attacks reveal that transient execution of instructions along mispredicted code paths can leak victim secrets, even if they are never leaked or even accessed architecturally. These attacks bypass gold standard software-level security policies (e.g., constant-time programming and sandboxing), establishing hardware side-channel attacks as a threat to all programs that hold secrets in architectural state.
+
+Hardware side-channel defenses in general, and Spectre defenses in particular, require cooperation between hardware and software. Our research studies what this cooperation should look like and how to design and verify the implementations of new hardware-software contracts that enable it. This talk will introduce three such contracts. First, I will present the ASP contract, which empowers programs at compile-time to restrict their runtime control-/data-flow, enabling Serberus—a hardware-enabled software defense against Spectre for current-generation hardware. Next, I will present the ProtISA contract, which empowers programs at compile-time to specify what architectural registers and memory bytes may hold secrets at each program point, enabling Protean—a software-enabled hardware defense against Spectre for next-generation hardware. Finally, I will present leakage functions, a set of which form a contract that characterizes how a microarchitecture's hardware side-channels create observably-distinct executions for instructions as a function of unsafe instructions’ operands, enabling future probabilistic software-level and fine-grained hardware-level defenses against side-channel attacks."
+      title: "Hardware-Software Contracts for High Assurance with Applications to Side-Channel Security"
+      speaker: "Caroline Trippel"
+      bio: "Caroline Trippel is an Assistant Professor in the Computer Science and Electrical Engineering Departments at Stanford University. Her research fits broadly in the area of computer architecture and focuses on promoting high assurance—correctness, security, and reliability—as a first-order computer architecture design goal. A central theme of Trippel’s work is leveraging automated reasoning and formal methods techniques to design and verify hardware systems. Trippel’s research has influenced the design of the RISC-V ISA memory consistency model both via her formal analysis of its draft specification and her subsequent participation in the RISC-V Memory Model Task Group; prompted Intel to update their Software Security Guidance to confirm that two Intel microarchitectures satisfy assumptions made by the Seberus Spectre defense that her work developed; and produced a novel methodology and tool that synthesized two new variants of the famous Meltdown and Spectre attacks. Trippel’s research has been recognized with IEEE Top Picks distinctions, an NSF CAREER Award, the inaugural Google ML and Systems Junior Faculty Award, the Intel Rising Star Faculty Award, an Intel Outstanding Researcher Award, the 2020 ACM SIGARCH/IEEE CS TCCA Outstanding Dissertation Award, and the 2020 CGS/ProQuest® Distinguished Dissertation Award in Mathematics, Physical Sciences, & Engineering."
+
 y25_fall:
   location: "CoDa E401"
   year: "2025"
