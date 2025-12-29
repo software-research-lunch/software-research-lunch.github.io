@@ -43,10 +43,26 @@ Hardware side-channel defenses in general, and Spectre defenses in particular, r
       speaker: "Caroline Trippel"
       bio: "Caroline Trippel is an Assistant Professor in the Computer Science and Electrical Engineering Departments at Stanford University. Her research fits broadly in the area of computer architecture and focuses on promoting high assurance—correctness, security, and reliability—as a first-order computer architecture design goal. A central theme of Trippel’s work is leveraging automated reasoning and formal methods techniques to design and verify hardware systems. Trippel’s research has influenced the design of the RISC-V ISA memory consistency model both via her formal analysis of its draft specification and her subsequent participation in the RISC-V Memory Model Task Group; prompted Intel to update their Software Security Guidance to confirm that two Intel microarchitectures satisfy assumptions made by the Seberus Spectre defense that her work developed; and produced a novel methodology and tool that synthesized two new variants of the famous Meltdown and Spectre attacks. Trippel’s research has been recognized with IEEE Top Picks distinctions, an NSF CAREER Award, the inaugural Google ML and Systems Junior Faculty Award, the Intel Rising Star Faculty Award, an Intel Outstanding Researcher Award, the 2020 ACM SIGARCH/IEEE CS TCCA Outstanding Dissertation Award, and the 2020 CGS/ProQuest® Distinguished Dissertation Award in Mathematics, Physical Sciences, & Engineering."
     - date: "2026-1-15"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Most modern OS distributions have evolved a distinction between
+    package maintainers (with knowledge and computing resources needed
+    to modify software) and users (who interact solely with a
+    precompiled binary). This strict dichotomy makes little sense today,
+    as the popularity of programming education indicates people are
+    acquiring the skills necessary to understand and control software
+    running on their computers. I'll describe a new Debian variant
+    designed around the assumption that casual users (with casual
+    hardware and a second-year undergraduate programming skills) should
+    be able to easily fiddle with (study, modify, and debug) the
+    software on their machine. The distribution augments binary packages
+    with additional information so they can be modified by the user via
+    a software patching tool that allows fast, painless
+    edit-rebuild-rerun cycles. Our tool also allows directly mixing
+    Python code into C and C++ source files, letting users work in a
+    language they might be more familiar with. Finally, I'll describe
+    how the system makes large systems more understandable via tooling."
+      title: "System Support for Software Fiddling"
       speaker: "Matthew Sotoudeh"
-      bio: "TBD"
+      bio: "Matthew Sotoudeh is a fifth year PhD candidate advised by Dawson Engler."
     - date: "2026-1-22"
       abstract: "As large language models (LLMs) transition from research prototypes to production systems, verifying that their outputs satisfy correctness, safety, and security properties has become paramount for real-world deployment. Unlike traditional neural networks that produce a single output for a given input, LLMs induce probability distributions over output sequences, making distribution-level verification essential. However, LLMs' probabilistic choice, sequential unrolling, and decoding logic fall outside the expressiveness and scalability of traditional verification techniques based on abstract interpretation or SMT solvers. Consequently, existing work has resorted to ad hoc sampling-based estimates, but these cannot provide the rigorous guarantees required for reliable deployment. Therefore, new verification principles are needed to reason soundly about the probabilistic semantics of LLMs.
 
