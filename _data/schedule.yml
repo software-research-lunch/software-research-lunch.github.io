@@ -78,10 +78,12 @@ In this work, we formalize the LLM verification problem as computing the total p
       speaker: "No Speaker"
       bio: "No Speaker"
     - date: "2026-2-5"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Developing kernels for emerging AI accelerators remains a difficult, manual process requiring hardware and algorithm expertise. In this talk, I will present AccelOpt, a framework that leverages self-improving LLM agentic systems to automate kernel development. By utilizing an optimization memory to learn from iterative beam search, AccelOpt eliminates the need for human experts while boosting hardware utilization. Our evaluation confirms that AccelOpt’s capability improves over time, boosting the average percentage of peak throughput from 49% to 61% on Trainium 1 and from 45% to 59% on Trainium 2 for NKIBench kernels. Moreover, AccelOpt is highly cost-effective: using open-source models, it matches the kernel improvements of Claude Sonnet 4 while being 26× cheaper.  We also applied AccelOpt to FlashInfer-Bench in Triton on H100.  The best AccelOpt configuration achieved an average of 0.59x the performance of FlashInfer and 1.5x at best on a GQA paged decode kernel, and 1.38× on a GQA paged prefill kernel. I will also discuss the design principles behind these systems and share lessons learned on the path toward fully autonomous kernel optimization. 
+
+AccelOpt and NKIBench are open-sourced in https://github.com/zhang677/AccelOpt. Here is the paper (https://arxiv.org/pdf/2511.15915)."
+      title: "AccelOpt: Self-Improving Kernel Optimization Agents for AI Accelerators"
       speaker: "Genghan Zhang"
-      bio: "TBD"
+      bio: "Genghan Zhang is a third-year CS PhD student at Stanford University advised by Prof. Kunle Olukotun. His research interests lie in better programming models and systems for domain-specific architectures. This work includes the Sparse Workspace for sparse tensor algebra and the AccelOpt self-improving agents. I am also interested in optimizing GPU kernels. This work includes inference kernels for TTT-KVB and CATS. This is his homepage: https://zhang677.github.io/"
     - date: "2026-2-12"
       abstract: "TBD"
       title: "TBD"
