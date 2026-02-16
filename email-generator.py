@@ -21,8 +21,8 @@ def parse_date(date_str):
 
 
 def format_date_for_email(dt):
-    """Format datetime object as 'Month Day, Year' for email."""
-    return dt.strftime("%B %d, %Y")
+    """Format datetime object as 'Thursday 2/20' for email."""
+    return dt.strftime("%-m/%-d")
 
 
 def find_talk(schedule_data, target_date):
