@@ -109,10 +109,12 @@ This approach can be given a clean semantics by compiling to standard logic prog
       speaker: "Chris Gyurgyik"
       bio: "Chris is a 3rd year PhD student, and spent his past life in the Marine Corps. It remains an open question which experience has been more arduous."
     - date: "2026-3-12"
-      abstract: "TBD"
+      abstract: "For decades, researchers and operators have analyzed reconstructed flows and application sessions to understand Internet behavior, security, resilience, and performance. Yet, despite many proposed traffic analysis tools, the networking community continues to build custom, one-off systems over low-level packet processing libraries to conduct experiments.
+
+We investigate the needs of modern passive traffic analysis, and we introduce Iris: a development framework for efficiently building complex, high-performance traffic analysis pipelines. Iris addresses traditional tradeoffs between expressiveness and performance by approaching traffic analysis as a compile-time optimization problem. Building on the observation that many analysis tasks require similar operations and data, Iris provides a compiler extension that constructs an optimized, end-to-end pipeline from user-defined filters, stream transformations, and computations written in Rust. Iris provides a flexible development environment by exposing connection- and application-layer semantics as Rust data types, rather than operating on packets or restricting users to a domain-specific query language. By deduplicating shared logic and composing high-performance implementations of key primitives, Iris can execute real-world analysis tasks concurrently at 100Gbps+ on a single commodity server."
       title: "A Programming Model for Passive Traffic Analysis"
       speaker: "Thea Rossman"
-      bio: "TBD"
+      bio: "Thea Rossman is a second-year PhD student at Stanford advised by Zakir Durumeric in the Empirical Security Research Group. She is broadly interested in building practical systems that help researchers, operators, and end-users understand, in order to strengthen, modern networks."
     - date: "2026-3-19"
       abstract: "TBD"
       title: "TBD"
