@@ -169,12 +169,6 @@ We investigate the needs of modern passive traffic analysis, and we introduce Ir
       title: "A Programming Model for Passive Traffic Analysis"
       speaker: "Thea Rossman"
       bio: "Thea Rossman is a second-year PhD student at Stanford advised by Zakir Durumeric in the Empirical Security Research Group. She is broadly interested in building practical systems that help researchers, operators, and end-users understand, in order to strengthen, modern networks."
-    - date: "2026-3-19"
-      abstract: "TBD"
-      title: "TBD"
-      speaker: "TBD"
-      bio: "TBD"
-
 
 y25_fall:
   location: "CoDa E401"
