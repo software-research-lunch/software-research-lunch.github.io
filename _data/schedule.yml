@@ -36,10 +36,12 @@ y26_spring:
   quarter: "spring"
   talks:
     - date: "2026-4-2"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Building on our work on Fixpoint, starting from a set of operational semantics, we explore how to materialize facts, both operational ones (e.g. that a handle evaluates to a certain result), and equivalence ones (e.g. two handles are indistinguishable from the perspective of user programs) as coupons that can be combined and reasoned about via a set of trading rules. The goal is to allow untrusted, user-provided scheduler to make scheduling and optimizing decisions, as long as they can achieve the desired coupon.
+
+To show that the set of trades is sound, we model the observational equivalence between handles/objects in Isabelle. We begin with a base coinductive relation, extend it with lemmas that capture nontrivial properties given our modeling of the system, and lift it into an equivalence relation through closure. We then define an inductive relation describing valid coupon trades and prove that it is sound with respect to this equivalence. Finally, we implement the coupon trading component as a WebAssembly program, and show that it faithfully implements the trades using  the Isabelle mechanization of Wasm reference interpreter."
+      title: "From Operational Semantics to Tradeable Coupons"
       speaker: "Yuhan Deng"
-      bio: "TBD"
+      bio: "Yuhan Deng is a sixth year PhD candidate advised by Keith Winstein."
     - date: "2026-4-9"
       abstract: "TBD"
       title: "TBD"
