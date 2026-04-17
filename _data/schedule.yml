@@ -53,10 +53,12 @@ To show that the set of trades is sound, we model the observational equivalence 
       speaker: "Alexander Stepanov"
       bio: "Computer Science student and researcher at DHBW Stuttgart and UC Berkeley with strong interests in CS theory, operations research, and combinatorial optimization. Currently conducting research at UC Berkeley's IEOR department under Prof. Dr. Hochbaum, and working with the Large-Scale Integrated Photonics team at Hewlett Packard Labs on GPU-accelerated approaches to solving hard optimization problems."
     - date: "2026-4-23"
-      abstract: "TBD"
-      title: "TBD"
-      speaker: "TBD"
-      bio: "TBD"
+      abstract: "While the Rust language provides memory safety by default, functional correctness and safety of programs using unsafe code remain unchecked. This thesis aims to improve the quality of Rust code and assist adoption of Rust by developing automatic testing and verification techniques for analyzing properties unchecked by the language.
+
+For testing unsafe library APIs, we develop Rust semantic-aware synthesizers that generate well-typed Rust API calls to efficiently search through the state space guided by types. We develop SyRust (PLDI’21), a synthesizer equipped with awareness of the Rust type semantics. Semantic awareness allows SyRust to generate well-typed API tests for polymorphic Rust library APIs and find memory safety bugs in them. To overcome the scalability limitations of SyRust on large API sets found in popular libraries, we develop Crabtree (OOPSLA’24), a heuristic-guided API test synthesis algorithm that leverages code coverage and coverage over Rust types to guide the synthesis of tests. Results indicate Crabtree yields higher and quicker code coverage over SyRust. To assist developers migrating from other languages into Rust, we develop VERT (ASE’25), a general translator from multiple languages into Rust with verified equivalence."
+      title: "Testing and Verifying Rust’s Next Mile"
+      speaker: "Yoshiki Takashima"
+      bio: "Associate Research Scholar, Yale Law School."
     - date: "2026-4-30"
       abstract: "TBD"
       title: "TBD"
