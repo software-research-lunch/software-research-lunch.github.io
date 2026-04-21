@@ -77,7 +77,7 @@ For testing unsafe library APIs, we develop Rust semantic-aware synthesizers tha
     - date: "2026-5-21"
       abstract: "TBD"
       title: "TBD"
-      speaker: "TBD"
+      speaker: "Atharva Chougule"
       bio: "TBD"
     - date: "2026-5-28"
       abstract: "TBD"
