@@ -70,10 +70,13 @@ For testing unsafe library APIs, we develop Rust semantic-aware synthesizers tha
       speaker: "TBD"
       bio: "TBD"
     - date: "2026-5-14"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Modern in-memory data analytics span a remarkably diverse spectrum of workloads, including relational queries, streaming analytics, graph processing, and machine learning. While these workloads differ widely in their data models and computational patterns, achieving high performance and efficiency ultimately boils down to maximizing cache locality, minimizing memory traffic, and extracting parallelism. Existing systems, however, often sacrifice either generality or performance, achieving high efficiency through narrow specialization or supporting broad workloads with suboptimal performance.
+
+In this talk, I present Reffine, a unified programming model and compiler framework that enables workload-agnostic, end-to-end optimizations such as operator fusion and automatic parallelization across a wide range of analytics applications. The key idea behind Reffine is to combine the expressive power of the relational model with the ability to generate efficient code for irregular data and computations using sparse compilation techniques. I demonstrate that Reffine achieves strong performance across relational, streaming, and graph analytics benchmarks, delivering 8×–47× speedups over state-of-the-art systems such as DuckDB, Polars, and NetworkX."
+      title: "Reffine: Efficient In-Memory Data Analytics through Sparse Compilation"
       speaker: "Anand Jayarajan"
-      bio: "TBD"
+      bio: "Anand Jayarajan is a PhD candidate at the University of Toronto, advised by Gennady Pekhimenko, working at the intersection of data systems, compilers, and machine learning. His research focuses on bridging the gap between generality and performance in modern analytics systems through compiler-driven techniques. His work has appeared in venues such as ASPLOS, MLSys, USENIX ATC, and MICRO, and he is a two-time recipient of the Best Artifact Award at ASPLOS.
+In addition to his PhD research, Anand has contributed to several projects in machine learning and systems. Anand is also the co-founder of CentML, a startup building next-generation infrastructure for large-scale AI systems, which was acquired by NVIDIA. He currently serves as a Tech Lead for AI Infrastructure at NVIDIA, where he builds industry-grade inference systems for generative AI."
     - date: "2026-5-21"
       abstract: "TBD"
       title: "TBD"
