@@ -64,11 +64,6 @@ For testing unsafe library APIs, we develop Rust semantic-aware synthesizers tha
       title: "Automating Verification of ZKP Arithmetizations in Lean"
       speaker: "Liza Pertseva"
       bio: "Elizaveta Pertseva is a 3rd year PhD at Stanford advised by Clark Barrett. Her research focuses on automatically formally verifying cryptographic primitives."
-    - date: "2026-5-7"
-      abstract: "TBD"
-      title: "TBD"
-      speaker: "TBD"
-      bio: "TBD"
     - date: "2026-5-14"
       abstract: "Modern in-memory data analytics span a remarkably diverse spectrum of workloads, including relational queries, streaming analytics, graph processing, and machine learning. While these workloads differ widely in their data models and computational patterns, achieving high performance and efficiency ultimately boils down to maximizing cache locality, minimizing memory traffic, and extracting parallelism. Existing systems, however, often sacrifice either generality or performance, achieving high efficiency through narrow specialization or supporting broad workloads with suboptimal performance.
 
