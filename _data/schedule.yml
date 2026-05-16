@@ -73,10 +73,10 @@ In this talk, I present Reffine, a unified programming model and compiler framew
       bio: "Anand Jayarajan is a PhD candidate at the University of Toronto, advised by Gennady Pekhimenko, working at the intersection of data systems, compilers, and machine learning. His research focuses on bridging the gap between generality and performance in modern analytics systems through compiler-driven techniques. His work has appeared in venues such as ASPLOS, MLSys, USENIX ATC, and MICRO, and he is a two-time recipient of the Best Artifact Award at ASPLOS.
 In addition to his PhD research, Anand has contributed to several projects in machine learning and systems. Anand is also the co-founder of CentML, a startup building next-generation infrastructure for large-scale AI systems, which was acquired by NVIDIA. He currently serves as a Tech Lead for AI Infrastructure at NVIDIA, where he builds industry-grade inference systems for generative AI."
     - date: "2026-5-21"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Sparse tensor algebra is challenging to efficiently parallelize due to the irregular, data-dependent, and potentially skewed structure of sparse computation. We propose the first partitioning algorithm that provably load balances the computation of any sparse tensor algebra expression across parallel execution units. Our algorithm generalizes parallel merging algorithms to any number of operands, and to multidimensional, hierarchical sparse data structures. We implement our algorithm within an existing sparse tensor algebra compilation framework to automatically generate parallel sparse tensor algebra kernels that target multi-core CPUs and GPUs. We show that our generated code is competitive with hand-implemented parallelization strategies used by vendor libraries like Intel MKL and NVIDIA cuSPARSE (geo-means of 0.73–3.4×) and Taco (geo-means of 1.0–2.4×), and significantly outperforms general-purpose strategies for sparse tensor expressions where specialized algorithms have not been developed (geo-means of 2.0–6.4×)."
+      title: "Partitioning Unstructured Sparse Tensor Algebra for Load-Balanced Parallel Execution"
       speaker: "Atharva Chougule"
-      bio: "TBD"
+      bio: "Atharva Chougule is a first-year master's student at Stanford University, advised by Fredrik Kjolstad in the Compilers Group. His interests broadly include compilers and parallel programming, and his recent research has focused on compiling sparse tensor algebra for parallel systems."
     - date: "2026-5-28"
       abstract: "TBD"
       title: "TBD"
@@ -85,7 +85,7 @@ In addition to his PhD research, Anand has contributed to several projects in ma
     - date: "2026-6-4"
       abstract: "TBD"
       title: "TBD (NOTE: Location is CoDa W401)"
-      speaker: "TBD"
+      speaker: "Keith Winstein"
       bio: "TBD"
 
 y26_winter:
