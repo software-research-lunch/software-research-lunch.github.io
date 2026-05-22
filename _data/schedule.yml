@@ -78,10 +78,12 @@ In addition to his PhD research, Anand has contributed to several projects in ma
       speaker: "Atharva Chougule"
       bio: "Atharva Chougule is a first-year master's student at Stanford University, advised by Fredrik Kjolstad in the Compilers Group. His interests broadly include compilers and parallel programming, and his recent research has focused on compiling sparse tensor algebra for parallel systems."
     - date: "2026-5-28"
-      abstract: "TBD"
-      title: "TBD"
+      abstract: "Efficient execution on modern parallel machines requires more than just abundant parallelism; it demands high instruction and data coherence to maximize SIMD utilization and memory bandwidth. While the popular SPMD model trivially handles regular parallelism, it struggles with dynamic workloads where the control flow and data working sets diverge based on runtime values. Optimizing these irregular applications requires navigating a complex, multi-dimensional trade-off space: maximizing parallelism often comes at the cost of locality or coherence.
+
+In this talk, I will present a (work in progress) programming model for representing and optimizing highly parallel divergent workloads. I will motivate its design by presenting state of the art in path tracing (a long-studied, massively parallel and divergent graphics workload). Then, I will present a user schedulable language for transforming the model to explore the trade-off space of parallelism, locality, and coherence, and an intermediate representation explicitly designed to compose transformations in the scheduling space. This design enforces a clean separation of concerns: the core algorithm remains portable, while the execution schedule is customized for the specific constraints of the target hardware. A key result of this work is that specialized optimization strategies across a wide range of parallel divergent workloads from graphics can be unified and reproduced as schedules in our language."
+      title: "Decoupling Algorithm and Schedule for Divergent Workloads on Parallel Architectures"
       speaker: "AJ Root"
-      bio: "TBD"
+      bio: "AJ is a fourth year PhD student advised by Fred Kjolstad and collaborating closely with Kayvon Fatahalian. He works on compilers for high-performance irregular computing (e.g., sparse array programming and path tracing).  He enjoys designing programming languages that enable portable expression of irregular computations and acceleration specification languages with associated optimizing compilers to specialize to concrete data structures and architectures."
     - date: "2026-6-4"
       abstract: "TBD"
       title: "TBD (NOTE: Location is CoDa W401)"
