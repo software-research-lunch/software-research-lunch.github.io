@@ -85,10 +85,10 @@ In this talk, I will present a (work in progress) programming model for represen
       speaker: "AJ Root"
       bio: "AJ is a fourth year PhD student advised by Fred Kjolstad and collaborating closely with Kayvon Fatahalian. He works on compilers for high-performance irregular computing (e.g., sparse array programming and path tracing).  He enjoys designing programming languages that enable portable expression of irregular computations and acceleration specification languages with associated optimizing compilers to specialize to concrete data structures and architectures."
     - date: "2026-6-4"
-      abstract: "TBD"
-      title: "TBD (NOTE: Location is CoDa W401)"
+      abstract: "We just finished the first offering of CS 10N: 'Computer Play', a pilot of a new intro CS/EE class. Students learned to write WebAssembly programs in a new development environment called 'Codillon' that tries to make programs live and visible in the face of syntax, validation, and execution-time errors. The core mechanism is the visualization of Wasm instruction sequences as well-typed expressions where values flow between typed slots, in a text editor that disables lines that would violate the syntax or typing rules while leaving the rest of the program intact. I'll demonstrate the system and how it differs from other notebook-based and live programming environments, and talk about how the class went and our future plans."
+      title: "Codillon update: a live development environment that was used in a pilot intro CS/EE class (NOTE: Location is CoDa W401)"
       speaker: "Keith Winstein"
-      bio: "TBD"
+      bio: "Keith Winstein is a faculty member in computer science. Joint work with Haibib Kerim, Linfan Qian, Akshay Srivatsan, Jiahao Zhang, Emma Sudo, Trip Master, Francis Chua, Zane St. John, Victor Phisitkul, Kavita Kar, and Kwame Brako Asante."
 
 y26_winter:
   location: "CoDa E401"
