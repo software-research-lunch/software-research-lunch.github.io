@@ -54,10 +54,13 @@ y26_fall:
       speaker: "Nirav Atre"
       bio: ""
     - date: "2026-10-22"
-      abstract: ""
-      title: ""
+      abstract: |
+        Helion is a very high-level, Python-embedded kernel DSL that delivers state-of-the-art performance with an order of magnitude less code than low-level kernel languages. By exposing implementation choices in the language and pairing them with an integrated autotuner, Helion lets developers express the computation while the system searches for an efficient implementation. This talk introduces Helion's programming model and its new Pallas and CuTe DSL backends, bringing TPU support and performance competitive with the state of the art on NVIDIA Blackwell.
+
+        We'll then explore automated agentic loops for building compiler optimizations that improve many kernels at once. These loops pair agents with autotuning to search more efficiently in both time and tokens, supported by automated correctness testing and adversarial review. We’ll argue that with more powerful models and enough tokens, all systems will eventually reach hardware roofline performance, making maintainability, development velocity, and stability the key differentiators.
+      title: "Helion DSL and the Future of Building Compilers with Agents"
       speaker: "Jason Ansel"
-      bio: ""
+      bio: "Jason Ansel is a technical lead for PyTorch compilers at Meta. He created TorchDynamo, TorchInductor, and Helion, bringing flexible graph capture, high-performance compilation, and high-level kernel authoring to the PyTorch ecosystem. He holds a Ph.D. from MIT and has over 20 years of experience in machine learning, compilers, and programming languages."
     - date: "2026-11-05"
       abstract: ""
       title: ""
