@@ -62,15 +62,26 @@ y26_fall:
       speaker: "Jason Ansel"
       bio: "Jason Ansel is a technical lead for PyTorch compilers at Meta. He created TorchDynamo, TorchInductor, and Helion, bringing flexible graph capture, high-performance compilation, and high-level kernel authoring to the PyTorch ecosystem. He holds a Ph.D. from MIT and has over 20 years of experience in machine learning, compilers, and programming languages."
     - date: "2026-11-05"
-      abstract: ""
-      title: ""
-      speaker: "Matthew Sotoudeh"
-      bio: ""
+      abstract: |
+        This week is a double feature with two practice talks.
+
+        Cold-Patching for Faster Edit-Compile-Run Cycles (Matthew Sotoudeh): (Practice talk for ACM SIGOPS ATC 2026, will be timing aimed for 18 minutes including questions at the end.) Programmers rely on fast edit-compile-run cycles when debugging code, exploring unfamiliar codebases, and trying out new ideas. Fiddle is a new tool for cold-patching small changes onto large compiled software systems. When repeatedly editing a small number of compilation units, Fiddle is faster than linkers, uses less memory, and does not require saving intermediate compilation artifacts. Fiddle is simpler and more reliable than hot-patching because it does not need to deal with global state migration or non-quiescent functions. Fiddle is designed for developers repeatedly fiddling with a handful of functions in a large codebase; it cannot patch changes to the types of global non-static objects, it cannot patch binaries compiled with LTO, and its speed relies on repeatedly editing the same set of compilation units. We end by describing a suite of tools enabled by the Fiddle cold-patching primitive that make it easier to rapidly prototype modifications to compiled system software.
+
+        Parallel and Accelerated Dependent Partitioning (Rohan Chanani): Dependent partitioning is a flexible framework for compactly describing and efficiently computing partitions of distributed data structures that contain indirections and inter-connected references. These data structures are commonly found in scientific applications, which operate over meshes, graphs, and sparse tensors. However, existing implementations of dependent partitioning process the individual elements of their input data sequentially on CPUs. This limitation makes dependent partitioning an expensive component of application initialization and hinders its use in dynamic or on-line contexts. In this work, we present parallel algorithms for computing dependent partitions and show that these algorithms perform well on accelerators like GPUs. Across a series of microbenchmarks and existing applications that use dependent partitioning, we show that our work achieves speedups of 9.4–9,807× for computing dependent partitions. We then show that our algorithms enable dynamic and on-line partitioning during steady-state execution.
+      title: "Cold-Patching for Faster Edit-Compile-Run Cycles / Parallel and Accelerated Dependent Partitioning"
+      speaker: "Matthew Sotoudeh and Rohan Chanani"
+      bio: |
+        Matthew Sotoudeh is a sixth-year PhD candidate advised by Prof. Dawson Engler.
+
+        Rohan Chanani (B.S. Math ’27, M.S. Computer Science ’27)
     - date: "2026-11-12"
-      abstract: ""
-      title: ""
-      speaker: ""
-      bio: ""
+      abstract: |
+        Effectful scripts---i.e., scripts that perform actions that change the world around them, such as modifying files in the file system or configuring a cloud deployment---are ubiquitous in computing. In addition to being ubiquitous, these scripts are very powerful since their effects are often irreversible or costly, and therefore getting them right is critical. Unfortunately, the state of the art in checking the correctness of effectful scripts lags far behind that of other programming domains, leading to the frequent occurence of high-impact bugs, such as accidentally deleting important user data. To make matters worse, these scripts are increasingly being implemented by agents in response to user prompts, where it is even harder to determine whether they are doing the right thing, since user intent is ambiguously hidden behind a natural-language prompt, and agents have been shown to hallucinate and to be vulnerable to prompt injections and other attacks.
+
+        In this talk, I will discuss three systems that we are developing to address this exact problem: how can we know whether an effectful script is doing what we want it to do, and how can we protect ourselves when it is not? First, I will talk about Sash, the first system for semantic analysis of shell scripts that can identify critical bugs, such as accidentally deleting the user's home directory. Second, I will talk about try, a lightweight and easy-to-use system that allows transparently reverting a command's effects on the file system. Third, I will talk about Caruca, a system that can automatically infer partial specifications of arbitrary black-box commands. Together, these systems can improve users' confidence that the scripts they (or their agents) implement behave as intended.
+      title: "Agents, effects, and how to protect yourself against them"
+      speaker: "Konstantinos Kallas"
+      bio: "Konstantinos Kallas is an assistant professor of CS at the University of California, Los Angeles. He is broadly interested in building systems that enable the development of high-performance applications with robust correctness guarantees, both in theory and in practice. His research spans several domains, from serverless and microservices to the Unix shell and scripting languages in general, has appeared at several venues including SOSP, OSDI, NSDI, EuroSys, ATC, POPL, OOPSLA, and VLDB, and has received several awards (Dennis M. Richie SIGOPS 2024 dissertation award, best paper awards at OSDI 26, USENIX ATC 25, and EuroSys 21, best presentation at HotOS 21, and 2nd place at the 2021 ACM SRC Grand Finals). His research has led to the development of PaSh, the first optimizing compiler for the shell, which is supported by the Linux Foundation."
     - date: "2026-11-19"
       abstract: ""
       title: ""
